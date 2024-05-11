@@ -1,8 +1,8 @@
 ---
 layout: default
-package: GestionProjects
-presentationPackage: GestionProjects
-order:  8
+package: gestion_projects
+presentationPackage: gestion_projects
+order:  50
 ---
 
 # Conception

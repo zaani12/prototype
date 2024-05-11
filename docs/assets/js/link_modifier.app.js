@@ -1,7 +1,9 @@
 
+// TODO  : comments - le rôle de ce script
 /**
- * TODO : comments - le rôle de ce script
+ * TODO  : comments - le rôle de ce script
  */
+export function link_modifier(){
 document.addEventListener("DOMContentLoaded", function () {
     let currentURL = window.location.href;
 
@@ -17,3 +19,4 @@ document.addEventListener("DOMContentLoaded", function () {
         presentationLink.setAttribute("href", presentationURL);
     }
 });
+}

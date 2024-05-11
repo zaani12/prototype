@@ -1,9 +1,9 @@
 ---
 layout: default
-package: GestionProjects
-presentationPackage: GestionProjects
-presentation: GestionProjects
-order: 9
+package: gestion_projects
+presentationPackage: gestion_projects
+presentation: gestion_projects
+order: 50
 ---
 ## Maquettes
 

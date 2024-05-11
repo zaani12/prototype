@@ -2,9 +2,9 @@
 layout: default
 chapitre: Desing pattern
 presentation: Desing pattern
-package: GestionProjects
-presentationPackage: GestionProjects
-order:  7
+package: gestion_projects
+presentationPackage: gestion_projects
+order:  40
 ---
 
 ## Desing pattern

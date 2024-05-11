@@ -2,9 +2,9 @@
 layout: default
 chapitre: MVC
 presentation: MVC
-package: GestionProjects
-presentationPackage: GestionProjects
-order:  18
+package: gestion_projects
+presentationPackage: gestion_projects
+order:  60
 ---
 
 # Réalisation
