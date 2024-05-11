@@ -1,1 +1,19 @@
-﻿{"folders": [{"path": "."}],"settings": {}}
+{
+    "folders": [{"path": "."}],
+    "settings": {
+        "todo-tree.general.showActivityBarBadge": true,
+        "todo-tree.general.periodicRefreshInterval": 1,
+        "todo-tree.general.showIconsInsteadOfTagsInStatusBar": true,
+        "todo-tree.general.statusBar": "tags",
+        "todo-tree.general.tags": [
+            "BUG",
+            "FIXME",
+            "TODO",
+            "[ ]",
+            "[x]",
+            "solicode"
+        ]
+
+        // "todo-tree.general.tags" :  ["TODO","FIXME","BUG","Solicode"]
+    }
+}
