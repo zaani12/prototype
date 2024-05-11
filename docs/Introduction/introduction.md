@@ -12,7 +12,7 @@ order: 2
 
 <!-- TODO : Insertion d'une #image qui représent les deux objectifs de prototype -->
 
-![Introduction](/prototype/introduction/images/introduction.jpg){:width="50%"}*figure: Introduction*
+![Introduction](/prototype/introduction/images/introduction.jpg){:width="50%"}*Figure: Introduction*
 
 <!-- note -->
 

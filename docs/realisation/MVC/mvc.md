@@ -14,7 +14,7 @@ order:  60
 
 ## MVC
 
-![MVC](/prototype/realisation/MVC/images/mvc.png){:width="48%"}*figure: MVC*
+![MVC](/prototype/realisation/MVC/images/mvc.png){:width="48%"}*Figure: MVC*
 
 
 

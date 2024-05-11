@@ -3,9 +3,9 @@ layout: default
 package: gestion_projects
 presentationPackage: gestion_projects
 presentation: gestion_projects
-order: 40
+order: 42
 ---
-### Extension de vs code
+# Extension de vs code
 
 ![Prettier](/prototype/Analyse-Techniques/les-extension/images/3extensions.png)
   

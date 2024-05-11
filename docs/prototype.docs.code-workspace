@@ -4,5 +4,27 @@
 			"path": "."
 		}
 	],
-	"settings": {}
+	"settings": {
+
+		"todo-tree.general.tags": [
+            "BUG",
+            "TODO",
+            "[ ]",
+            "[x]",
+            "todo_html",
+            "todo_css",
+            "todo_js",
+            "todo_php",
+            "todo_config",
+            "todo_layout",
+            "todo_database",
+            "todo_model",
+            "todo_controller",
+            "todo_route",
+            "todo_view",
+            "todo_test",
+            "todo_rédaction"
+        ]
+
+	}
 }

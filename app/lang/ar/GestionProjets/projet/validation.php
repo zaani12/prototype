@@ -1,6 +1,6 @@
 <?php
 
-// TODO : à supprimer
+// todo_view : : à supprimer
 return [
     // Validation
     'nomRequired' => 'Le nom du projet est requis.',

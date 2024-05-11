@@ -35,6 +35,6 @@ _figure: Modifier le Projet_
 #### Details de projet
 
 ![index](/prototype/conception/maquettes/images/details_de_projet.png){:width="999px"}
-*figure: Details de Projet*
+*Figure: Details de Projet*
 
 <!-- new slide -->

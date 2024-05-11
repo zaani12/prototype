@@ -9,7 +9,7 @@ order: 80
 ---
 # Conclusion
 
-![Conclusion](./images/conclusion.png){:width="900px"}*figure: Conclusion*
+![Conclusion](./images/conclusion.png){:width="900px"}*Figure: Conclusion*
 
 <!-- note -->
 

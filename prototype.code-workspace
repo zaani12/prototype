@@ -5,15 +5,27 @@
         "todo-tree.general.periodicRefreshInterval": 1,
         "todo-tree.general.showIconsInsteadOfTagsInStatusBar": true,
         "todo-tree.general.statusBar": "tags",
+
+
+
         "todo-tree.general.tags": [
             "BUG",
-            "FIXME",
             "TODO",
             "[ ]",
             "[x]",
-            "solicode"
+            "todo_html",
+            "todo_css",
+            "todo_js",
+            "todo_php",
+            "todo_config",
+            "todo_layout",
+            "todo_database",
+            "todo_model",
+            "todo_controller",
+            "todo_route",
+            "todo_view",
+            "todo_test",
+            "todo_rédaction"
         ]
-
-        // "todo-tree.general.tags" :  ["TODO","FIXME","BUG","Solicode"]
     }
 }
