@@ -19,7 +19,7 @@ Le chef de projet occupe une place essentielle dans le processus de réalisation
 ### Carte d'empathie
 
 
-![Empathie de chef de projet](/lab_crud/besoin/images/empathyChef.PNG){:width="900px"}*Figure:Empathie de chef de projet*
+![Empathie de chef de projet](/prototype/besoin/images/empathyChef.PNG){:width="900px"}*Figure:Empathie de chef de projet*
 
 
 
@@ -50,7 +50,7 @@ Une séance d’empathie a été réalisée avec Abdelatif Soklabi, un formateur
 
 ## Définir le problème
 
-![Définir le problem](/lab_crud/besoin/images/problem.jpg){:width="700px"}
+![Définir le problem](/prototype/besoin/images/problem.jpg){:width="700px"}
 *figure: définir le problème*
 
 <!-- note -->

@@ -108,3 +108,9 @@ password : admin
 
 login : apprenant@solicode.co
 password : apprenant
+
+
+## Collaboration 
+
+La contribution à ce projet se fait par la création d'un fork, suivi d'une pull request conforme aux exigences du nom du package.
+- [lab-collaboration](https://github.com/labs-web/lab-collaboration)

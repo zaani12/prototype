@@ -12,18 +12,18 @@ order:  8
 
 ## Diagramme de classes globale
 
-![Diagramme de classes globale](/lab_crud/conception/Diagramme-classe/Images/diagramme-classe-globale.PNG){:width="70%"}*figure: diagramme de classe globale*
+![Diagramme de classes globale](/prototype/conception/Diagramme-classe/Images/diagramme-classe-globale.PNG){:width="70%"}*figure: diagramme de classe globale*
 
 <!-- new slide -->
 
 ## Diagramme de classe de Authorization
 
-![Diagramme de classes de Authorization](/lab_crud/conception/Diagramme-classe/Images/diagramme-classe-authorization.PNG){:width="70%"}*figure: diagramme de classe de Authorization*
+![Diagramme de classes de Authorization](/prototype/conception/Diagramme-classe/Images/diagramme-classe-authorization.PNG){:width="70%"}*figure: diagramme de classe de Authorization*
 
 <!-- new slide -->
 
 ## Diagramme de classe de projets
 
-![Diagramme de classe de projets](/lab_crud/conception/Diagramme-classe/Images/diagramme-classe-projet.PNG){:width="70%"}*figure: diagramme de classe de projets*
+![Diagramme de classe de projets](/prototype/conception/Diagramme-classe/Images/diagramme-classe-projet.PNG){:width="70%"}*figure: diagramme de classe de projets*
 
 <!-- new slide -->
