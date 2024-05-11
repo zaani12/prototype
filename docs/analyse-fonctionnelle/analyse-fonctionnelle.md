@@ -1,8 +1,6 @@
 ---
 layout: default
-package: gestion_projects
-presentationPackage: gestion_projects
-presentation: gestion_projects
+chapitre: Analyse fonctionnelle
 order: 30
 ---
 

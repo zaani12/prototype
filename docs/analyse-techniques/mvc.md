@@ -1,24 +1,13 @@
 ---
 layout: default
-chapitre: MVC
-presentation: MVC
-package: gestion_projects
-presentationPackage: gestion_projects
-order:  60
+chapitre: Analyse Techniques
+order: 41
 ---
 
-# Réalisation
-{:class="sectionHeader"}
-
-<!-- new slide -->
 
 ## MVC
 
-![MVC](/prototype/realisation/MVC/images/mvc.png){:width="48%"}*Figure: MVC*
-
-
-
-
+![MVC](/prototype/analyse-techniques/images/mvc.png){:width="48%"}*Figure: MVC*
 
 <!-- note -->
 

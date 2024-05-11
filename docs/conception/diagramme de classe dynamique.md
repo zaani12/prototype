@@ -1,3 +1,9 @@
+---
+layout: default
+chapitre: Analyse Techniques
+order: 52
+---
+
 ## Diagramme de classes dynamique pour le Sprint 1 : Gestion de projet solicode
 
 Le diagramme de classes dynamique représente les interactions entre les classes et les changements d'état au cours du processus de gestion de projet et de tâches.

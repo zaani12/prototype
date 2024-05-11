@@ -1,7 +1,10 @@
-# Diagramme de classe 
+---
+layout: default
+chapitre: Conception
+order: 51
+---
 
-
-## Diagramme de classes pour le Sprint 1 : Gestion de projet solicode
+## Diagramme de classes pour le Sprint 1 
 
 Ce diagramme de classes représente le noyau fonctionnel de l'application, permettant la gestion des projets et des tâches.
 
