@@ -1,7 +1,7 @@
 ---
 name: Exposé
 about: Création d'un exposé
-title: 'Titre de l\'expoisé'
+title: ''
 labels: exposé,new_issue
 assignees: ''
 ---
