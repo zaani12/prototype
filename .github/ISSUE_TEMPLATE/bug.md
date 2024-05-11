@@ -1,7 +1,6 @@
 ---
 name: Bug
 about: Déclaration d'un bug
-title: ''
 labels: bug,new_issue
 assignees: ''
 ---
