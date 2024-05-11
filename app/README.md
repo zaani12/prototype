@@ -97,6 +97,14 @@ npm run dev
 ```
 
 
-<!-- TODO :Loin and password   -->
-
 ## Loin and password 
+
+### admin
+
+login : admin@solicode.co
+password : admin
+
+### apprenant
+
+login : apprenant@solicode.co
+password : apprenant

@@ -6,8 +6,7 @@ labels: exposé,new_issue
 assignees: ''
 ---
 
-## Travail à faire
+# Sujet
 
-## Livrables
-- docs/
+## Références 
 
