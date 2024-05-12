@@ -1,0 +1,25 @@
+├─ e:\labs-web\prototype\app\resources\views\layouts\app.blade.php line 7: TODO Madani : à expliquer dans /docs/réalisation/layout.md -->
+├─ e:\labs-web\prototype\docs\Introduction\introduction.md line 13: TODO Ali : Insertion d'une #image qui représent les deux objectifs de prototype
+├─ e:\labs-web\prototype\docs\_layouts\default.html line 11: TODO Ali : utilisation des fichiers locaux en de rupture de connexion internet dans la classe
+├─ e:\labs-web\prototype\docs\_layouts\default.html line 28: TODO ESSARRAJ : expliquer (ES6, module, import) dans lab-javascript et indiquer le lien de rapport de lab dans les prérequis
+├─ e:\labs-web\prototype\docs\analyse-fonctionnelle\analyse-sprint1.md line 30: TODO : Donnez le diagramme de cas d'utilisation de sprint 1
+├─ e:\labs-web\prototype\docs\analyse-fonctionnelle\diagramme-cas-utilisation.md line 88: TODO : Donnez le diagramme de cas d'utilisation global
+├─ e:\labs-web\prototype\docs\analyse-fonctionnelle\empathie.md line 44: TODO : à refaire selon la nouvelle version de l'entretien avec le chef de projet
+├─ e:\labs-web\prototype\docs\assets\css\customRapport.css line 1: TODO ESSARRAJ : add comments
+├─ e:\labs-web\prototype\docs\assets\css\rapport.css line 1: TODO Ali : Il faut télécharger le font en local
+├─ e:\labs-web\prototype\docs\assets\js\link_modifier.app.js line 2: TODO : comments - le rôle de ce script
+├─ e:\labs-web\prototype\docs\assets\js\table_matiere.app.js line 7: TODO : Convert to function, and execute it after par load.
+├─ e:\labs-web\prototype\docs\besoin\besoin.md line 15: TODO : image
+├─ e:\labs-web\prototype\docs\besoin\besoin.md line 32: TODO : Insertion d'une image qui représente  l'objectif 1 - différents types de relations de données
+├─ e:\labs-web\prototype\docs\besoin\besoin.md line 45: TODO : Insertion d'une image qui représente  l'objectif 2 - un système d'authentification et d'autorisation réutilisable
+├─ e:\labs-web\prototype\docs\serve.ps1 line 4: [ ] aaa
+├─ e:\labs-web\prototype\docs\serve.ps1 line 5: [ ] aa
+├─ e:\labs-web\prototype\app\resources\views\GestionProjets\projet\table.blade.php line 47: todo_css : Importer et exporter ne doit pas s'afficher dans la version mobile  -->
+├─ e:\labs-web\prototype\app\resources\views\auth\login.blade.php line 25: todo_css :
+├─ e:\labs-web\prototype\docs\assets\js\app.js line 14: todo_js : Création d'un script javascript qui permet d'afficher les figure par numéro
+├─ e:\labs-web\prototype\docs\assets\js\app.js line 16: todo_js : Création d'un script javascript qui permet d'afficher un tableau des figures
+├─ e:\labs-web\prototype\app\resources\views\auth\login.blade.php line 31: todo_config : à lire depuis le fichier de configuration de Laravel-->
+├─ e:\labs-web\prototype\app\resources\views\auth\login.blade.php line 1: todo_layout : La page login doit aussi utilise - app.blade.php -->
+├─ e:\labs-web\prototype\app\lang\ar\GestionProjets\projet\message.php line 3: todo_view : à simplifier
+├─ e:\labs-web\prototype\app\lang\ar\GestionProjets\projet\validation.php line 3: todo_view :  à supprimer
+└─ e:\labs-web\prototype\app\README.md line 3: todo_rédaction :

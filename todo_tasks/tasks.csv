@@ -1,0 +1,7 @@
+Apprenant,TODO_Tag,Question,File,Line
+Madani,TODO,à expliquer dans /docs/réalisation/layout.md -->,e:\labs-web\prototype\app\resources\views\layouts\app.blade.php,line 7
+Ali,TODO,Insertion d'une #image qui représent les deux objectifs de prototype,e:\labs-web\prototype\docs\Introduction\introduction.md,line 13
+Ali,TODO,utilisation des fichiers locaux en de rupture de connexion internet dans la classe,e:\labs-web\prototype\docs\_layouts\default.html,line 11
+ESSARRAJ,TODO,expliquer (ES6, module, import) dans lab-javascript et indiquer le lien de rapport de lab dans les prérequis,e:\labs-web\prototype\docs\_layouts\default.html,line 28
+ESSARRAJ,TODO,add comments,e:\labs-web\prototype\docs\assets\css\customRapport.css,line 1
+Ali,TODO,Il faut télécharger le font en local,e:\labs-web\prototype\docs\assets\css\rapport.css,line 1

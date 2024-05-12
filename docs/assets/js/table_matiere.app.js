@@ -4,7 +4,7 @@
  * par h1 .. h6
  */
 
-// TODO : TODO : Convert to function, and execute it after par load.
+// TODO : Convert to function, and execute it after par load.
 
 
 export function table_matiere(){

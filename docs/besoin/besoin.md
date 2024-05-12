@@ -29,7 +29,7 @@ En résumé, l'application de démonstration constituera un outil précieux pour
 
 ## Démonstration des fonctionnalités techniques requises 
 
-<!-- TODO : Insertion d'une image qui représente  l'objectif 1 : différents types de relations de données -->
+<!-- TODO : Insertion d'une image qui représente  l'objectif 1 - différents types de relations de données -->
 
 * **Interface CRUD (Create, Read, Update, Delete):** Permettre la création, la lecture, la mise à jour et la suppression de données de manière individuelle.
 
@@ -42,7 +42,7 @@ En résumé, le prototype vise à illustrer la capacité à implémenter des int
 
 ## Développement d'un système d'authentification et d'autorisation : 
 
-<!-- TODO : Insertion d'une image qui représente  l'objectif 2 : un système d'authentification et d'autorisation réutilisable-->
+<!-- TODO : Insertion d'une image qui représente  l'objectif 2 - un système d'authentification et d'autorisation réutilisable-->
 
 Le prototype mettra également en œuvre un système d'authentification et d'autorisation adaptable à n'importe quelle application Laravel. Ce système permettra de gérer les utilisateurs, les rôles et les permissions, garantissant un accès sécurisé aux ressources de l'application.
 

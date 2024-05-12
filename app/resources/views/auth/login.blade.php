@@ -1,4 +1,4 @@
-<!-- todo_layout : La page login doit aussi utilise : app.blade.php -->
+<!-- todo_layout : La page login doit aussi utilise - app.blade.php -->
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 

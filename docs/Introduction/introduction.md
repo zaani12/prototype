@@ -10,7 +10,7 @@ order: 2
 
 <!-- new slide -->
 
-<!-- TODO : Insertion d'une #image qui représent les deux objectifs de prototype -->
+<!-- TODO Ali : Insertion d'une #image qui représent les deux objectifs de prototype -->
 
 ![Introduction](/prototype/introduction/images/introduction.jpg){:width="50%"}*Figure: Introduction*
 
