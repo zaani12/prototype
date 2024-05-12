@@ -1,6 +1,6 @@
 <?php
 
-// todo_view : à simplifier
+// TODO view-2 : à simplifier
 return [
     'titre' => 'Projet',
     'detail' => 'Detail de projet',

@@ -1,6 +1,6 @@
 # Prototype 
 
-<!-- todo_rédaction : 
+<!-- TODO rédaction-2 : 
 
 - Introduction 
 - Objectif de prototype 

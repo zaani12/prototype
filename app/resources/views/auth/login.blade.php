@@ -22,13 +22,13 @@
         <div class="login-box">
             <div class="login-logo">
 
-                <!-- todo_css : 
+                <!-- TODO css-2 : 
                 - remplacer style par class dans le fichier de package : authentification.css 
                 - ajouter la configuration de l'icon de l'application dans le fichier de configuration .env
                 -->
                 <i class="fas fa-home" style="font-size: 50px;"></i>
 
-                <!-- todo_config : à lire depuis le fichier de configuration de Laravel-->
+                <!-- TODO config-2 : à lire depuis le fichier de configuration de Laravel-->
                 <h4>Prototype</h4>
             </div>
             <div class="card">

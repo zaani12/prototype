@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const Task = require('../Entities/Task')
 
 class TodoRepository{
 
@@ -8,6 +9,11 @@ class TodoRepository{
         // process.cwd() = path d'exécusion de script
         this.app_path = path.resolve(__dirname,app_path ) ;
         this.todoLines = [];
+
+        // Ne pas traiter les dossiers suivant : 
+        // TODO : ne pas traiter tous les fichiers et dossier indiquer dans le fichier .gitignore
+        this.directory_ignore = [".bundle",".vscode",".git",".github","_site","vendor","node_modules"]
+
     }
     /**
      * find all todo in current Laravel app
@@ -30,25 +36,31 @@ class TodoRepository{
           const stats = fs.statSync(filePath);
           if (stats.isDirectory()) {
     
+           
+            // ne pas traiter le dossier node_module,vendor
+            if(this.directory_ignore.includes(file)){
+              continue
+            }
+
             // ne pas traiter les dossier caché
             if(file.startsWith(".") ){
-              continue
-            }
-            // ne pas traiter le dossier node_module,vendor
-            if(file.endsWith("vendor") || file.endsWith("node_modules")){
-              continue
-            }
+            continue
+          }
+
             this.traverse(filePath);
           } else if (stats.isFile()) {
             const content = fs.readFileSync(filePath, 'utf8');
             const lines = content.split(/\r?\n/);
-            for (const line of lines) {
-              if (line.trim().startsWith('// TODO')) {
+
+            lines.forEach((todo_line,index) => {
+
+              if (todo_line.trim().startsWith('// TODO')) {
                 // Afficher un message sans retour à la ligne
                 process.stdout.write('.'); 
-                this.todoLines.push(filePath + ':' + line);
+                let num_line = index +1
+                this.todoLines.push (new Task(filePath,num_line,todo_line));
               }
-            }
+            });
           }
         }
       }

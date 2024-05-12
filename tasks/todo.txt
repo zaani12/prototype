@@ -14,12 +14,12 @@
 ├─ e:\labs-web\prototype\docs\besoin\besoin.md line 45: TODO : Insertion d'une image qui représente  l'objectif 2 - un système d'authentification et d'autorisation réutilisable
 ├─ e:\labs-web\prototype\docs\serve.ps1 line 4: [ ] aaa
 ├─ e:\labs-web\prototype\docs\serve.ps1 line 5: [ ] aa
-├─ e:\labs-web\prototype\app\resources\views\GestionProjets\projet\table.blade.php line 47: todo_css : Importer et exporter ne doit pas s'afficher dans la version mobile  -->
-├─ e:\labs-web\prototype\app\resources\views\auth\login.blade.php line 25: todo_css :
-├─ e:\labs-web\prototype\docs\assets\js\app.js line 14: todo_js : Création d'un script javascript qui permet d'afficher les figure par numéro
-├─ e:\labs-web\prototype\docs\assets\js\app.js line 16: todo_js : Création d'un script javascript qui permet d'afficher un tableau des figures
-├─ e:\labs-web\prototype\app\resources\views\auth\login.blade.php line 31: todo_config : à lire depuis le fichier de configuration de Laravel-->
+├─ e:\labs-web\prototype\app\resources\views\GestionProjets\projet\table.blade.php line 47: TODO css-2 : Importer et exporter ne doit pas s'afficher dans la version mobile  -->
+├─ e:\labs-web\prototype\app\resources\views\auth\login.blade.php line 25: TODO css-2 :
+├─ e:\labs-web\prototype\docs\assets\js\app.js line 14: TODO js-2 : Création d'un script javascript qui permet d'afficher les figure par numéro
+├─ e:\labs-web\prototype\docs\assets\js\app.js line 16: TODO js-2 : Création d'un script javascript qui permet d'afficher un tableau des figures
+├─ e:\labs-web\prototype\app\resources\views\auth\login.blade.php line 31: TODO config-2 : à lire depuis le fichier de configuration de Laravel-->
 ├─ e:\labs-web\prototype\app\resources\views\auth\login.blade.php line 1: todo_layout : La page login doit aussi utilise - app.blade.php -->
-├─ e:\labs-web\prototype\app\lang\ar\GestionProjets\projet\message.php line 3: todo_view : à simplifier
-├─ e:\labs-web\prototype\app\lang\ar\GestionProjets\projet\validation.php line 3: todo_view :  à supprimer
-└─ e:\labs-web\prototype\app\README.md line 3: todo_rédaction :
+├─ e:\labs-web\prototype\app\lang\ar\GestionProjets\projet\message.php line 3: TODO view-2 : à simplifier
+├─ e:\labs-web\prototype\app\lang\ar\GestionProjets\projet\validation.php line 3: TODO view-2 :  à supprimer
+└─ e:\labs-web\prototype\app\README.md line 3: TODO rédaction-2 :
