@@ -1,0 +1,111 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Windows-1252">
+<title>Rapport de listes MOO
+</title>
+<link href="Theme_BleuClair.css" type="text/css" rel="stylesheet">
+</head>
+<!--Ce fichier a été généré automatiquement par PowerAMC.-->
+<body>
+<h2>
+<a name="242">Classe Formateur</a> 
+</h2>
+<h3>
+<a name="245">Aperçu du code de la classe Formateur</a> 
+</h3>
+<table class="Text" border="1" cellpadding="3" cellspacing="1" width="100%"><tr><td>
+<p align="left">/***********************************************************************<br />
+ * Module:  Formateur.cs<br />
+ * Author:  essarraj<br />
+ * Purpose: Definition of the Class gestion_rh.Formateur<br />
+ ***********************************************************************/<br />
+<br />
+using System;<br />
+<br />
+namespace gestion_rh<br />
+{<br />
+   public class Formateur : Personne<br />
+   {<br />
+      public gestion_authorisation.Utilisateur utilisateur;<br />
+      public System.Collections.ArrayList créateur de projet;<br />
+      <br />
+      /// &lt;pdGenerated&gt;default getter&lt;/pdGenerated&gt;<br />
+      public System.Collections.ArrayList GetCréateur de projet()<br />
+      {<br />
+         if (créateur de projet == null)<br />
+            créateur de projet = new System.Collections.ArrayList();<br />
+         return créateur de projet;<br />
+      }<br />
+      <br />
+      /// &lt;pdGenerated&gt;default setter&lt;/pdGenerated&gt;<br />
+      public void SetCréateur de projet(System.Collections.ArrayList newCréateur de projet)<br />
+      {<br />
+         RemoveAllCréateur de projet();<br />
+         foreach (Projet oProjet in newCréateur de projet)<br />
+            AddCréateur de projet(oProjet);<br />
+      }<br />
+      <br />
+      /// &lt;pdGenerated&gt;default Add&lt;/pdGenerated&gt;<br />
+      public void AddCréateur de projet(Projet newProjet)<br />
+      {<br />
+         if (newProjet == null)<br />
+            return;<br />
+         if (this.créateur de projet == null)<br />
+            this.créateur de projet = new System.Collections.ArrayList();<br />
+         if (!this.créateur de projet.Contains(newProjet))<br />
+            this.créateur de projet.Add(newProjet);<br />
+      }<br />
+      <br />
+      /// &lt;pdGenerated&gt;default Remove&lt;/pdGenerated&gt;<br />
+      public void RemoveCréateur de projet(Projet oldProjet)<br />
+      {<br />
+         if (oldProjet == null)<br />
+            return;<br />
+         if (this.créateur de projet != null)<br />
+            if (this.créateur de projet.Contains(oldProjet))<br />
+               this.créateur de projet.Remove(oldProjet);<br />
+      }<br />
+      <br />
+      /// &lt;pdGenerated&gt;default removeAll&lt;/pdGenerated&gt;<br />
+      public void RemoveAllCréateur de projet()<br />
+      {<br />
+         if (créateur de projet != null)<br />
+            créateur de projet.Clear();<br />
+      }<br />
+   <br />
+   }<br />
+}
+</p>
+</td></tr>
+</table><br />
+<h3>
+<a name="246">Début de la classe Formateur</a> 
+</h3>
+<table class="Text" border="1" cellpadding="3" cellspacing="1" width="100%"><tr><td>
+<p align="left">/***********************************************************************<br />
+ * Module:  Formateur.cs<br />
+ * Author:  essarraj<br />
+ * Purpose: Definition of the Class gestion_rh.Formateur<br />
+ ***********************************************************************/
+</p>
+</td></tr>
+</table><br />
+<h3>
+<a name="247">Importations de la classe Formateur</a> 
+</h3>
+<table class="Text" border="1" cellpadding="3" cellspacing="1" width="100%"><tr><td>
+<p align="left">using System;
+</p>
+</td></tr>
+</table><br />
+<hr />
+<table><tr>
+<td><table class="NavGroup"><tr><td><a class="NavButton" href="Rapp78.htm">Précédent</a></td></tr></table></td>
+<td width=4></td>
+<td><table class="NavGroup"><tr><td><a class="NavButton" href="Accueil_BleuClair.html">Accueil</a></td></tr></table></td>
+<td width=4></td>
+<td><table class="NavGroup"><tr><td><a class="NavButton" href="Rapp80.htm">Suivant</a></td></tr></table></td></tr></table>
+<br />
+<br />
+</body>
+</html>
