@@ -6,7 +6,7 @@ order: 32
 
 <!-- new slide -->
 
-# Idéation
+## Idéation
 
 ![Ideation]({{site.baseurl}}/analyse-fonctionnelle/images/ideation.jpg){:width="200px"}
 *Figure: Idéation*

@@ -4,7 +4,7 @@ chapitre: Idéation
 order: 33
 ---
 
-# Diagramme de cas d'utilisation 
+## Diagramme de cas d'utilisation 
 
 
 **Acteurs:**

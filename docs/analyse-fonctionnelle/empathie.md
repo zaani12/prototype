@@ -4,13 +4,13 @@ chapitre: Empathie
 order: 31
 ---
 
-# Empathie 
+## Empathie 
 
 Pour assurer le succès d'un projet, il est vital de comprendre les besoins et les motivations des utilisateurs. La recherche utilisateur, processus systématique visant à les cerner, permet de concevoir des produits ou services qui leur correspondent.
 
 Parmi les méthodes populaires figure la carte d'empathie, un outil visuel qui synthétise les informations clés sur les utilisateurs. Dans ce projet, un entretien avec le chef de projet permettra de réaliser une telle carte et ainsi de mieux comprendre les utilisateurs.
 
-## Entretien avec le chef de projet 
+### Entretien avec le chef de projet 
 
 Séance d'entretien avec ESSARRAJ Fouad, formateur en solicode
 
@@ -47,7 +47,7 @@ En résumé, ESSARRAJ Fouad recherche un outil qui l'aidera à mieux gérer ses 
 <!-- note -->
 
 
-## Entretien avec l'apprenant 
+### Entretien avec l'apprenant 
 
 
-## Carte d'empathie avec l'apprenant
+### Carte d'empathie avec l'apprenant

@@ -4,7 +4,7 @@ chapitre: Idéation
 order: 35
 ---
 
-# Sprint 1 - 
+## Sprint 1 - 
 
 * **Objectif:** Développer le noyau fonctionnel de l'application pour la gestion de projets et de tâches.
 
@@ -16,7 +16,7 @@ order: 35
     * Interface utilisateur intuitive pour les formateurs et les apprenants
 
 <!-- new slide -->
-## Diagramme de cas d'utilisation de gestion des projets
+### Diagramme de cas d'utilisation de gestion des projets
 
 L'utilisation du diagramme de cas d'utilisation simplifie la clarification et l'organisation des besoins en offrant une représentation visuelle des interactions entre les utilisateurs et le système. 
 {:class="introduction"}

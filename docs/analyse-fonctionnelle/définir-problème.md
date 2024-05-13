@@ -4,7 +4,7 @@ chapitre: Empathie
 order: 32
 ---
 
-# Définir le problème
+## Définir le problème
 
 ![Définir le problem](/prototype/besoin/images/problem.jpg){:width="400px"}
 *Figure: définir le problème*
