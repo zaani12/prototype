@@ -107,7 +107,8 @@ img {
 
 /* Nom de figure d'image */
 /* Par conception : le titre de figure est l'élément em situé aprés l'image */
-img+em {
+/* Il s'applique aussi sur un bloc de code  */
+img+em, pre+p>em  {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
@@ -215,4 +216,11 @@ h5 {
 #table-de-matiere+ul li a:hover {
 	color: #777;
 	/* Change text color on hover */
+}
+
+
+/* Bloc de code : pre */
+
+pre{
+text-align: center;
 }

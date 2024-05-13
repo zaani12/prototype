@@ -1,0 +1,19 @@
+classDiagram
+class Competence {
+  id : int
+  nom : String
+  description : String
+}
+class NiveauCompetence {
+  id : int
+  nom : String
+  description : String
+}
+
+namespace gestion_technologies {
+class Technologie
+}
+
+Competence "*" --> "1" NiveauCompetence
+Competence "*" --> "1" Technologie 
+ 

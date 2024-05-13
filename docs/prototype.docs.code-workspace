@@ -2,16 +2,10 @@
 	"folders": [
 		{
 			"path": "."
+		},
+		{
+			"path": "../conception"
 		}
-	],
-	"settings": {
+	]
 
-		"todo-tree.general.tags": [
-            "BUG",
-            "TODO",
-            "[ ]",
-            "[x]"
-        ]
-
-	}
 }
