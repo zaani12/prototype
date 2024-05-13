@@ -4,7 +4,7 @@ chapitre: conclusion
 presentation: conclusion
 package: gestion_projects
 presentationPackage: gestion_projects
-order: 80
+order: 800
 
 ---
 # Conclusion

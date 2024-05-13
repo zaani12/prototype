@@ -1,10 +1,10 @@
 ---
 layout: default
 chapitre: Conception
-order: 55
+order: 550
 ---
 
-## Diagramme de classes pour le Sprint 1 
+## Package - gestion projets
 
 Ce diagramme de classes représente le noyau fonctionnel de l'application, permettant la gestion des projets et des tâches.
 

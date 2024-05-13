@@ -1,0 +1,23 @@
+classDiagram
+
+class Personne {
+    + id: int 
+    + nom: String 
+    + prenom: String 
+}
+
+class Utilisateur {
+    + id : int
+    + login: String 
+    + password: String 
+
+}
+
+<<gestion_authorisation>> Utilisateur
+
+
+Personne <|-- Formateur
+Personne <|-- Apprenant
+
+Utilisateur "1" <-- "*" Formateur : "compte"
+Utilisateur "1" <-- "*" Apprenant : "compte"

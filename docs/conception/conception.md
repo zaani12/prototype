@@ -1,7 +1,7 @@
 ---
 layout: default
 chapitre: Conception
-order: 50
+order: 500
 ---
 
 # Conception
@@ -22,3 +22,41 @@ order: 50
 - diagramme de séquence dynamique
 - diagramme de classe dynamique  
 -->
+
+
+## Edition des diagrammes 
+
+à voir sur : 
+
+- [documentation](https://mermaid.js.org/syntax/classDiagram.html)
+- [mermaid.live](https://mermaid.live/)
+
+````php
+classDiagram
+class Projet {
+  + id: int
+  + nom: string
+  + description: string
+}
+
+class Tâche {
+  + id: int
+  + nom: string
+  + description: string
+  + priorité: int
+  + état: string
+}
+
+Projet --* Tâche
+
+````
+
+## Diagramme de navigation 
+
+Un exemple de diagramme de navigation
+````
+graph TD
+A[Index] --> B[Ajouter]
+A --id--> C[Supprimer]
+A --id--> D[Modifier]
+````
