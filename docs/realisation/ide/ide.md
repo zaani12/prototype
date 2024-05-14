@@ -62,34 +62,19 @@ order:  610
 
 #### JSON
 
-     - JSON est un format de données courant dans les fichiers de configuration tels que package.json ou project.json. Nous l'utilisons également largement dans Visual Studio Code pour nos fichiers de configuration. Lors de l'ouverture d'un fichier se terminant par .json, VS Code propose des fonctionnalités pour simplifier l'écriture ou la modification du contenu du fichier.
-
-
-
-
-
 ### Gestion des packages 
 
 #### NPM Intellisence
 
-    - npm Intellisense vous permet de gagner du temps et de l’énergie en fournissant une auto-complétion intelligente pour les importations de paquets npm. Il suggère des noms de paquets au fur et à mesure que vous les saisissez, ce qui facilite l’importation de dépendances dans votre projet.
+- npm Intellisense vous permet de gagner du temps et de l’énergie en fournissant une auto-complétion intelligente pour les importations de paquets npm. Il suggère des noms de paquets au fur et à mesure que vous les saisissez, ce qui facilite l’importation de dépendances dans votre projet.
 
 #### Composer "All-in-One"
 
-  - Composer "All-in-One" provides complete integration of composer and packagist into Visual Studio Code. The extension provides quick composer commands, IntelliSense for composer.json, code lenses, code actions, schema validation, browsing and searching packages, checking abandoned packages, running user scripts, and it extends VS Code with composer tasks.
-
-    
-
-
 ### Debug
 
-#### Php debug
+#### PHP debug
 
-   - Php debug est un adaptateur de débogage entre VS Code et Xdebug par Derick Rethans. Xdebug est une extension PHP (un fichier .so sous Linux et un fichier .dll sous Windows) qui doit être installée sur votre serveur.
-  
-
-  
-
+- Php debug est un adaptateur de débogage entre VS Code et Xdebug par Derick Rethans. Xdebug est une extension PHP (un fichier .so sous Linux et un fichier .dll sous Windows) qui doit être installée sur votre serveur.
 
 ### Création des diagrammes
 
@@ -99,14 +84,11 @@ Name: Mermaid Markdown Syntax Highlighting
 Id: bpruitt-goddard.mermaid-markdown-syntax-highlighting
 Description: Markdown syntax support for the Mermaid charting language
 
-
 #### Markdown Preview Mermaid Support
 
 #### Mermaid Editor
 Id: tomoyukim.vscode-mermaid-editor
 Description: Live editor for mermaid.js in Visual Studio Code
-
-
 
 ### Édition des images  
 
@@ -119,7 +101,4 @@ Description: Live editor for mermaid.js in Visual Studio Code
 
 
 #### Luna Paint
-     - Luna Paint est une extension pour VS Code qui vous permet de modifier des images raster directement depuis l'éditeur. Il vous suffit d'ouvrir une image depuis l'explorateur et de commencer à l'éditer comme n'importe quel autre fichier.
 
-    - Unit Test Explorer UI for VSC fournit une interface utilisateur extensible pour exécuter vos tests dans VS Code. Elle peut être utilisée avec n'importe quel framework de test s'il existe une extension Test Adapter correspondante.
-  

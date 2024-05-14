@@ -1,0 +1,21 @@
+@startuml pkg_competences
+
+left to right direction
+
+
+actor Formateur as formateur
+actor Apprenant as apprenant
+
+
+package pkg_competences {
+  formateur -->  (Gestion des compétences) 
+  formateur -->  (Gestion des niveaux de compétences) 
+
+  apprenant --> (Afficher les compétences)
+ 
+  (Afficher les compétences) ..> (Gestion des compétences) : <<extend>>
+}  
+
+' note right of admin : "note 1"
+
+@enduml

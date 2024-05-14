@@ -1,0 +1,22 @@
+@startuml use_case_pk_authentification
+
+left to right direction
+'  top to bottom direction
+
+
+actor Formateur as formateur
+actor Apprenant as apprenant
+
+
+package pkg_technologies {
+  formateur -->  (Gestion des technologies) 
+  formateur -->  (Gestion des catégories des technologies) 
+  (Gestion des technologies) <.  (Ajouter) : <<extend>>
+  (Ajouter) <. (Affecter la technologie à une compétence)   : <<extend>>
+  apprenant -->(Consulter les technologies)
+  (Consulter les technologies) ..> (Gestion des technologies)
+}  
+
+' note right of admin : "note 1"
+
+@enduml

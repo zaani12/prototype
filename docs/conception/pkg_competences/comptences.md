@@ -1,33 +1,13 @@
 ---
 layout: default
 chapitre: Conception
+package: pkg_competences
 order: 530
 ---
 
 ## Conception - Gestion des compétences
 
-### Diagramme de classe
+### Diagramme de classes 
 
-<pre class="mermaid">
-
-classDiagram
-class Competence {
-  id : int
-  nom : String
-  description : String
-}
-class NiveauCompetence {
-  id : int
-  nom : String
-  description : String
-}
-
-namespace gestion_technologies {
-class Technologie
-}
-
-Competence "*" --> "1" NiveauCompetence
-Competence "*" --> "1" Technologie 
- 
-
-</pre>
+![Conception - gestion des compétences ](/prototype/diagrammes/classes-competences.svg){:width="400px"}
+**Conception - gestion des compétences**

@@ -1,8 +1,8 @@
 # TODO exposé-1 : créer une liste avec YML
 - pkg_authentification
+- pkg_competences
 - pkg_technologies
 - pkg_autorisations
-- pkg_competences
 - pkg_rh
 - pkg_projets
 - pkg_sous_taches
