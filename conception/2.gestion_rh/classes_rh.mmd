@@ -1,23 +1,25 @@
 classDiagram
 
+namespace gestion_rh{
 class Personne {
     + id: int 
     + nom: String 
     + prenom: String 
 }
+class Formateur 
+class Apprenant
+}
 
+
+namespace gestion_authentifications {
 class Utilisateur {
     + id : int
     + login: String 
     + password: String 
-
 }
-
-<<gestion_authorisation>> Utilisateur
-
+}
 
 Personne <|-- Formateur
 Personne <|-- Apprenant
-
-Utilisateur "1" <-- "*" Formateur : "compte"
-Utilisateur "1" <-- "*" Apprenant : "compte"
+Utilisateur "1" <-- "1" Formateur : "compte"
+Utilisateur "1" <-- "1" Apprenant : "compte"

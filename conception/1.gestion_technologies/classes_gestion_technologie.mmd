@@ -1,4 +1,8 @@
 classDiagram
+
+namespace gestion_technologies{
+
+
 class Technologie {
   id : int
   nom : String
@@ -8,5 +12,6 @@ class CategorieTechnologie {
   id : int
   nom : String
   description : String
+}
 }
 Technologie "*" --> "1" CategorieTechnologie
