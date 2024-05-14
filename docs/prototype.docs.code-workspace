@@ -4,9 +4,15 @@
 			"path": "."
 		},
 		{
-			"path": "../conception",
-			"name": "Dossier conception"
+			"path": "../modélisation",
+			"name": "Modélisationn"
 		}
-	]
+	],
+
+	"settings": {
+
+        "plantuml.diagramsRoot": ".",
+		"plantuml.exportOutDir": "../docs/diagrammes/"
+    }
 
 }

@@ -14,6 +14,9 @@ class TodoRepository{
         // TODO : ne pas traiter tous les fichiers et dossier indiquer dans le fichier .gitignore
         this.directory_ignore = [".bundle",".vscode",".git",".github","_site","vendor","node_modules"]
 
+        this.todo_comment_and_tag = ["// TODO","<!-- TODO"]
+        
+
     }
     /**
      * find all todo in current Laravel app
@@ -54,7 +57,8 @@ class TodoRepository{
 
             lines.forEach((todo_line,index) => {
 
-              if (todo_line.trim().startsWith('// TODO')) {
+              // if (todo_line.trim().startsWith('// TODO')) {
+              if(this.todo_comment_and_tag.some(element => todo_line.startsWith(element))){
                 // Afficher un message sans retour à la ligne
                 process.stdout.write('.'); 
                 let num_line = index +1

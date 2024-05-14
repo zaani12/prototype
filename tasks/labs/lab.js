@@ -1,5 +1,5 @@
 const path = require('path');
-const TodoRepository = require('./Repositories/TodoRepository');
+const TodoRepository = require('../Repositories/TodoRepository');
 
 let app_path = path.resolve(__dirname,"../" ) ;
 

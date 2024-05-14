@@ -10,14 +10,14 @@ class Task{
         this.level = "";
         
         // TODO css-2 : Convert to function, and execute it after par load.
-        var regex = /^(?:\s*\/\/\s+)(.+?)\s+(.+?)-(.+?)\s+:\s+(.*?)\s*$/;
+        var regex = /^(.+?) (.+?)\s+(.+?)-(.+?)\s+:\s+(.*?)\s*$/;
         // regex = /\/\/ TODO : (.*)/;
         let match = this.todo_line.match(regex);
 
         if(match){
-            this.technology = match[2];
-            this.level = match[3];
-            this.description = match[4];
+            this.technology = match[3];
+            this.level = match[4];
+            this.description = match[5];
            
         }
     }
