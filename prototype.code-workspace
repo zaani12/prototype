@@ -12,7 +12,6 @@
             "[ ]",
             "[x]"
         ],
-        "workbench.welcomePage.folders": ["docs","conception"],
         "workbench.startupEditor": "readme",
         
     }
