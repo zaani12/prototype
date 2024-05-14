@@ -1,0 +1,59 @@
+classDiagram 
+
+namespace gestion_competence {
+  class Competence {
+    id : int
+    nom : String
+    description : String
+  }
+  class NiveauCompetence {
+    id : int
+    nom : String
+    description : String
+  }
+}
+
+namespace gestion_technologies {
+  class Technologie {
+    id : int
+    nom : String
+    description : String
+  }
+  class CategorieTechnologie {
+    id : int
+    nom : String
+    description : String
+  }
+}
+
+Competence "*" --> "1" NiveauCompetence
+Competence "*" --> "1" Technologie 
+ 
+namespace gestion_rh{
+  class Personne {
+      + id: int 
+      + nom: String 
+      + prenom: String 
+  }
+
+  class Utilisateur {
+      + id : int
+      + login: String 
+      + password: String 
+
+  }
+  class Formateur{
+  }
+  class Apprenant{
+  }
+}
+
+Personne <|-- Formateur
+Personne <|-- Apprenant
+
+Utilisateur "1" <-- "*" Formateur : "compte"
+Utilisateur "1" <-- "*" Apprenant : "compte"
+
+
+
+Technologie "*" --> "1" CategorieTechnologie
