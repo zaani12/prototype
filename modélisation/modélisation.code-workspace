@@ -9,6 +9,7 @@
 		// Voir aussi la configuration dans les autres fichiers workspace
 		"plantuml.diagramsRoot": "",
 		"plantuml.exportOutDir": "../docs/diagrammes/",
-		"mermaid-editor.generate.outputPath": "../docs/diagrammes/"
+		"mermaid-editor.generate.outputPath": "../docs/diagrammes/",
+		"mermaid-editor.generate.useCurrentPath" : false
 	}
 }

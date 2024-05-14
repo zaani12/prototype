@@ -10,23 +10,10 @@ order: 520
 
 ### Diagramme de classes 
 
-```mermaid
-classDiagram
-namespace gestion_authentifications {
-class User {
-    + id : int
-    + login: String 
-    + password: String 
 
-}
-class Role{
-    + id : int
-    + name: String 
-    + description: String 
-}
-}
-User "*" --> "1" Role
-```
-**Figure : Diagramme de classes : Gestion d'authentification**
+![Diagramme de classes - gestion d'authentification ](/prototype/diagrammes/classes_pkg_authentification.svg){:width="400px"}
+**Diagramme de classes - gestion d'authentification**
+
+
 
 <!-- new slide -->

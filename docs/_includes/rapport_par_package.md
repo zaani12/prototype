@@ -1,6 +1,8 @@
 {% assign pages = site.pages | sort: "order" %}
 {% for page in pages %}
-  {% if page.package == "global" or  page.package == package_name %}
+<!-- page.package == "global" or -->
+{% if   page.package == package_name %}
+<!-- {{- page.path  | markdownify -}} -->
     {{- page.content | markdownify -}}
   {% endif %}
 {% endfor %}
