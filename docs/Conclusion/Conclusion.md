@@ -8,7 +8,7 @@ order: 800
 
 ---
 # Conclusion
-
+ 
 ![Conclusion](./images/conclusion.png){:width="900px"}*Figure: Conclusion*
 
 <!-- note -->
