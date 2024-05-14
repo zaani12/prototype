@@ -38,6 +38,14 @@ order:  610
 [VS Marketplace Link](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree) 
 
 
+#### PlantUML
+
+- Name: PlantUML
+- Id: jebbs.plantuml
+- Description: Rich PlantUML support for Visual Studio Code.
+- VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml
+
+
 ### Édition de code  
 
 #### Prettier

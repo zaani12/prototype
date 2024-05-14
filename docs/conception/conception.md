@@ -1,6 +1,7 @@
 ---
 layout: default
 chapitre: Conception
+package : global
 order: 500
 ---
 

@@ -1,6 +1,7 @@
 ---
 layout: default
 chapitre: table de matiere
+package : global
 order: 1
 ---
 

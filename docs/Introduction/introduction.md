@@ -1,10 +1,11 @@
 ---
 layout: default
 chapitre: Prototype
+package : global
 order: 2
 ---
 
-# Prototype 
+# Introduction 
 {:class="sectionHeader"}
 
 
