@@ -3,5 +3,9 @@ layout: default
 order: 1
 ---
 
-
-- [gestion_authentification](/prototype/rapports/gestion_authentification/)
+{% assign pages = site.pages | sort: "order" %}
+{% for page in pages %}
+ {% if page.chapitre %}
+    {{- page.content | markdownify -}}
+  {% endif %}
+{% endfor %}

@@ -1,7 +1,7 @@
 ---
 layout: default
 chapitre: Conception
-package : gestion_authentification
+package : pkg_authentification
 order: 520
 ---
 

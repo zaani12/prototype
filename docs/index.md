@@ -3,9 +3,14 @@ layout: default
 order: 1
 ---
 
-{% assign pages = site.pages | sort: "order" %}
-{% for page in pages %}
- {% if page.chapitre or page.package %}
-    {{- page.content | markdownify -}}
-  {% endif %}
-{% endfor %}
+# Rapports
+
+<a href="/prototype/rapports/"> Rapport globale </a> 
+
+## Par packages
+
+<ul>
+  {% for package in site.data.packages %}
+    <li> <a href="/prototype/rapports/{{ package }}"> {{ package }} </a> </li>
+  {% endfor %}
+</ul>
