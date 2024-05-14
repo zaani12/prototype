@@ -3,7 +3,7 @@
 ## Workspaces 
 
 - [Documentation](./docs/prototype.docs.code-workspace)
-- [Conception](./conception/conception.code-workspace)
+- [Conception](./modélisation/modélisation.code-workspace)
 - [Application](./app/prototype.app.code-workspace)
 
 ## Exécution des rapports 

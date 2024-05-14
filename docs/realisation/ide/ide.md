@@ -110,6 +110,14 @@ Description: Live editor for mermaid.js in Visual Studio Code
 
 ### Édition des images  
 
+#### Svg Preview
+
+- Name: Svg Preview
+- Id: SimonSiefke.svg-preview
+- Description: Preview for Svg files
+- VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=SimonSiefke.svg-preview
+
+
 #### Luna Paint
      - Luna Paint est une extension pour VS Code qui vous permet de modifier des images raster directement depuis l'éditeur. Il vous suffit d'ouvrir une image depuis l'explorateur et de commencer à l'éditer comme n'importe quel autre fichier.
 
