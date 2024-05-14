@@ -41,8 +41,11 @@ export function table_matiere(){
     
     });
     
+    if(tableDeMatiere){
     // Insert the unordered list after the table-de-matiere element
     tableDeMatiere.insertAdjacentElement('afterend', ul);
+    }
+    
 
 }
 
