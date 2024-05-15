@@ -2,7 +2,7 @@
 layout: default
 chapitre: Diagamme de cas d'utilisation  gestion des compétences
 package : pkg_technologies
-order: 340
+order: 330
 ---
 
 ## Diagamme de cas d'utilisation : gestion des technologies

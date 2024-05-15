@@ -1,0 +1,38 @@
+# Ordre des chapitres 
+
+- pk_rapport
+  - 1 : Table des matières
+  - 300 : Analyse
+  - 500 : Conception
+  - 600 : Réalisation
+- pk_global
+  - 200 : Besoin
+  - 400 : Analyse Techniques
+- pkg_authentification
+  - 320-324 : Analyse
+  - 520-524 : Conception
+  - 620-624 : Réalisation
+- pkg_competences
+  - 325-329 : Analyse
+  - 525-529 : Conception
+  - 625-629 : Réalisation
+- pkg_technologies
+  - 330-334 : Analyse
+  - 530-534 : Conception
+  - 630-634 : Réalisation
+- pkg_autorisations
+  - 335-339 : Analyse
+  - 535-539 : Conception
+  - 635-639 : Réalisation
+- pkg_rh
+  - 340-344 : Analyse
+  - 540-544 : Conception
+  - 640-644 : Réalisation
+- pkg_projets
+  - 345-344 : Analyse
+  - 545-544 : Conception
+  - 645-644 : Réalisation
+- pkg_sous_taches
+  - 350-354 : Analyse
+  - 550-554 : Conception
+  - 650-654 : Réalisation

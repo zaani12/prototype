@@ -5,9 +5,5 @@ package: pk_global
 order: 1
 ---
  
-{% assign pages = site.pages | sort: "order" %}
-{% for page in pages %}
- {% if page.chapitre %}
-    {{- page.content | markdownify -}}
-  {% endif %}
-{% endfor %}
+{% assign package_name = "pkg_global" %}
+{% include rapport_par_package.md %}

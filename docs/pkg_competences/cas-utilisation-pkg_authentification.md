@@ -2,7 +2,7 @@
 layout: default
 chapitre: Idéation
 package : pkg_competences
-order: 330
+order: 325
 ---
 
 ## Diagamme de cas d'utilisation : gestion des compétences

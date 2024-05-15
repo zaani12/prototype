@@ -2,7 +2,7 @@
 layout: default
 chapitre: Conception
 package: pkg_competences
-order: 530
+order: 525
 ---
 
 ## Conception - Gestion des compétences
