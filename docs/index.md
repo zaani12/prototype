@@ -11,7 +11,7 @@ order: 1
 
 <ul>
   {% for package in site.data.packages %}
-    <li> <a href="/prototype/{{ package }}/rapport/"> {{ package }} </a> </li>
+    <li> <a href="/prototype/{{ package }}/rapport"> {{ package }} </a> </li>
   {% endfor %}
 </ul>
 
