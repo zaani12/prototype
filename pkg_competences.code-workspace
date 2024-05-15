@@ -31,15 +31,15 @@
             "name":"migrations"
         },
         {
-            "path": "./docs/pkg_authentification",
+            "path": "./docs/pkg_competences",
             "name":"docs"
         },
         {
-            "path": "./docs/diagrammes/pkg_authentification",
+            "path": "./docs/diagrammes/pkg_competences",
             "name":"docs/diagrammes"
         },
         {
-            "path": "./modélisation/pkg_authentification",
+            "path": "./modélisation/pkg_competences",
             "name":"modélisation"
         },   
       

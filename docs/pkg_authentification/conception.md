@@ -11,7 +11,7 @@ order: 520
 ### Diagramme de classes 
 
 
-![Diagramme de classes - gestion d'authentification ](/prototype/diagrammes/classes_pkg_authentification.svg){:width="400px"}
+![Diagramme de classes - gestion d'authentification ](/prototype/diagrammes/pkg_authentification/classes_pkg_authentification.svg){:width="400px"}
 **Diagramme de classes - gestion d'authentification**
 
 

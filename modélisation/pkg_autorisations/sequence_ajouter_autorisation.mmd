@@ -1,11 +1,14 @@
 sequenceDiagram
+actor Admin
+Admin->>Système: use case : Ajouter autorisation
+Admin->>Système: Choisir le rôle
+Admin->>Système: Choisir le le contôleur
 
-Admin->>Système: formulaire d'insertion d'une autorisation
-Admin->>Système: choisir le rôle
-Admin->>Système: choisir le le contôleur
-
-Admin->>Système: choisir les actions à autoriser
-Admin->>Système: enregistrer
+Admin->>Système: Choisir les actions à autoriser
+Admin->>+Système: Enregistrer
 activate Système
-Système-->>Admin: message de confirmation
+Système -->>Système: "Affecter les permissions au rôles"
+note over Système : une action est en relation avec une permission
 deactivate Système
+Système-->>-Admin: message de confirmation
+
