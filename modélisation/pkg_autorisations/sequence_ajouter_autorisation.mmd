@@ -1,0 +1,11 @@
+sequenceDiagram
+
+Admin->>Système: formulaire d'insertion d'une autorisation
+Admin->>Système: choisir le rôle
+Admin->>Système: choisir le le contôleur
+
+Admin->>Système: choisir les actions à autoriser
+Admin->>Système: enregistrer
+activate Système
+Système-->>Admin: message de confirmation
+deactivate Système

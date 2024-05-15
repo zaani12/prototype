@@ -1,0 +1,21 @@
+@startuml use_case_pk_authentification
+
+left to right direction
+'  top to bottom direction
+
+
+actor Admin as admin
+
+package pkg_autorisations {
+  admin -->  (Gestion des controller)
+  admin -->  (Gestion des actions) 
+  admin -->  (Gestion des autorisation) 
+
+  ' extends : gestion des actions 
+  (Gestion des actions)  <.  (ajouter action) : <<extend>>
+  (ajouter action) <.. (Choisir les actions permises avec lui) : <<extend>>
+ }  
+
+' note right of admin : "note 1"
+
+@enduml
