@@ -1,6 +1,6 @@
 ---
 layout: default
-chapitre: Diagamme de cas d'utilisation  gestion des compétences
+chapitre: true
 package : pkg_technologies
 order: 330
 ---

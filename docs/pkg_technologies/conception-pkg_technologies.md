@@ -1,6 +1,6 @@
 ---
 layout: default
-chapitre: Conception
+chapitre: true
 package : pkg_technologies
 order: 530
 ---

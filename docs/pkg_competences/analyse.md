@@ -1,6 +1,6 @@
 ---
 layout: default
-chapitre: Idéation
+chapitre: true
 package : pkg_competences
 order: 325
 ---
