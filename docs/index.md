@@ -14,3 +14,21 @@ order: 1
     <li> <a href="/prototype/rapports/{{ package }}"> {{ package }} </a> </li>
   {% endfor %}
 </ul>
+
+## Organisation du rappor par package 
+
+- Packages
+  - global
+    - Empathie
+    - Diagramme de cas d'utilisation global
+    - Diagramme de classe global
+  - rapport
+    - Table de matière
+    - Introduction
+    - Conclusion
+  - pk_pakcage_name
+    - Introdiction au package 
+    - Analyse
+    - Conception
+    - Réalisation
+    - Conclusion
