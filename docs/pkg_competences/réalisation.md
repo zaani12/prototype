@@ -10,4 +10,5 @@ order:  625
 
 Les cas d'utilisation 
 
-- cas
+- Gestion des compétences
+- Gestion des niveaux de compétences 
