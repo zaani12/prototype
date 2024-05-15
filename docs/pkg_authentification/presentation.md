@@ -1,5 +1,7 @@
 ---
 layout: presentation
+chapitre: false
+package: pkg_authentification
 order: 1
 ---
 

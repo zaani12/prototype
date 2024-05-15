@@ -218,9 +218,21 @@ h5 {
 	/* Change text color on hover */
 }
 
+#menu_rapports{
+	text-align: center;
+	margin: 5px;
+}
 
-/* Bloc de code : pre */
+#menu_rapports i {
+	color: #2E74B5;
+	font-size: 30px;
+	padding-right: 3px;
+}
 
-pre{
-text-align: center;
+#menu_rapports i:hover {
+	color: #388bd7;
+}
+
+#menu_rapports i:visited {
+	color: #0c5294;
 }

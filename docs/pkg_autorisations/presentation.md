@@ -1,5 +1,7 @@
 ---
 layout: presentation
+chapitre: false
+package: pkg_autorisations
 order: 1
 ---
 

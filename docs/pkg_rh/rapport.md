@@ -1,5 +1,7 @@
 ---
 layout: default
+chapitre: false
+package: pkg_rh
 order: 1
 ---
 

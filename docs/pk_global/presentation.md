@@ -1,8 +1,10 @@
 ---
-layout: default
+layout: presentation
+chapitre: false
+package: pk_global
 order: 1
 ---
-
+ 
 {% assign pages = site.pages | sort: "order" %}
 {% for page in pages %}
  {% if page.chapitre %}

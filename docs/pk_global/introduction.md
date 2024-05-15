@@ -1,10 +1,10 @@
 ---
 layout: default
-chapitre: Prototype
+chapitre: true
 package : global
 order: 2
 ---
-
+ 
 # Introduction 
 {:class="sectionHeader"}
 
@@ -13,7 +13,7 @@ order: 2
 
 <!-- TODO Ali : Insertion d'une #image qui représent les deux objectifs de prototype -->
 
-![Introduction](/prototype/introduction/images/introduction.jpg){:width="50%"}*Figure: Introduction*
+![Introduction](/prototype/pk_global/images/introduction.jpg){:width="50%"}*Figure: Introduction*
 
 <!-- note -->
 

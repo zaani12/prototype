@@ -1,11 +1,12 @@
 ---
 layout: default
-chapitre: table de matiere
-package : rapport
+chapitre: true
+package : pkg_rapport
 order: 1
 ---
 
-# Table de matiere
+{:id="table-de-matiere"}
+# Table de matière
  
 <!-- Ce document est vide car il contient un code JavaScript qui génère dynamiquement le contenu et l'affiche ici  -->
 

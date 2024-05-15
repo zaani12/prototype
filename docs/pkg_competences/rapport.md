@@ -1,5 +1,7 @@
 ---
-layout: presentation
+layout: default
+chapitre: false
+package: pkg_competences
 order: 1
 ---
 

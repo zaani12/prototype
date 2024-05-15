@@ -2,7 +2,8 @@
 layout: default
 chapitre: true
 package : pkg_authentification
-order: 1
+is_global : false
+order: 800
 ---
 
-# Introduction
+# Conclusion

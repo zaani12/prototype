@@ -1,7 +1,7 @@
 ---
 layout: default
-chapitre: Analyse fonctionnelle
-package : rapport
+chapitre: true
+package : pkg_rapport
 order: 300
 ---
 

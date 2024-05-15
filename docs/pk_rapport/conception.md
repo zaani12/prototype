@@ -1,7 +1,7 @@
 ---
 layout: default
-chapitre: Conception
-package : rapport
+chapitre: true
+package : pkg_rapport
 order: 500
 ---
 

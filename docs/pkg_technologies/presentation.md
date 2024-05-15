@@ -1,5 +1,7 @@
 ---
-layout: default
+layout: presentation
+chapitre: false
+package: pkg_technologies
 order: 1
 ---
 

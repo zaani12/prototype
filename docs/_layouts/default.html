@@ -9,6 +9,8 @@
     <title> Rapport </title>
 
     <!-- TODO html-1 : utilisation des fichiers locaux en de rupture de connexion internet dans la classe   -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <script src="
@@ -23,9 +25,20 @@
 </head>
 <body>
     <div class="book">
-        <a id="presentation-icon" href="#" target="_blank">
-            <img src="{{ site.baseurl }}/images/entreprise.png" width="80px" height="80px" />
-        </a>
+        <div id="menu_rapports">
+            <a id="rapport_global-icon" href="{{site.baseurl}}/" >
+                <i class="fas fa-list"></i>
+            </a>
+            {% if page.package %}
+            <a id="rapport_global-icon" href="{{site.baseurl}}/{{page.package}}/rapport" >
+                <i class="fas fa-file-word"></i>
+            </a>
+            <a id="presentation-icon" href="{{site.baseurl}}/{{page.package}}/presentation" target="_blank">
+                <i class="fas fa-file-powerpoint"></i>
+            </a>
+            {%  endif %}
+        </div>
+       
         <div class="page">
             {{ content }}
         </div>
