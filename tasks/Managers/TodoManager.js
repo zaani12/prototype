@@ -16,12 +16,28 @@ class TodoManager{
 
         const csvFilePath = './tasks.csv'; // Output CSV file path
         const csvContent = [
-            ['technology','level','description','file_path','line_number','todo_line'], // Header row
+            ['Technologie',
+            'Niveau',
+            'Package',
+            'Apprenant',
+            'Question',
+            'Todo',
+            'File path',
+            'Numéro de ligne'], // Header row
         ];
         
     
         for (const task of tasks) {
-          csvContent.push([task.technology,task.level, task.description,task.file_path,task.line_number,task.todo_line]); // Add task data to CSV content
+
+          csvContent.push([
+            task.technology,
+            task.level,
+            "",
+            "",
+            task.description,
+            task.todo_line,
+            task.file_path,
+            task.line_number]); // Add task data to CSV content
         }
         const csvString = csvContent.map(row => row.join(';')).join('\n'); // Convert CSV content to comma-separated string
         fs.writeFileSync(csvFilePath, csvString, {encoding:'utf16le'});

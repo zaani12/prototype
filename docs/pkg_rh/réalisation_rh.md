@@ -8,7 +8,7 @@ order: 625
 
 ### Rappel - lab-héritage 
 
-<!-- TODO laravel-3 : Rappel de lab-héritage
+<!-- TODO lab_backend-3 : Rappel de lab-héritage
 
 - Lien vers le lab
 - Problématique

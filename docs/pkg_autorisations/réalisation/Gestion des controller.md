@@ -7,6 +7,6 @@ order: 620
 
 ### Gestion des controller
 
-<!-- TODO laravel-1 : pkg_autorisations - Gestion des controller -->
+<!-- TODO backend-1 : pkg_autorisations - Gestion des controller -->
 
-<!-- TODO laravel-3 : pkg_autorisations - Insertion automatique des actions-->
+<!-- TODO backend-3 : pkg_autorisations - Insertion automatique des actions-->

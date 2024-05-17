@@ -15,7 +15,7 @@ order: 525
 
 ### Schéma de navigation
 
-<!-- TODO laravel-3 : Donnez le schéma de navigation de l'interface CRUD de gestion des formateurs -->
+<!-- TODO conception-3 : Donnez le schéma de navigation de l'interface CRUD de gestion des formateurs -->
 
 <pre class="mermaid">
 ---
