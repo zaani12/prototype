@@ -1,0 +1,28 @@
+@startuml pkg_projets 
+
+left to right direction
+
+
+actor Formateur as formateur
+actor Apprenant as apprenant
+
+
+package pkg_projets {
+
+  (Gestion des projets) <.. (Ajouter projet) 
+  (Affectation de projet aux apprenants) .> (Ajouter projet)
+
+  (Gestion des tâches) <.. (Ajouter tâche) 
+  (Gestion des tâches)  <. (Consulter ses tâches)
+  (Consulter ses tâches) <. (filtrer par projet)
+  (Affectation de la tâche à un apprenant) .> (Ajouter tâche)
+ 
+  formateur -->  (Gestion des projets) 
+  formateur -->  (Gestion des tâches) 
+  apprenant --> (Consulter ses tâches)
+
+}  
+
+' note right of admin : "note 1"
+
+@enduml
