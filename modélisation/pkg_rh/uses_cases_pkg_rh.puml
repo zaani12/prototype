@@ -1,0 +1,21 @@
+@startuml uses_cases_pkg_rh
+ 
+left to right direction
+
+actor Formateur as formateur
+actor Admin as admin
+
+package pkg_competences {
+
+ 
+  (gestion des formateurs)  ..> (gestion des personnes) 
+  (gestion des apprenants)  ..> (gestion des personnes) 
+  formateur --  (gestion des apprenants) 
+  admin --  (gestion des formateurs) 
+
+  (Intialiser le mot de passe) ..> (gestion des personnes)
+}  
+
+' note right of admin : "note 1"
+
+@enduml
