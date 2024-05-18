@@ -1,26 +1,27 @@
-@startuml pkg_realisation_projet
+@startuml uses_cases_pkg_realisation_projet
 
 left to right direction
 
 actor Apprenant as apprenant
+actor Formateur as formateur
 
 package pkg_realisation_projet {
 
-  apprenant -->  (Consulter les tâches) 
-  (filtrer par projet) ..> (Consulter les tâches) 
-  (Changer le statut de la tâche) ..> (Consulter les tâches) 
-  apprenant -->  (filtrer par projet) 
-  apprenant -->  (Changer le statut de la tâche)
+ apprenant -- (Gestion des livrables)
+ formateur -- (Gestion catégories des livrables)
+ formateur -- (Gestion des message)
+ (Gestion des message) <. (Rédaction des message d'un projet)
+ (Gestion des message) <. (Rédaction des message d'une tâche)
 
- 
 }  
 
 package pkg_projets{
 
-  (gestion des tâches)
-}
+  (Modifier projet)  <.. (Rédaction des message d'un projet)
+  (Modifier tâche)  <.. (Rédaction des message d'une tâche)
+  (Modifier tâche)  <.. (valider la tâche)
 
-(Consulter les tâches) ..> (gestion des tâches)
+}
 
 
 ' note right of admin : "note 1"

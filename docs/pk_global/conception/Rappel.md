@@ -29,13 +29,13 @@ classDiagram
 class Projet {
   + id: int
   + nom: string
-  + description: string
+  + description: text
 }
 
 class Tâche {
   + id: int
   + nom: string
-  + description: string
+  + description: text
   + priorité: int
   + état: string
 }

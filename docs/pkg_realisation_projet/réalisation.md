@@ -2,13 +2,11 @@
 layout: default
 chapitre : true
 package: pkg_realisation_projet
-order:  625
+order:  650
 ---
 
-## Réalisation package gestion des compétences
+## Réalisation package gestion des réalisations
 
-
-Les cas d'utilisation 
-
-- Gestion des compétences
-- Gestion des niveaux de compétences 
+- Gestion des livrables
+- Gestion catégories des livrables
+- Gestion des messages

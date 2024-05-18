@@ -9,19 +9,18 @@ actor Apprenant as apprenant
 
 package pkg_projets {
 
-  (Gestion des projets) <.. (Ajouter projet) 
-  (Affectation de projet aux apprenants) .> (Ajouter projet)
-  (Affectation de projet aux apprenants) <.. (filtrer par équipe)
-  (Gestion des tâches) <.. (Ajouter tâche) 
-  (Gestion des tâches)  <. (Consulter ses tâches)
-  (Consulter ses tâches) <.. (filtrer par projet)
-  (Consulter ses tâches) <.. (filtrer tâche par équipe)
-  (Affectation de la tâche à un apprenant) .> (Ajouter tâche)
-  (Envoyer notification)  .> (Affectation de la tâche à un apprenant)
-  formateur -->  (Gestion des projets) 
-  formateur -->  (Gestion des tâches) 
-  apprenant --> (Consulter ses tâches)
+  formateur --  (Gestion des projets) 
+  formateur --  (Gestion des tâches)
+  (Gestion des tâches)  <. (Modifier tâche)
+  (Modifier tâche)  <.. (valider la tâche)
 
+  apprenant -- (Consulter ses tâches)
+  formateur -- (valider la tâche)
+ 
+
+  (Gestion des tâches) <. (Consulter ses tâches)
+  (Consulter ses tâches) <.. (Affichage en diagramme de gantt)
+  (Consulter ses tâches) <.. (Affichage Kanban)
 }  
 
 ' note right of admin : "note 1"

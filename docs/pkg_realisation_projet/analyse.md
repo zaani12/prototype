@@ -2,10 +2,10 @@
 layout: default
 chapitre: true
 package : pkg_realisation_projet
-order: 325
+order: 350
 ---
 
-## Diagamme de cas d'utilisation : gestion des compétences
+## Diagamme de cas d'utilisation : Gestion des réalisations
 
-![Diagamme de cas d'utilisation : gestion des compétences](/prototype/diagrammes/pkg_competences/uses_cases_pkg_technologies.svg)
-**Diagamme de cas d'utilisation : gestion des compétences**
+![Diagamme de cas d'utilisation : Gestion des réalisations](/prototype/diagrammes/pkg_realisation_projet/uses_cases_pkg_realisation_projet.svg)
+**Diagamme de cas d'utilisation : Gestion des réalisations**
