@@ -61,10 +61,12 @@ namespace pk_projets {
 Formateur "1" --> "*" Projet : "Crée plusieurs de projets"
 
 Projet "1" --> "*" Tache
+Projet "*" --> "*" Competence : "En relation avec plusieurs technoligies"
 
 Tache "*" --> "1" Apprenant : "affectation à un seul apprenant"
 
-Projet "*" --> "*" Technologie : "En relation avec plusieurs technoligies"
+
+
 Tache "*" --> "1" NiveauCompetence
 Tache "*" --> "*" Technologie
 Tache "*" --> "1" StatutTache 

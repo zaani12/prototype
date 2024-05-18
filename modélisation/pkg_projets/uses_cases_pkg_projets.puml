@@ -17,7 +17,7 @@ package pkg_projets {
   (Consulter ses tâches) <.. (filtrer par projet)
   (Consulter ses tâches) <.. (filtrer tâche par équipe)
   (Affectation de la tâche à un apprenant) .> (Ajouter tâche)
- 
+  (Envoyer notification)  .> (Affectation de la tâche à un apprenant)
   formateur -->  (Gestion des projets) 
   formateur -->  (Gestion des tâches) 
   apprenant --> (Consulter ses tâches)

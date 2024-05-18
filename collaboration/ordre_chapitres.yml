@@ -11,9 +11,10 @@
   - 0   : pk_rapport
   - 20  : pkg_authentification
   - 25  : pkg_competences
-  - 30  : 
+  - 30  : pkg_notifications
   - 35  : pkg_autorisations
   - 40  : pkg_rh
   - 45  : pkg_projets
   - 50  : pkg_realisation_projet
+  - 55  : 
   - 90  : pkg_sous_taches
