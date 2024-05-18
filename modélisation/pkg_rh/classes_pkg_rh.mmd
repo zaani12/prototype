@@ -1,6 +1,7 @@
 classDiagram
 
 namespace gestion_rh{
+
 class Personne {
     + id: int 
     + nom: String 
@@ -8,10 +9,25 @@ class Personne {
 }
 class Formateur 
 class Apprenant
+
+class  Groupe {
+    id: int
+    nom: String
+    description: String
 }
 
 
+}
+
+namespace pk_projets {
+  class Projet
+
+}
+
+
+
 namespace gestion_authentifications {
+
 class Utilisateur {
     + id : int
     + login: String 
@@ -20,6 +36,10 @@ class Utilisateur {
 }
 
 Personne <|-- Formateur
-Personne <|-- Apprenant
+Personne <|-- Apprenant 
 Utilisateur "1" <-- "1" Formateur : "compte"
 Utilisateur "1" <-- "1" Apprenant : "compte"
+
+Apprenant  "*" --> "1"  Groupe 
+
+Projet "*" --> "1" Groupe

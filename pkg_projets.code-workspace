@@ -1,4 +1,18 @@
 {
+    "settings": {
+
+        "todo-tree.general.showActivityBarBadge": true,
+        "todo-tree.general.periodicRefreshInterval": 1,
+        "todo-tree.general.showIconsInsteadOfTagsInStatusBar": true,
+        "todo-tree.general.statusBar": "tags",
+        "workbench.startupEditor": "readme",
+        "plantuml.diagramsRoot": "./",
+		"plantuml.exportOutDir": "./",
+
+  
+ 
+
+    },
     "folders": [
         {
             "path": "./app/app/Models/GestionProjets",
@@ -44,18 +58,14 @@
         },   
       
         {
-            "path": "./maquettes/view/GestionProjets"
+            "path": "./maquettes/view/GestionProjets",
+            "name": "maquettes"
+        },
+        {
+            "path": "./collaboration",
+            "name": "collaboration"
         }
-    ],
-    "settings": {
-
-        // TODO ide-2 : configuration de todo-tree à documenter dans /réalisation/ide
-        "todo-tree.general.showActivityBarBadge": true,
-        "todo-tree.general.periodicRefreshInterval": 1,
-        "todo-tree.general.showIconsInsteadOfTagsInStatusBar": true,
-        "todo-tree.general.statusBar": "tags",
-        "workbench.startupEditor": "readme",
-        "plantuml.diagramsRoot": "./",
-		"plantuml.exportOutDir": "./"
-    }
+        
+    ]
+  
 }

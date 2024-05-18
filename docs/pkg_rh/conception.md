@@ -10,22 +10,12 @@ order: 525
 
 ## Diagramme de classes : gestion rh
 
-![Diagramme de classes : gestion rh](/prototype/diagrammes/pkg_rh/classes_pkg_rh.svg)
+![Diagramme de classes : gestion rh](/prototype/diagrammes/pkg_rh/classes_pkg_rh.svg){:width="70%"}
 *Diagramme de classes : gestion rh*
 
-### Schéma de navigation
+### Schéma de navigation -  gestion des formateurs
 
 <!-- TODO conception-3 : Donnez le schéma de navigation de l'interface CRUD de gestion des formateurs -->
 
-<pre class="mermaid">
----
-title : En construction
----
-
-graph TD
-A[Index] --> B[Ajouter]
-A --id--> C[Supprimer]
-A --id--> D[Modifier]
-
-</pre>
-*Figure : Schéma de navigation de gestion des formateurs*
+![Schéma de navigation de gestion des formateurs](/prototype/diagrammes/pkg_rh/schéma-navigation-gestion-formateurs.svg){:width="70%"}
+*Schéma de navigation de gestion des formateurs*

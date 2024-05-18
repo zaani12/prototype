@@ -9,6 +9,11 @@
         "todo-tree.general.statusBar": "tags",
         "workbench.startupEditor": "readme",
         "plantuml.diagramsRoot": "modélisation",
-		"plantuml.exportOutDir": "docs/diagrammes/"
+		"plantuml.exportOutDir": "docs/diagrammes/",
+
+
+       
+
+       
     }
 }

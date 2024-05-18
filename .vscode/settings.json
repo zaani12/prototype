@@ -1,5 +1,7 @@
 {
+
     "files.exclude": {
         "scripts": true
     },
+   
 }

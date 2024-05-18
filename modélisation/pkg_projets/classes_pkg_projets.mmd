@@ -10,7 +10,8 @@ class Formateur
 
 
 
-namespace gestion_authentifications {
+namespace pk_projets {
+
   class Projet {
     id: int
     nom: string
@@ -39,6 +40,12 @@ namespace gestion_authentifications {
     description: string
   }
 
+  class Equipe {
+    id: int
+    nom: String
+    description: String
+  }
+
 }
 
 namespace gestion_technologies{
@@ -50,13 +57,15 @@ class NiveauCompetence
 }
 
 
+namespace gestion_rh{
+  class  Groupe 
+}
 
 
-
-
-
-Projet "1" --> "*" Formateur
+Projet "1" --> "*" Formateur : "Créateur de projet"
 Projet "1" --> "*" Tache
+Projet "*" --> "1" Groupe
+
 Tache "*" --> "*" Apprenant 
 Projet "*" --> "*" Apprenant : "participants"
 Projet "*" --> "*" Technologie
@@ -64,3 +73,6 @@ Tache "*" --> "1" NiveauCompetence
 Tache "*" --> "*" Technologie
 Projet "*" --> "1" statutProjetTache
 Tache "*" --> "1" statutProjetTache
+
+Equipe "*" --> "1" Projet
+Equipe   "*" --> "*"  Apprenant : "participants"

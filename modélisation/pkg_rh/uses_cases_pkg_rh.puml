@@ -7,15 +7,21 @@ actor Admin as admin
 
 package pkg_competences {
 
- 
   (gestion des formateurs)  ..> (gestion des personnes) 
   (gestion des apprenants)  ..> (gestion des personnes) 
   formateur --  (gestion des apprenants) 
   admin --  (gestion des formateurs) 
 
+  formateur --  (gestion des groupes) 
+  (gestion des groupes)  <.. (ajouter groupe)
+  (Affectation des apprenants) ..> (ajouter groupe)
+  (gestion des groupes)  <.. (supprimer groupe)
+
   (Intialiser le mot de passe) ..> (gestion des personnes)
+
+  note right of "gestion des groupes" : "Modifier"
 }  
 
-' note right of admin : "note 1"
+
 
 @enduml

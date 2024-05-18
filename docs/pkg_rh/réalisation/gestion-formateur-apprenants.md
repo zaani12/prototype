@@ -1,10 +1,11 @@
 ---
 layout: default
-chapitre: Conception
+chapitre: true
+package : pkg_rh
 order: 626
 ---
 
-# Gestion des formateur et apprenants 
+## Gestion des formateur et apprenants 
 
 <!-- TODO backend-3 : Gestion des formateurs et apprenants en utilisant l'héritage ( voir lab-héritage) -->
 
