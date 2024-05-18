@@ -1,7 +1,7 @@
 ---
 layout: default
 chapitre: true
-package : pkg_technologies
+package : pkg_competences
 order: 627
 ---
 

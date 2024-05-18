@@ -11,8 +11,9 @@
   - 0   : pk_rapport
   - 20  : pkg_authentification
   - 25  : pkg_competences
-  - 30  : pkg_technologies
+  - 30  : 
   - 35  : pkg_autorisations
   - 40  : pkg_rh
   - 45  : pkg_projets
-  - 50  : pkg_sous_taches
+  - 50  : pkg_realisation_projet
+  - 90  : pkg_sous_taches

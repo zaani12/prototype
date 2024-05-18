@@ -1,19 +1,20 @@
-@startuml pkg_competences
+@startuml uses_cases_pkg_technologies
 
 left to right direction
 
 
 actor Formateur as formateur
-actor Apprenant as apprenant
-
 
 package pkg_competences {
+
   formateur -->  (Gestion des compétences) 
   formateur -->  (Gestion des niveaux de compétences) 
+  formateur -->  (Gestion des technologies) 
+  formateur -->  (Gestion des catégories des technologies)
 
-  apprenant --> (Afficher les compétences)
- 
-  (Afficher les compétences) ..> (Gestion des compétences) : <<extend>>
+  (Gestion des technologies) <..  (Ajouter) : <<extend>>
+  (Ajouter) <. (Affecter la technologie à une compétence)   : <<extend>>
+   (Ajouter) <. (Affecter la technologie à une catégorie)   : <<extend>>
 }  
 
 ' note right of admin : "note 1"

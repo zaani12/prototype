@@ -11,15 +11,19 @@ class NiveauCompetence {
   nom : String
   description : String
 }
+class Technologie {
+  id : int
+  nom : String
+  description : String
 }
 
-
-
-
-namespace gestion_technologies {
-class Technologie
+class CategorieTechnologie {
+  id : int
+  nom : String
+  description : String
+}
 }
 
 Competence "*" --> "1" NiveauCompetence
 Competence "1" --> "*" Technologie 
- 
+Technologie "*" --> "1" CategorieTechnologie

@@ -11,10 +11,11 @@ package pkg_projets {
 
   (Gestion des projets) <.. (Ajouter projet) 
   (Affectation de projet aux apprenants) .> (Ajouter projet)
-
+  (Affectation de projet aux apprenants) <.. (filtrer par équipe)
   (Gestion des tâches) <.. (Ajouter tâche) 
   (Gestion des tâches)  <. (Consulter ses tâches)
-  (Consulter ses tâches) <. (filtrer par projet)
+  (Consulter ses tâches) <.. (filtrer par projet)
+  (Consulter ses tâches) <.. (filtrer tâche par équipe)
   (Affectation de la tâche à un apprenant) .> (Ajouter tâche)
  
   formateur -->  (Gestion des projets) 

@@ -1,0 +1,28 @@
+@startuml pkg_realisation_projet
+
+left to right direction
+
+actor Apprenant as apprenant
+
+package pkg_realisation_projet {
+
+  apprenant -->  (Consulter les tâches) 
+  (filtrer par projet) ..> (Consulter les tâches) 
+  (Changer le statut de la tâche) ..> (Consulter les tâches) 
+  apprenant -->  (filtrer par projet) 
+  apprenant -->  (Changer le statut de la tâche)
+
+ 
+}  
+
+package pkg_projets{
+
+  (gestion des tâches)
+}
+
+(Consulter les tâches) ..> (gestion des tâches)
+
+
+' note right of admin : "note 1"
+
+@enduml

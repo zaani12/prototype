@@ -5,10 +5,11 @@ left to right direction
 actor Formateur as formateur
 actor Admin as admin
 
-package pkg_competences {
+package pkg_rh {
 
   (gestion des formateurs)  ..> (gestion des personnes) 
   (gestion des apprenants)  ..> (gestion des personnes) 
+  (gestion des apprenants) <.. (filtrer par groupe)
   formateur --  (gestion des apprenants) 
   admin --  (gestion des formateurs) 
 
