@@ -5,7 +5,7 @@ order: 1
 
 # Rapports
 
-<a href="/prototype/pk_global/rapport/"> Rapport globale </a> 
+<a href="/prototype/pk_global/rapport"> Rapport globale </a> 
 
 ## Par packages
 

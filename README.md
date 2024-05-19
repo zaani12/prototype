@@ -16,4 +16,4 @@ cd docs
 
 ## Rapport et présentation global 
 
-- [Rapport](https://labs-web.github.io/prototype/) 
+- [Rapport](https://labs-web.github.io/prototype) 
