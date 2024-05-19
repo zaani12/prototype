@@ -1,6 +1,7 @@
 ---
 layout: default
 chapitre: true
+package: global
 order:  612
 ---
 

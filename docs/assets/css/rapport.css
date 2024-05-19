@@ -70,6 +70,9 @@ hr {
 
 @media print {
 
+	#menu_rapports{
+		display: none;
+	}
 	#presentation-icon,
 	hr {
 		display: none;

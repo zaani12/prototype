@@ -2,6 +2,7 @@
 layout: default
 chapitre : true
 package: pkg_realisation_projet
+evaluation: cc2
 order:  650
 ---
 
