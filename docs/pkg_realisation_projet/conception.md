@@ -9,5 +9,5 @@ order: 550
 
 ### Diagramme de classes 
 
-![Conception - Gestion des réalisations ](/prototype/diagrammes/pkg_competences/pkg_realisation_projet.svg){:width="400px"}
-**Conception - Gestion des réalisations**
+![Conception - Gestion des réalisations ](/prototype/diagrammes/pkg_realisation_projet/classes_pkg_realisation_projet.svg){:width="400px"}
+*Conception - Gestion des réalisations*

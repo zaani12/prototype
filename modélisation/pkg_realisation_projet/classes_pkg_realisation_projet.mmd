@@ -4,6 +4,7 @@ direction RL
 
 namespace pk_projets {
 class Projet
+class Tâche
 }
 namespace pkg_realisation_projet {
 
@@ -21,8 +22,17 @@ namespace pkg_realisation_projet {
     description: text
   }
 
+  class Message {
+    id: int
+    titre: string
+    description: text
+  }
+
 }
 
 Projet "1" --> "*" Livrable
 Livrable "*" --> "1" NatureLivrable
+
+Message "*"--> "1" Tâche
+Message "*"--> "1" Projet
 
