@@ -34,18 +34,36 @@
 {% endif %}
 
 {% assign pages = site.pages | sort: "order" %}
+
+
 {% for page in pages %}
-{% if 
-    page.order > 300 and  page.order < 400  
-    or page.order > 500 and  page.order < 600  %}
-{% if 
-    page.chapitre == true 
+<!-- In tags with more than one and or or operator, operators are checked in order from right to left. -->
+
+
+{% if affichage_analyse %}
+{% if page.order > 300 
+    and  page.order < 400 
+    and page.chapitre == true 
     and page.package == package_name
 %}
 <!-- {{- page.path  | markdownify -}} -->
     {{- page.content | markdownify -}}
 {%  endif %} 
 {%  endif %} 
+
+
+{% if affichage_conception %}
+{% if page.order > 500 
+    and  page.order < 600
+    and page.chapitre == true 
+    and page.package == package_name
+%}
+<!-- {{- page.path  | markdownify -}} -->
+    {{- page.content | markdownify -}}
+{%  endif %} 
+{%  endif %} 
+
+
 {% endfor %}
 
 
