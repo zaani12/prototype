@@ -15,33 +15,33 @@
     },
     "folders": [
         {
-            "path": "./app/app/Models/GestionProjets",
+            "path": "./app/app/Models/pkg_realisation_projet",
             "name":"Models"
         },   
         {
-            "path": "./app/resources/views/GestionProjets",
+            "path": "./app/resources/views/pkg_realisation_projet",
             "name":"Views"
         },
         {
-            "path": "./app/app/Http/Controllers/GestionProjets",
+            "path": "./app/app/Http/Controllers/pkg_realisation_projet",
             "name":"Controllers"
         },
       
        
         {
-            "path": "./app/app/Repositories/GestionProjets",
+            "path": "./app/app/Repositories/pkg_realisation_projet",
             "name":"Repositories"
         },
         {
-            "path": "./app/app/Http/Requests/GestionProjets",
+            "path": "./app/app/Http/Requests/pkg_realisation_projet",
             "name":"requests"
         },
         {
-            "path": "./app/database/seeders/GestionProjets",
+            "path": "./app/database/seeders/pkg_realisation_projet",
             "name":"seeders"
         },
         {
-            "path": "./app/database/migrations/GestionProjets",
+            "path": "./app/database/migrations/pkg_realisation_projet",
             "name":"migrations"
         },
         {
@@ -58,7 +58,7 @@
         },   
       
         {
-            "path": "./maquettes/view/GestionProjets",
+            "path": "./maquettes/view/pkg_realisation_projet",
             "name": "maquettes"
         },
         {

@@ -1,33 +1,33 @@
 {
     "folders": [
         {
-            "path": "./app/app/Models/GestionProjets",
+            "path": "./app/app/Models/pkg_sous_taches",
             "name":"Models"
         },   
         {
-            "path": "./app/resources/views/GestionProjets",
+            "path": "./app/resources/views/pkg_sous_taches",
             "name":"Views"
         },
         {
-            "path": "./app/app/Http/Controllers/GestionProjets",
+            "path": "./app/app/Http/Controllers/pkg_sous_taches",
             "name":"Controllers"
         },
       
        
         {
-            "path": "./app/app/Repositories/GestionProjets",
+            "path": "./app/app/Repositories/pkg_sous_taches",
             "name":"Repositories"
         },
         {
-            "path": "./app/app/Http/Requests/GestionProjets",
+            "path": "./app/app/Http/Requests/pkg_sous_taches",
             "name":"requests"
         },
         {
-            "path": "./app/database/seeders/GestionProjets",
+            "path": "./app/database/seeders/pkg_sous_taches",
             "name":"seeders"
         },
         {
-            "path": "./app/database/migrations/GestionProjets",
+            "path": "./app/database/migrations/pkg_sous_taches",
             "name":"migrations"
         },
         {
@@ -44,7 +44,7 @@
         },   
       
         {
-            "path": "./maquettes/view/GestionProjets",
+            "path": "./maquettes/view/pkg_sous_taches",
             "name": "maquettes"
         },
         {

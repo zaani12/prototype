@@ -1,33 +1,33 @@
 {
     "folders": [
         {
-            "path": "./app/app/Models/GestionProjets",
+            "path": "./app/app/Models/pkg_authentification",
             "name":"Models"
         },   
         {
-            "path": "./app/resources/views/GestionProjets",
+            "path": "./app/resources/views/pkg_authentification",
             "name":"Views"
         },
         {
-            "path": "./app/app/Http/Controllers/GestionProjets",
+            "path": "./app/app/Http/Controllers/pkg_authentification",
             "name":"Controllers"
         },
       
        
         {
-            "path": "./app/app/Repositories/GestionProjets",
+            "path": "./app/app/Repositories/pkg_authentification",
             "name":"Repositories"
         },
         {
-            "path": "./app/app/Http/Requests/GestionProjets",
+            "path": "./app/app/Http/Requests/pkg_authentification",
             "name":"requests"
         },
         {
-            "path": "./app/database/seeders/GestionProjets",
+            "path": "./app/database/seeders/pkg_authentification",
             "name":"seeders"
         },
         {
-            "path": "./app/database/migrations/GestionProjets",
+            "path": "./app/database/migrations/pkg_authentification",
             "name":"migrations"
         },
         {
@@ -44,7 +44,7 @@
         },   
       
         {
-            "path": "./maquettes/view/GestionProjets",
+            "path": "./maquettes/view/pkg_authentification",
             "name": "maquettes"
         },
         {
