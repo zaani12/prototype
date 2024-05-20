@@ -7,16 +7,18 @@ competence: db
 order: 626
 ---
 
+**pkg_competences**
+
 <!-- TODO db-1 : table NiveauCompetences , Fix diagramme de classe-->
-Question : Création de la table pour le Model NiveauCompetences
+Variant 3: class - NiveauCompetences
 
 
 <!-- TODO db-1 : table Competences -->
-Question : Création de la table pour le Model Competences
+Variant 4: class - Competences
 
 
 <!-- TODO db-1 : table CategorieTechnologies -->
-Question : Création de la table pour le Model CategorieTechnologies
+Variant 5: class - CategorieTechnologies
 
 
 

@@ -48,5 +48,12 @@
         "name":"controle",
         "titre":"contrôle"
     }
+    ,
+    {
+        "name":"pkg_posts",
+        "titre":"Gestion des articles"
+    }
+    
+
     
   ]

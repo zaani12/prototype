@@ -7,6 +7,8 @@ competence: db
 order: 630
 ---
 
+**pkg_notifications**
+
 <!-- TODO db-1 : Table Notification -->
-Question : Création de la table pour le Model Notification
+Variant 6: class - Notification
 

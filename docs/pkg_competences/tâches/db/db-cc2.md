@@ -9,5 +9,5 @@ order: 626
 
 
 <!-- TODO db-2 : table Technologies -->
-Question : Création de la table pour le Model Technologies
+Variant : class - Technologies
 
