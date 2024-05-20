@@ -77,6 +77,7 @@
 {% if  
     page.chapitre == true 
     and page.controle == controle
+    and page.competence == competence
     and packages contains page.package
 %}
 <!-- {{- page.path  | markdownify -}} -->
