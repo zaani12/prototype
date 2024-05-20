@@ -6,7 +6,7 @@ left to right direction
 actor Formateur as formateur
 actor Apprenant as apprenant
 
-package pkg_projets {
+package "pkg_projets.gestion-projets" {
 
   formateur --  (Gestion des projets) 
   (Gestion des projets) <.. (Ajouter projet) 

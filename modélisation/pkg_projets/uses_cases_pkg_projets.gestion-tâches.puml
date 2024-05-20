@@ -6,7 +6,7 @@ left to right direction
 actor Formateur as formateur
 actor Apprenant as apprenant
 
-package "pkg_projets/Gestion des tâches" {
+package "pkg_projets.gestion-tâches" {
 
 apprenant -- (Modifier Statut ) 
 apprenant -- (Modifier Date de fin ) 

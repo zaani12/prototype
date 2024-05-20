@@ -6,10 +6,10 @@ namespace gestion_rh{
 class Apprenant
 class Formateur 
 class  Groupe 
-
 }
 Groupe "1" --> "*" Apprenant
 Formateur "*" --> "1" Groupe
+
 
 namespace gestion_competences {
 class NiveauCompetence
@@ -19,7 +19,6 @@ class Technologie
 Competence "*" -- "*" Technologie
 
 
-note for  StatutTache "Le statut de projet est calculable à partir les status de ces tâches"
 
 namespace pk_projets {
 
@@ -31,6 +30,7 @@ namespace pk_projets {
     objectifs: string
     dateDebut: date
     dateEcheance: date
+    CalculerStatutProjet()
   }
 
   class Tache {
@@ -41,6 +41,7 @@ namespace pk_projets {
     dateÉchéance: date
   }
 
+ 
   class StatutTache{
     id: int
     nom: string
@@ -52,25 +53,15 @@ namespace pk_projets {
     nom: string
     description: text
   }
-
-
 }
 
 
-Formateur "1" --> "*" Projet : "Crée plusieurs de projets"
-
+Formateur "1" --> "*" Projet 
 Projet "1" --> "*" Tache
-Projet "*" --> "*" Competence : "En relation avec plusieurs technoligies"
-
-Tache "*" --> "1" Apprenant : "affectation à un seul apprenant"
-
-
-
+Projet "*" --> "*" Competence  
+Tache "*" --> "1" Apprenant : 1
 Tache "*" --> "1" NiveauCompetence
 Tache "*" --> "*" Technologie
 Tache "*" --> "1" StatutTache 
-
-
- 
 Equipe "*" --> "1" Projet
-Equipe   "*" --> "*"  Apprenant : "participants"
+Equipe   "*" --> "*"  Apprenant  : *

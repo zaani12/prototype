@@ -9,5 +9,5 @@ order: 525
 
 ### Diagramme de classes 
 
-![Conception - gestion des compétences ](/prototype/diagrammes/pkg_competences/classes_pkg_competences.svg){:width="400px"}
-**Conception - gestion des compétences**
+![Conception - gestion des compétences ](/prototype/diagrammes/pkg_competences/classes_pkg_competences.svg){:width="80%"}
+*Conception - gestion des compétences*

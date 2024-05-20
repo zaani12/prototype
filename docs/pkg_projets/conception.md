@@ -9,5 +9,5 @@ order: 545
 
 ### Diagramme de classes 
 
-![Conception - gestion des projets ](/prototype/diagrammes/pkg_projets/classes_pkg_projets.svg){:width="400px"}
-**Conception - gestion des projets**
+![Conception - gestion des projets ](/prototype/diagrammes/pkg_projets/classes_pkg_projets.svg){:width="100%"}
+*Conception - gestion des projets*
