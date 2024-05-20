@@ -1,55 +1,52 @@
 {
     "folders": [
         {
-            "path": "./app/app/Models/pkg_global",
-            "name":"Models"
-        },   
-        {
-            "path": "./app/resources/views/pkg_global",
-            "name":"Views"
+            "name": "Models",
+            "path": "app/app/Models/pkg_global"
         },
         {
-            "path": "./app/app/Http/Controllers/pkg_global",
-            "name":"Controllers"
-        },
-      
-       
-        {
-            "path": "./app/app/Repositories/pkg_global",
-            "name":"Repositories"
+            "name": "Views",
+            "path": "app/resources/views/pkg_global"
         },
         {
-            "path": "./app/app/Http/Requests/pkg_global",
-            "name":"requests"
+            "name": "Controllers",
+            "path": "app/app/Http/Controllers/pkg_global"
         },
         {
-            "path": "./app/database/seeders/pkg_global",
-            "name":"seeders"
+            "name": "Repositories",
+            "path": "app/app/Repositories/pkg_global"
         },
         {
-            "path": "./app/database/migrations/pkg_global",
-            "name":"migrations"
+            "name": "requests",
+            "path": "app/app/Http/Requests/pkg_global"
         },
         {
-            "path": "./docs/pkg_global",
-            "name":"docs"
+            "name": "seeders",
+            "path": "app/database/seeders/pkg_global"
         },
         {
-            "path": "./docs/diagrammes/pkg_global",
-            "name":"docs/diagrammes"
+            "name": "migrations",
+            "path": "app/database/migrations/pkg_global"
         },
         {
-            "path": "./modélisation/pkg_global",
-            "name":"modélisation"
-        },   
-      
-        {
-            "path": "./maquettes/view/pkg_global",
-            "name": "maquettes"
+            "name": "docs",
+            "path": "docs/pkg_global"
         },
         {
-            "path": "./collaboration",
-            "name": "collaboration"
+            "name": "docs/diagrammes",
+            "path": "docs/diagrammes/pkg_global"
+        },
+        {
+            "name": "modélisation",
+            "path": "modélisation/pkg_global"
+        },
+        {
+            "name": "maquettes",
+            "path": "maquettes/view/pkg_global"
+        },
+        {
+            "name": "collaboration",
+            "path": "collaboration"
         }
     ],
     "settings": {

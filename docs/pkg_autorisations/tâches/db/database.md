@@ -8,8 +8,10 @@ order: 620
 ---
 
 <!-- TODO db-1 : Table Action -->
-Question : Table Action
+Question : Création de la table pour le Model Action
+
 <!-- TODO db-1 : Table Controller -->
-Question : Table Controller
+Question : Création de la table pour le Model Controller
+
 <!-- TODO db-1 : Table Autorisation -->
-Question : Table Autorisation
+Question : Création de la table pour le Model Autorisation

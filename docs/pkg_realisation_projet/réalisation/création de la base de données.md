@@ -1,8 +1,8 @@
 ---
 layout: default
 chapitre : true
-package: pkg_competences
-order:  625
+package: pkg_realisation_projet
+order:  650
 ---
 
 ### Création de la base de données 
@@ -10,10 +10,8 @@ order:  625
 
 ````bash
 
-php artisan make:model NiveauCompetence -m
-php artisan make:model Competence -m
-php artisan make:model CategorieTechnologie -m
-php artisan make:model Technologie -m
-
+php artisan make:model Livrable -m
+php artisan make:model NatureLivrable -m
+php artisan make:model Message -m
 
 ````

@@ -1,9 +1,8 @@
 ---
 layout: default
 chapitre: true
-package : pkg_authentification
+package : pk_global
 controle: cc1
 competence: db
-order: 621
+order: 626
 ---
-
