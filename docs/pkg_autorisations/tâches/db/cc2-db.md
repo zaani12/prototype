@@ -10,4 +10,6 @@ order: 620
 **pkg_autorisations**
 
 <!-- TODO db-2 : Table Autorisation -->
-Variant : class - Autorisation
+**Variant 1** : class - Autorisation
+- Requêtes :
+  - Donnez les actions non autorisées pour l'apprenant "Madani Ali".

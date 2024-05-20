@@ -11,7 +11,14 @@ order: 645
 
 
 <!-- TODO db-2 : Table Projet -->
-Variant : class - Projet
+**Variant 4** : class - Projet
+- Requêtes SQL :
+  - Donnez les projets terminés
+  - Donnez les projets en cours de réalisation
+  - Donnez les projets avec mois plus de 3 équipes
 
 <!-- TODO db-2 : Table Tache -->
-Variant : class - Tache
+**Variant 5** : class - Tache
+- Requêtes SQL :
+  - Donnez les tâches non affectées
+  - Donnez les tâches non affecté à "Madani Ali"

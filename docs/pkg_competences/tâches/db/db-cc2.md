@@ -9,5 +9,9 @@ order: 626
 
 
 <!-- TODO db-2 : table Technologies -->
-Variant : class - Technologies
+**Variant 2** : class - Technologies
+- Requêtes SQL :
+  - Donnez les technologies qui ne sont pas affectées à aucun projet.
+  - Donnez les trois technoligies les moins affectées
+
 
