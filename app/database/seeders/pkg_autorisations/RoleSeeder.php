@@ -1,6 +1,6 @@
 <?php
 
-namespace Database\Seeders\Autorisation;
+namespace Database\Seeders\pkg_autorisations;
 
 use App\Models\User;
 use Illuminate\Database\Seeder;
