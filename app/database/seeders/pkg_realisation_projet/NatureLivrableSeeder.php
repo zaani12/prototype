@@ -1,43 +1,42 @@
 <?php
 
-namespace Database\Seeders;
+namespace Database\Seeders\pkg_realisation_projet;
+
 
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\File;
-use League\Csv\Reader;
+use App\Models\GestionProjets\Projet;
+use App\Models\pkg_realisation_projet\NatureLivrable;
+use Spatie\Permission\Models\Permission;
+use Spatie\Permission\Models\Role;
+use App\Models\User;
+use Illuminate\Support\Facades\Schema;
+
 
 class NatureLivrableSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
-    public function run()
+    public function run(): void
     {
-        // Chemin vers le fichier CSV
-        $csvFile = base_path('database/data/formation_data.csv');
+        $AdminRole = User::ADMIN;
+        $MembreRole = User::APPRENANT;
 
-        // Lire le fichier CSV
-        if (File::exists($csvFile)) {
-            try {
-                $csv = Reader::createFromPath($csvFile, 'r');
-                $csv->setHeaderOffset(0); // On considère la première ligne comme en-tête
+        Schema::disableForeignKeyConstraints();
+        NatureLivrable::truncate();
+        Schema::enableForeignKeyConstraints();
 
-                foreach ($csv as $record) {
-                    DB::table('nature_livrables')->insert([
-                        'nom' => $record['nom'],
-                        'description' => $record['description'],
-                    ]);
-                }
-
-                $this->command->info('Données insérées avec succès.');
-            } catch (\Exception $e) {
-                $this->command->error('Erreur lors de la lecture du fichier CSV: ' . $e->getMessage());
+        $csvFile = fopen(base_path("database/data/pkg_realisation_projet/nature-livrable.csv"), "r");
+        $firstline = true;
+        $i = 0;
+        while (($data = fgetcsv($csvFile)) !== FALSE) {
+            if (!$firstline) {
+                NatureLivrable::create([
+                    "nom"=>$data['0'],
+                    "description" =>$data['1']
+                ]);
             }
-        } else {
-            $this->command->error("Le fichier CSV n'existe pas!");
+            $firstline = false;
         }
+
+        fclose($csvFile);
+
     }
 }
