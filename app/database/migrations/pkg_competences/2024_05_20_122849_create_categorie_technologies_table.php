@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('categorie_technologies', function (Blueprint $table) {
             $table->id();
+            $table->String('nom');
+            $table->String('description');
             $table->timestamps();
         });
     }
