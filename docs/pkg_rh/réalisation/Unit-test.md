@@ -2,7 +2,7 @@
 layout: default
 chapitre : true
 package: gestion_rh
-order:  625
+order:  627
 ---
 
 ### Création de la base de données 
@@ -17,3 +17,4 @@ php artisan test --filter=GroupeTest
 ````
 
 
+![test](/prototype/pkg_rh/réalisation/images/testdone.png){: width="600px" }*Figure : Test pour la class groupe*
