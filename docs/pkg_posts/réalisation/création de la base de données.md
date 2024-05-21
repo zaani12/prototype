@@ -9,7 +9,7 @@ order: 620
 
 
 ````bash
-php artisan make:migration pkg_posts/create_posts_table
-php artisan make:migration pkg_posts/create_tags_table
-php artisan make:migration pkg_posts/create_post_tag_table
+php artisan make:migration create_posts_table
+php artisan make:migration create_tags_table
+php artisan make:migration create_post_tag_table
 ````
