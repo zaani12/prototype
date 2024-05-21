@@ -8,6 +8,6 @@ order: 621
 # Générer des données de test avec des seeders
 
 ````bash
-php artisan db:seed --class=AutorisationsSeeder
+php artisan db:seed 
 
 ````
