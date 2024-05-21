@@ -30,10 +30,10 @@ class DatabaseSeeder extends Seeder
 {
     public function run(): void
     {
+        $this->call(AutorisationsSeeder::class);
         $this->call(UserSeeder::class);
         $this->call(CompetencesSeeder::class);
         $this->call(NotificationsSeeder::class);
-        $this->call(AutorisationsSeeder::class);
         $this->call(RHSeeder::class);
         $this->call(GestionProjetsSeeder::class);
         $this->call(ProjetsSeeder::class);
