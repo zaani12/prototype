@@ -59,17 +59,17 @@ class NotificationsTest extends TestCase
 
     }
 
-    public function test_delete_controller(): void
+    public function test_delete_notifications(): void
     {
-        $existingController = $this->model->create([
+        $existingNotifications = $this->model->create([
             'title' => 'Félicitations',
             'message' => 'Vous avez réussi lexamen',
             'isVue' => true,
             'apprenant_id' => 1,
         ]);
 
-        $existingController->delete();
+        $existingNotifications->delete();
 
-        $this->assertDatabaseMissing('notifications', ['id' => $existingController->id]);
+        $this->assertDatabaseMissing('notifications', ['id' => $existingNotifications->id]);
     }
 }
