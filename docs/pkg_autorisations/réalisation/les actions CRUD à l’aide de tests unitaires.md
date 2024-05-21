@@ -16,5 +16,6 @@ order: 621
 ````bash
 
 php artisan make:test  pkg_autorisations/ActionTest
+php artisan test --filter=ActionTest
 ````
 

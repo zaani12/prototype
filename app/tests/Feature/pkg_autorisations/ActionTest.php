@@ -7,7 +7,7 @@ use App\Models\pkg_autorisations\Action;
 use App\Models\pkg_autorisations\Controller;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 
-class ActionsTest extends TestCase
+class ActionTest extends TestCase
 {
     use DatabaseTransactions;
 
@@ -24,6 +24,11 @@ class ActionsTest extends TestCase
      */
     public function test_paginate_actions(): void
     {
+        // Create sample actions for pagination test
+        $this->model->create(['nom' => 'Action1', 'controller_id' => 1]);
+        $this->model->create(['nom' => 'Action2', 'controller_id' => 1]);
+        $this->model->create(['nom' => 'Action3', 'controller_id' => 1]);
+
         $actions = $this->model->paginate(2);
         $this->assertNotNull($actions);
         $this->assertNotEmpty($actions);
@@ -34,7 +39,8 @@ class ActionsTest extends TestCase
      */
     public function test_create_action(): void
     {
-        $controller = Controller::factory()->create();
+        // Create a sample controller for the action
+        $controller = Controller::create(['nom' => 'TestController']);
         $data = ['nom' => "TestAction", 'controller_id' => $controller->id];
 
         $this->model->create($data);
@@ -46,7 +52,8 @@ class ActionsTest extends TestCase
      */
     public function test_update_action(): void
     {
-        $controller = Controller::factory()->create();
+        // Create a sample controller and action for the update test
+        $controller = Controller::create(['nom' => 'TestController']);
         $existingAction = $this->model->create(['nom' => 'ExistingAction', 'controller_id' => $controller->id]);
 
         $newName = 'UpdatedAction';
@@ -61,7 +68,8 @@ class ActionsTest extends TestCase
      */
     public function test_delete_action(): void
     {
-        $controller = Controller::factory()->create();
+        // Create a sample controller and action for the delete test
+        $controller = Controller::create(['nom' => 'TestController']);
         $existingAction = $this->model->create(['nom' => 'ExistingAction', 'controller_id' => $controller->id]);
 
         $existingAction->delete();
