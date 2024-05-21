@@ -16,6 +16,8 @@ return new class extends Migration
             $table->text('description');
             $table->string('priorité');
             $table->Date('dateEchéance');
+            $table->unsignedBigInteger('apprenant_id');
+            $table->foreign('apprenant_id')->references('id')->on('personnes')->onDelete('cascade');
         });
     }
 
@@ -29,6 +31,7 @@ return new class extends Migration
             $table->dropColumn('description');
             $table->dropColumn('priorité');
             $table->dropColumn('dateEchéance');
+            $table->dropColumn('apprenant_id');
         });
     }
 };
