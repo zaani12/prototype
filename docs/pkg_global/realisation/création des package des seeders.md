@@ -17,6 +17,8 @@ php artisan make:seeder pkg_notifications/NotificationSeeder
 php artisan make:seeder pkg_posts/TagsSeeder
 php artisan make:seeder pkg_posts/PostSeeder
 php artisan make:seeder pkg_realisation_projet/NatureLivrableSeeder
+php artisan make:seeder pkg_autorisations/ControllerSeeder
+php artisan make:seeder pkg_autorisations/ActionSeeder
 
 
 
