@@ -13,7 +13,6 @@ return new class extends Migration
     {
         Schema::create('controllers', function (Blueprint $table) {
             $table->id();
-            $table->string('nom');
             $table->timestamps();
         });
     }
