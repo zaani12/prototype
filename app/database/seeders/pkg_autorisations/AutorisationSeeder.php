@@ -44,8 +44,7 @@ class AutorisationSeeder extends Seeder
                                         
                         "created_at"=>$data[4],
                     
-                        "updated_at"=>$data[5],
-                    
+                        "updated_at" => $data[5] ?? null,                    
                 ]);
             }
             $firstline = false;
