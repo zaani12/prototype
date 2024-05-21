@@ -20,7 +20,7 @@ class UserSeeder extends Seeder
     public function run(): void
     {
         $adminRole = User::ADMIN;
-        $membreRole = User::MEMBRE;
+        $membreRole = User::APPRENANT;
 
         User::create([
             'name' => 'apprenant',
