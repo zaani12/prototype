@@ -4,8 +4,6 @@ namespace Tests\Feature\pkg_autorisations;
 
 use Tests\TestCase;
 use App\Models\pkg_autorisations\Controller;
-use Illuminate\Foundation\Testing\WithFaker;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class ControllersTest extends TestCase
@@ -20,6 +18,9 @@ class ControllersTest extends TestCase
         $this->model = new Controller;
     }
 
+    /**
+     * Test the pagination of controllers.
+     */
     public function test_paginate_controllers(): void
     {
         $controllers = $this->model->paginate(2);
@@ -27,6 +28,9 @@ class ControllersTest extends TestCase
         $this->assertNotEmpty($controllers);
     }
 
+    /**
+     * Test the creation of a new controller.
+     */
     public function test_create_controller(): void
     {
         $data = ['nom' => "TestController"];
@@ -36,6 +40,9 @@ class ControllersTest extends TestCase
     }
 
 
+    /**
+     * Test the update of an existing controller.
+     */
     public function test_update_controller(): void
     {
         $existingController = $this->model->create(['nom' => 'ExistingController']);
@@ -49,6 +56,9 @@ class ControllersTest extends TestCase
     }
 
 
+    /**
+     * Test the deletion of an existing controller.
+     */
     public function test_delete_controller(): void
     {
         $existingController = $this->model->create(['nom' => 'ExistingController']);
