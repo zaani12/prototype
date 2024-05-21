@@ -15,7 +15,6 @@ return new class extends Migration
             $table->string('titre')->after('id');
             $table->text('description')->after('titre');
             $table->boolean('isLue')->default(false);
-
         });
     }
 
