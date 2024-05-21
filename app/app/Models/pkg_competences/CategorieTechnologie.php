@@ -10,6 +10,13 @@ class CategorieTechnologie extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'nom',
+        'description',
+        'updated_at',
+        'created_at',
+    ];
+
     public function Technologie(){
         $this->belongsTo(Technologie::class);
     }
