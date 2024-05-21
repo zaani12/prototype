@@ -11,3 +11,10 @@ order:  626
 php artisan make:migration add_description_nom_to_CategorieTechnologie_table --table=CategorieTechnologie
 php artisan migrate
 ````
+
+- Ajouter UNite pour CategorieTechnologie
+
+````bash
+php artisan make:test pkg_competences/CategorieTechnologieTest
+php artisan test
+````
