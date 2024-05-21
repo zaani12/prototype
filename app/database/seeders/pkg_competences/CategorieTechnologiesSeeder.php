@@ -5,7 +5,7 @@ namespace Database\Seeders\pkg_competences;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class CategorieTechnologies extends Seeder
+class CategorieTechnologiesSeeder extends Seeder
 {
     /**
      * Run the database seeds.

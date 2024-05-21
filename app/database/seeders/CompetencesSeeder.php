@@ -8,7 +8,7 @@ use Symfony\Component\Uid\NilUuid;
 use Database\Seeders\pkg_competences\{
     CompetenceSeeder ,
     NiveauCompetencesSeeder,
-    CategorieTechnologies , 
+    CategorieTechnologiesSeeder , 
 };
 
 
@@ -25,7 +25,7 @@ class CompetencesSeeder extends Seeder
         return [
             CompetenceSeeder::class,
             NiveauCompetencesSeeder::class,
-            CategorieTechnologies::class,
+            CategorieTechnologiesSeeder::class,
         ];
     }
 }
