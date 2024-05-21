@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class CategorieTechnologie extends Model
 {
     use HasFactory;
+
+    public function Technologie(){
+        $this->belongsTo(Technologie::class);
+    }
 }
