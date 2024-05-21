@@ -1,11 +1,23 @@
 <?php
 
-namespace App\Models;
+namespace App\Models\pkg_notifications;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\pkg_rh\Personne;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Notification extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'title',
+        'message',
+        'isVue',
+        'apprenant_id',
+    ];
+
+    public function personne()
+    {
+        return $this->belongsTo(Personne::class, 'apprenant_id');
+    }
 }
