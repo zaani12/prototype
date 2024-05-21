@@ -2,7 +2,7 @@
 
 namespace Database\Seeders\pkg_autorisations;
 
-use App\Models\Autorisation\Permission;
+use App\Models\pkg_autorisations\Permission;
 use App\Models\pkg_autorisations\Action;
 use App\Models\pkg_autorisations\Role;
 use App\Models\User;
