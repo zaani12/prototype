@@ -10,5 +10,6 @@ order:  650
 ````bash
 
 php artisan make:test NatureLivrableTest
+php artisan test
 
 ````
