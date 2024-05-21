@@ -8,12 +8,20 @@ use Illuminate\Database\Seeder;
 use Symfony\Component\Uid\NilUuid;
 
 use Database\Seeders\{
-    UserSeeder
-};
-use Database\Seeders\Autorisation\RoleSeeder;
-use Database\Seeders\GestionProjets\{
+    UserSeeder ,
+    CompetencesSeeder, 
+    NotificationsSeeder,
+    AutorisationsSeeder,
+    RHSeeder ,
+    GestionProjetsSeeder,
     ProjetsSeeder,
+    RealisationProjetSeeder,
+    PostsSeeder,
+
+  
+  
 };
+
 
 
 
@@ -22,8 +30,18 @@ class DatabaseSeeder extends Seeder
 {
     public function run(): void
     {
-        $this->call(RoleSeeder::class);
+        $this->call(AutorisationsSeeder::class);
         $this->call(UserSeeder::class);
+        $this->call(CompetencesSeeder::class);
+        $this->call(NotificationsSeeder::class);
+        $this->call(RHSeeder::class);
         $this->call(GestionProjetsSeeder::class);
+        $this->call(ProjetsSeeder::class);
+        $this->call(RealisationProjetSeeder::class);
+        $this->call(PostsSeeder::class);
+       
+      
+    
+       
     }
 }
