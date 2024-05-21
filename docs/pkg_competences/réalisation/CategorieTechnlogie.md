@@ -9,4 +9,5 @@ order:  626
 
 ````bash
 php artisan make:migration add_description_nom_to_CategorieTechnologie_table --table=CategorieTechnologie
+php artisan migrate
 ````
