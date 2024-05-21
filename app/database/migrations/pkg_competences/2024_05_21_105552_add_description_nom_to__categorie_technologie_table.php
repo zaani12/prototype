@@ -11,9 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('categorie_technologies', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+        Schema::table('CategorieTechnologie', function (Blueprint $table) {
+            $table->string('nom');
+            $table->string('description');
         });
     }
 
@@ -22,6 +22,9 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('categorie_technologies');
+        Schema::table('CategorieTechnologie', function (Blueprint $table) {
+            $table->dropColumn('nom');
+            $table->dropColumn('description');
+        });
     }
 };
