@@ -15,7 +15,7 @@ class postsTest extends TestCase
 
     public function test_getAll_posts()
     {
-        $project = Post::create([
+        $post = Post::create([
             'nom' => 'test',
             'description' => 'description',
         ]);
