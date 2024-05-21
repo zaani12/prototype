@@ -19,7 +19,7 @@ class TagsSeeder extends Seeder
         Tag::truncate();
         Schema::enableForeignKeyConstraints();
 
-        $csvFile = fopen(base_path("database/data/tags.csv"), "r");
+        $csvFile = fopen(base_path("database/data/pkg_posts/tags.csv"), "r");
         $firstline = true;
         $i = 0;
         while (($data = fgetcsv($csvFile)) !== FALSE) {
