@@ -1,6 +1,6 @@
 <?php
 
-namespace Database\Seeders\Autorisation;
+namespace Database\Seeders\pkg_autorisations;
 
 use App\Models\User;
 use Illuminate\Database\Seeder;
@@ -16,6 +16,6 @@ class RoleSeeder extends Seeder
     {
 
         Role::create(['name' => User::ADMIN]);
-        Role::create(['name' => User::MEMBRE]);
+        Role::create(['name' => User::APPRENANT]);
     }
 }
