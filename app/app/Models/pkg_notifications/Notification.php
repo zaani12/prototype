@@ -2,6 +2,7 @@
 
 namespace App\Models\pkg_notifications;
 
+use App\Models\pkg_rh\Personne;
 use App\Models\pkg_rh\Apprenant;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -20,6 +21,6 @@ class Notification extends Model
 
     public function apprenant()
     {
-        return $this->belongsTo(Apprenant::class, 'apprenant_id');
+        return $this->belongsTo(Personne::class, 'apprenant_id');
     }
 }
