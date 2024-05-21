@@ -15,7 +15,7 @@ class TachesSeeder extends Seeder
     public function run(): void
     {
         $AdminRole = User::ADMIN;
-        $MembreRole = User::MEMBRE;
+        $MembreRole = User::APPRENANT;
 
         Schema::disableForeignKeyConstraints();
         Taches::truncate();

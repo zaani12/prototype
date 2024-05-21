@@ -19,7 +19,7 @@ class TasksSeeder extends Seeder
     public function run(): void
     {
         $AdminRole = User::ADMIN;
-        $MembreRole = User::MEMBRE;
+        $MembreRole = User::APPRENANT;
 
         Schema::disableForeignKeyConstraints();
         Task::truncate();
