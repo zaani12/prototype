@@ -2,31 +2,38 @@
 
 namespace Database\Seeders\pkg_competences;
 
-use App\Models\pkg_competences\CategorieTechnologie;
+use App\Models\pkg_competences\Technologie;
 use Carbon\Carbon;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Schema;
+use App\Models\pkg_notifications\Notification;
 
-class CategorieTechnologiesSeeder extends Seeder
+class TechnologiesSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        $csvFile = fopen(base_path("database/data/pkg_competences/CategorieTechnologie.csv"), "r");
+        Schema::disableForeignKeyConstraints();
+        Notification::truncate();
+        Schema::enableForeignKeyConstraints();
+
+        $csvFile = fopen(base_path("database/data/pkg_competences/Technologies.csv"), "r");
         $firstline = true;
         $i = 0;
         while (($data = fgetcsv($csvFile)) !== FALSE) {
             if (!$firstline) {
-                CategorieTechnologie::create([
+                Technologie::create([
                     "nom" => $data['0'],
                     "description" => $data['1'],
-                    'updated_at' => Carbon::now(),
-                    'created_at' => Carbon::now()
+                    "categorie_technologies_id" => $data['2'],
                 ]);
             }
             $firstline = false;
         }
+
+        fclose($csvFile);
     }
 }
