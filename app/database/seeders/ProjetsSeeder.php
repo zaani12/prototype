@@ -8,6 +8,8 @@ use Symfony\Component\Uid\NilUuid;
 use Database\Seeders\pkg_projets\{
     StatutTacheSeeder,
     EquipeSeeder,
+    ProjetSeeder,
+    
 };
 
 
@@ -24,6 +26,7 @@ class ProjetsSeeder extends Seeder
         return [
             StatutTacheSeeder::class,
             EquipeSeeder::class,
+            ProjetSeeder::class,
         ];
     }
 }
