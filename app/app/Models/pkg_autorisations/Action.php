@@ -15,4 +15,7 @@ class Action extends Model
         'updated_at',
         
     ];
+    public function controller(){
+        return $this->belongsTo(Controller::class, 'controller_id');
+    }
 }
