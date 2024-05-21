@@ -10,7 +10,8 @@ class Personne extends Model
 {
     use HasFactory;
 
-    public function notification(){
-        return $this->hasMany(Notification::class,'apprenant_id');
+    public function notification()
+    {
+        return $this->hasMany(Notification::class, 'apprenant_id');
     }
 }

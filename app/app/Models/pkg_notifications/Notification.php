@@ -16,10 +16,9 @@ class Notification extends Model
         'message',
         'isVue',
         'apprenant_id',
-
     ];
 
-    public function apprenant()
+    public function personne()
     {
         return $this->belongsTo(Personne::class, 'apprenant_id');
     }
