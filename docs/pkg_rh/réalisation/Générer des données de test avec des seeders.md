@@ -13,5 +13,5 @@ order:  626
 
 php artisan db:seed 
 
-php artisan db:seed --class=GroupeSeeder
+php artisan db:seed --class=RhSeeder
 ````
