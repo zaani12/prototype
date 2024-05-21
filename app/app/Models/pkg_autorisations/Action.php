@@ -4,6 +4,7 @@ namespace App\Models\pkg_autorisations;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\pkg_autorisations\Controller;
 
 class Action extends Model
 {
