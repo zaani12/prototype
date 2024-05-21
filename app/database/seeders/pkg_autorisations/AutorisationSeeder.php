@@ -35,50 +35,20 @@ class AutorisationSeeder extends Seeder
 
                     
                         "id"=>$data[0],
-                    
-                        "nom"=>$data[1],
-                    
-                        "action_id"=>$data[2],
-
-                        "role_id"=>$data[3],
                                         
-                        "created_at"=>$data[4],
+                        "action_id"=>$data[1],
+
+                        "role_id"=>$data[2],
+                                        
+                        "created_at"=>$data[3],
                     
-                        "updated_at" => $data[5] ?? null,                    
+                        "updated_at" => $data[4],                    
                 ]);
             }
             $firstline = false;
         }
 
         fclose($csvFile);
-        $Autorisations = ['index', 'show', 'create', 'store', 'edit', 'update', 'destroy', 'export', 'import'];
-        foreach ($Autorisations as $Autorisation) {
-            $permissionName = $Autorisation . '-' . "TachesController";
-            Permission::create(['name' => $permissionName, 'guard_name' => 'web']);
-        }
-
-        $tachesManagerRolePermissions = [
-            'index-TachesController',
-            'show-TachesController',
-            'create-TachesController',
-            'store-TachesController',
-            'edit-TachesController',
-            'update-TachesController',
-            'destroy-TachesController',
-            'export-TachesController',
-            'import-TachesController'
-        ];
-
-        $tachesMembreRolePermissions = [
-            'index-TachesController',
-            'show-TachesController',
-        ];
-
-        $admin = Role::where('name', $AdminRole)->first();
-        $membre = Role::where('name', $MembreRole)->first();
-
-        $admin->givePermissionTo($tachesManagerRolePermissions);
-        $membre->givePermissionTo($tachesMembreRolePermissions);
 
     }
 }
