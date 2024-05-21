@@ -16,10 +16,8 @@ return new class extends Migration
             $table->string('titre');
             $table->string('lien');
             $table->text('description')->nullable();
-            $table->unsignedBigInteger('nature_livrable_id')->nullable();
             $table->timestamps();
 
-            $table->foreign('nature_livrable_id')->references('id')->on('nature_livrables')->onDelete('cascade');
         });
     }
 
