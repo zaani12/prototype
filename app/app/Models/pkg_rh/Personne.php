@@ -20,5 +20,7 @@ class Personne extends Model
     {
         return $this->hasMany(Notification::class, 'apprenant_id');
     }
+
+
     
 }
