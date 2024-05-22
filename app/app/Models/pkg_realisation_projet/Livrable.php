@@ -19,3 +19,4 @@ class Livrable extends Model
         return $this->belongsTo(NatureLivrable::class, 'nature_livrable_id');
     }
 }
+     
