@@ -29,6 +29,7 @@ php artisan migrate:fresh
 php artisan migrate:fresh --seed 
 
 ```` 
+
 ### Test
 
 ````bash
@@ -36,4 +37,5 @@ php artisan migrate:fresh --seed
 php artisan test --filter=MessageTest 
 
 ```` 
+
 
