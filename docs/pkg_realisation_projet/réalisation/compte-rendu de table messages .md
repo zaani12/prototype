@@ -30,3 +30,11 @@ php artisan migrate:fresh --seed
 
 ```` 
 
+### Test
+
+````bash
+
+php artisan test --filter=MessageTest 
+
+```` 
+
