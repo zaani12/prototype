@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Models\pkg_projets;
+
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -15,6 +17,10 @@ return new class extends Migration
             $table->string('titre')->after('id');
             $table->text('description')->after('titre');
             $table->boolean('isLue')->default(false);
+            $table->unsignedBigInteger('projet_id')->after('description');
+            $table->foreign('projet_id')->references('id')->on('projets')->onDelete('cascade');
+            $table->unsignedBigInteger('tach_id')->after('projet_id');
+            $table->foreign('tach_id')->references('id')->on('taches')->onDelete('cascade');
         });
     }
 
@@ -24,7 +30,13 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('messages', function (Blueprint $table) {
-            $table->dropColumn(['titre', 'description' , 'isLue']);
+            $table->dropForeign(['projet_id']);
+            $table->dropForeign(['tach_id']);
+            $table->dropColumn('titre');
+            $table->dropColumn('description');
+            $table->dropColumn('isLue');
+            $table->dropColumn('projet_id');
+            $table->dropColumn('tach_id');
         });
     }
 };
