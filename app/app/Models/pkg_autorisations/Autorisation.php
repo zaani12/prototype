@@ -14,4 +14,12 @@ class Autorisation extends Model
         'created_at',
         'updated_at',
     ]; 
+
+
+public function Action(){
+    return $this->belongsTo(Action::class, 'action_id');
+}
+public function Role(){
+    return $this->belongsTo(Role::class, 'role_id');
+}
 }
