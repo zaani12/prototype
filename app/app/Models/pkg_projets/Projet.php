@@ -15,4 +15,7 @@ class Projet extends Model
         return $this->belongsToMany('App\Model\pkg_competences\Competence');
     }
 
+    public function Tache(){
+        return $this->hasMany(Tache::class);
+    }
 }
