@@ -37,9 +37,9 @@ class MessageTest extends TestCase
         $data = [
             'titre' => "TestTitreMessage",
             'description' => "TestDescriptionMessage",
+            'isLue' => true,
             'projet_id' => $projet->id,
-            'tache_id' => $tache->id,
-            'isLue' => true
+            'tach_id' => $tache->id,
         ];
 
         $this->model->create($data);
@@ -59,7 +59,7 @@ class MessageTest extends TestCase
             'titre' => 'ExistingTitreMessage',
             'description' => "ExistingDescriptionmessage",
             'projet_id' => $projet->id,
-            'tache_id' => $tache->id,
+            'tach_id' => $tache->id,
             'isLue' => true
         ]);
 
@@ -73,19 +73,21 @@ class MessageTest extends TestCase
             'titre' => $newTitre,
             'description' => $newDescription,
             'projet_id' => $newProjetId,
-            'tache_id' => $newTachId,
+            'tach_id' => $newTachId,
             'isLue' => $newLue,
         ]);
 
         $this->assertEquals($newTitre, $existingMessage->titre);
         $this->assertEquals($newDescription, $existingMessage->description);
         $this->assertEquals($newProjetId, $existingMessage->projet_id);
-        $this->assertEquals($newTachId, $existingMessage->tache_id);
+        $this->assertEquals($newTachId, $existingMessage->tach_id);
         $this->assertEquals($newLue, $existingMessage->isLue);
-        $this->assertDatabaseHas('competences', [
-            'nom' => $newTitre,
+        $this->assertDatabaseHas('messages', [
+            'titre' => $newTitre,
             'description' => $newDescription,
-            'niveau_competences_id' => $newTitre
+            'projet_id' => $newProjetId,
+            'tach_id' => $newTachId,
+            'isLue' => $newLue,
         ]);
     }
 
@@ -98,7 +100,7 @@ class MessageTest extends TestCase
             'titre' => 'ExistingTitreMessage',
             'description' => 'ExistingDescriptionMessage',
             'projet_id' => $projet->id,
-            'tache_id' => $tache->id,
+            'tach_id' => $tache->id,
             'isLue' => true
         ]);
 
