@@ -14,17 +14,6 @@ class MessageSeeder extends Seeder
      */
     public function run(): void
     {
-
-        Projet::create(['id' => 1, 'nom' => 'Portfolio']);
-        Projet::create(['id' => 2, 'nom' => 'Arbre des compétences']);
-        Projet::create(['id' => 3, 'nom' => 'CNMH']);
-
-
-        Tache::create(['id' => 1]);
-        Tache::create(['id' => 2]);
-        Tache::create(['id' => 3]);
-
-
         $csvFile = fopen(base_path('database/data/pkg_realisation_projet/messages.csv'), 'r');
         if ($csvFile === false) {
             throw new \Exception('Could not open the CSV file.');
