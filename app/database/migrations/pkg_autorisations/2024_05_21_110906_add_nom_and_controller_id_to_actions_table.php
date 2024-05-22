@@ -14,7 +14,10 @@ return new class extends Migration
         Schema::table('actions', function (Blueprint $table) {
             $table->string('nom');
             $table->unsignedBigInteger('controller_id');
+            $table->unsignedBigInteger('permission_id')->unique(); // Added unique constraint          
             $table->foreign('controller_id')->references('id')->on('controllers')->onDelete('cascade');
+            $table->foreign('permission_id')->references('id')->on('permissions')->onDelete('cascade'); // Added foreign key for permission
+            $table->foreignId('parent_action_id')->nullable()->constrained('actions')->onDelete('cascade'); // Self-referential relationship
        
         });
     }
