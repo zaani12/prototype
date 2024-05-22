@@ -10,6 +10,7 @@ use App\Models\pkg_autorisations\Permission;
 class Action extends Model
 {
     use HasFactory;
+  
     protected $fillable = [
         'nom' ,
         'controller_id',
