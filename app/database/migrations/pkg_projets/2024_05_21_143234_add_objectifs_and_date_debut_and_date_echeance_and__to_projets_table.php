@@ -8,12 +8,13 @@ return new class extends Migration
 {
     /**
      * Run the migrations.
-     */  
+     */
     public function up(): void
     {
-        Schema::table('personnes', function (Blueprint $table) {
-            $table->string('nom')->after('id');
-            $table->string('prenom')->after('nom');
+        Schema::table('projets', function (Blueprint $table) {
+            $table->string('objectifs')->nullable();
+            $table->date('date_debut')->nullable();
+            $table->date('date_echeance')->nullable();
         });
     }
 
@@ -22,9 +23,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('personnes', function (Blueprint $table) {
-            $table->dropColumn('nom');
-            $table->dropColumn('prenom');
+        Schema::table('projets_table', function (Blueprint $table) {
+            //
         });
     }
 };
