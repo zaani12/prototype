@@ -13,7 +13,7 @@ return new class extends Migration
         Schema::table('actions', function (Blueprint $table) {
             $table->string('nom');
             $table->unsignedBigInteger('controller_id')->nullable(); // Ensure 'controller_id' is not nullable
-            $table->unsignedBigInteger('permission_id')->unique()->nullable(); // Added unique constraint and nullable property
+            $table->unsignedBigInteger('permission_id')->nullable(); // Added unique constraint and nullable property
             $table->unsignedBigInteger('parent_action_id')->nullable(); // Self-referential relationship
             
             // Adding foreign keys
