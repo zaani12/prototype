@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\pkg_realisation_projet\NatureLivrable;
 
 class Livrable extends Model
 {
