@@ -10,14 +10,12 @@ class Personne extends Model
 {
     use HasFactory;
 
-
-    public function groupe()
-    {
-        return $this->belongsTo(Groupe::class);
-    }
-
     public $table = 'personnes';
-    protected $fillable = ['nom','prenom','type' , 'groupe_id'];
+    protected $fillable = ['nom','prenom','type'];
+
+
+    // TODO : relation non valide
+
     public function notification()
     {
         return $this->hasMany(Notification::class, 'apprenant_id');
