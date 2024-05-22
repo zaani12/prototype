@@ -9,6 +9,7 @@ use Database\Seeders\pkg_projets\{
     StatutTacheSeeder,
     EquipeSeeder,
     TachesSeeder,
+    ProjetSeeder
 };
 
 
@@ -26,6 +27,7 @@ class ProjetsSeeder extends Seeder
             StatutTacheSeeder::class,
             TachesSeeder::class,
             EquipeSeeder::class,
+            ProjetSeeder::class,
         ];
     }
 }
