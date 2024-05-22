@@ -18,6 +18,6 @@ class NiveauCompetence extends Model
     ];
     public function Competence()
     {
-        return $this->belongsTo(Competence::class);
+        return $this->belongsTo(Competence::class, 'competence_id');
     }
 }
