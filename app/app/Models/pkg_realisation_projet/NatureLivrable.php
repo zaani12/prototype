@@ -2,7 +2,7 @@
 
 namespace App\Models\pkg_realisation_projet;
 
-use App\Models\Livrable;
+use App\Models\pkg_realisation_projet\Livrable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
