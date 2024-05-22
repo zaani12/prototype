@@ -6,10 +6,9 @@ use Illuminate\Database\Seeder;
 use Symfony\Component\Uid\NilUuid;
 
 use Database\Seeders\pkg_competences\{
-    CompetenceSeeder,
+    CompetenceSeeder ,
     NiveauCompetencesSeeder,
-    CategorieTechnologiesSeeder,
-    TechnologiesSeeder,
+    CategorieTechnologiesSeeder ,
 };
 
 
@@ -27,7 +26,6 @@ class CompetencesSeeder extends Seeder
             CompetenceSeeder::class,
             NiveauCompetencesSeeder::class,
             CategorieTechnologiesSeeder::class,
-            TechnologiesSeeder::class,
         ];
     }
 }
