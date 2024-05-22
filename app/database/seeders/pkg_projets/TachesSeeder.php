@@ -19,7 +19,7 @@ class TachesSeeder extends Seeder
         $i = 0;
         while (($data = fgetcsv($csvFile)) !== FALSE) {
             if (!$firstline) {
-                $apprenant_id = NULL;
+                $apprenant_id = $data['4'] ? $data['4'] : NULL;
                 Tache::create([
                     "nom"=>$data['0'],
                     "description"=>$data['1'],
