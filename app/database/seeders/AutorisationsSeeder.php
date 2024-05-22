@@ -29,8 +29,6 @@ class AutorisationsSeeder extends Seeder
             ControllerSeeder::class,
             ActionSeeder::class,
             AutorisationSeeder::class
-            
-
         ];
     }
 }
