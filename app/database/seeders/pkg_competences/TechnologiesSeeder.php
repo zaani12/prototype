@@ -29,6 +29,7 @@ class TechnologiesSeeder extends Seeder
                     "nom" => $data['0'],
                     "description" => $data['1'],
                     "categorie_technologies_id" => $data['2'],
+                    "competence_id" => $data['3'],
                 ]);
             }
             $firstline = false;
