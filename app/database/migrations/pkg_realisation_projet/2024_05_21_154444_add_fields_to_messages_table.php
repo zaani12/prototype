@@ -19,8 +19,8 @@ return new class extends Migration
             $table->boolean('isLue')->default(false);
             $table->unsignedBigInteger('projet_id')->after('description');
             $table->foreign('projet_id')->references('id')->on('projets')->onDelete('cascade');
-            $table->unsignedBigInteger('tach_id')->after('projet_id');
-            $table->foreign('tach_id')->references('id')->on('taches')->onDelete('cascade');
+            $table->unsignedBigInteger('tache_id')->after('projet_id');
+            $table->foreign('tache_id')->references('id')->on('taches')->onDelete('cascade');
         });
     }
 
