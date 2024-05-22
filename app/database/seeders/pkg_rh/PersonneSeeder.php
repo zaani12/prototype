@@ -26,6 +26,8 @@ class PersonneSeeder extends Seeder
                     "nom"=>$data['0'],
                     "prenom"=>$data['1'],
                     "type"=>$data["2"],
+                    "groupe_id"=>$data["3"]
+                  
                 ]);
             }
             $firstline = false;
