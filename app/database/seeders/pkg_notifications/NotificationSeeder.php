@@ -19,9 +19,13 @@ class NotificationSeeder extends Seeder
 
         Personne::create([
             'id' => '1',
+            'nom' => 'madani',
+            'prenom' => 'ali',
         ]);
         Personne::create([
             'id' => '2',
+            'nom' => 'madani',
+            'prenom' => 'ahmad',
         ]);
         //
 
