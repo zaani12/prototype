@@ -5,11 +5,11 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 
 use Database\Seeders\{
-    UserSeeder ,
-    CompetencesSeeder, 
+    UserSeeder,
+    CompetencesSeeder,
     NotificationsSeeder,
     AutorisationsSeeder,
-    RHSeeder ,
+    RHSeeder,
     ProjetsSeeder,
     RealisationProjetSeeder,
     PostsSeeder,
@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
 {
     public function run(): void
     {
+        $this->call(RHSeeder::class);
         $this->call(AutorisationsSeeder::class);
         $this->call(UserSeeder::class);
         $this->call(CompetencesSeeder::class);
@@ -28,5 +29,9 @@ class DatabaseSeeder extends Seeder
         $this->call(ProjetsSeeder::class);
         $this->call(RealisationProjetSeeder::class);
         $this->call(PostsSeeder::class);
+
+
+
+
     }
 }
