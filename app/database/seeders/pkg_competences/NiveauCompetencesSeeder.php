@@ -32,6 +32,7 @@ class NiveauCompetencesSeeder extends Seeder
             $firstline = false;
         }
 
+
         fclose($csvFile);
     }
 }

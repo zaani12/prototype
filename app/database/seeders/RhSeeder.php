@@ -7,9 +7,8 @@ use Symfony\Component\Uid\NilUuid;
 
 use Database\Seeders\pkg_rh\{
     GroupeSeeder,
-    PersonneSeeder
+    PersonneSeeder,
 };
-
 
 class RhSeeder extends Seeder
 {
