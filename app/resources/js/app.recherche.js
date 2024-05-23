@@ -2,36 +2,39 @@
 import "https://code.jquery.com/jquery-3.6.0.min.js";
 
 $(document).ready(function () {
-    // Function to get URL parameter value by name
-    function getUrlParameter(name) {
-        name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)");
-        var results = regex.exec(location.search);
-        return results === null ? null : decodeURIComponent(results[1].replace(/\+/g, " "));
+    // Fonction pour mettre à jour un paramètre dans l'URL
+   /**
+ * Function to update or add a query parameter in the current URL without reloading the page.
+ * @param {string} param - The parameter name to update or add.
+ * @param {string} paramVal - The value of the parameter to set.
+ */
+function updateURLParameter(param, paramVal) {
+    var url = window.location.href;
+    var hash = location.hash;
+
+    // Remove hash from the URL
+    url = url.replace(hash, "");
+
+    // Check if the parameter already exists in the URL
+    if (url.indexOf(param + "=") >= 0) {
+        var prefix = url.substring(0, url.indexOf(param + "="));
+        var suffix = url.substring(url.indexOf(param + "="));
+        suffix = suffix.substring(suffix.indexOf("=") + 1);
+        suffix = suffix.indexOf("&") >= 0 ? suffix.substring(suffix.indexOf("&")) : "";
+        url = prefix + param + "=" + paramVal + suffix;
+    } else {
+        // If parameter doesn't exist, append it to the URL
+        if (url.indexOf("?") < 0) 
+            url += "?" + param + "=" + paramVal;
+        else 
+            url += "&" + param + "=" + paramVal;
     }
 
-    // Function to update a parameter in the URL
-    function updateURLParameter(param, paramVal) {
-        var url = window.location.href;
-        var hash = location.hash;
-        url = url.replace(hash, "");
-        if (url.indexOf(param + "=") >= 0) {
-            var prefix = url.substring(0, url.indexOf(param + "="));
-            var suffix = url.substring(url.indexOf(param + "="));
-            suffix = suffix.substring(suffix.indexOf("=") + 1);
-            suffix =
-                suffix.indexOf("&") >= 0
-                    ? suffix.substring(suffix.indexOf("&"))
-                    : "";
-            url = prefix + param + "=" + paramVal + suffix;
-        } else {
-            if (url.indexOf("?") < 0) url += "?" + param + "=" + paramVal;
-            else url += "&" + param + "=" + paramVal;
-        }
-        window.history.replaceState({ path: url }, "", url + hash);
-    }
+    // Update the URL in the browser history
+    window.history.replaceState({ path: url }, "", url + hash);
+}
 
-    // Function to fetch data with AJAX
+    // Fonction pour récupérer les données avec AJAX
     function fetchData(page, searchValue) {
         var url = "";
         if (window.location.pathname.includes("projets")) {
