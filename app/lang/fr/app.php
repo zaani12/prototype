@@ -2,7 +2,7 @@
 
 return [
     'add' => 'Ajouter',
-    'rechercher'=>"Rechercher",
+    'rechercher' => "Rechercher",
     'delete' => 'Supprimer',
     'edit' => 'Modifier',
     'cancel' => 'Annuler',
@@ -11,9 +11,7 @@ return [
     'detail' => 'Detail',
     'back' => 'Retour',
     'name' => 'Nom',
-    'prenom' => 'Prenom',
-    'action'=> 'Action',
-    'type' => 'Type',
+    'action' => 'Action',
     'detail' => 'Détail',
     'description' => 'Description',
     'list' => 'List',
