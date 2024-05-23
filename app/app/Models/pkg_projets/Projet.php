@@ -2,7 +2,7 @@
 namespace App\Models\pkg_projets;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Eloquent\Model;  
 
 class Projet extends Model
 {
@@ -12,5 +12,6 @@ class Projet extends Model
     {
         return $this->belongsToMany('App\Model\pkg_competences\Competence');
     }
+
 
 }
