@@ -32,9 +32,9 @@ class ApprenantRepositorie extends BaseRepository
     /**
      * Constructeur de la classe ProjetRepository.
      */
-    public function __construct($type = null)
+    public function __construct()
     {
-        $this->type = $type;
+        $this->type = "Formateur";
         parent::__construct(new Formateur());
     }
 
