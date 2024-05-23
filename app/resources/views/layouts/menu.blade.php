@@ -10,3 +10,7 @@
 @include('layouts.GestionProjets.GestionProjetsMenu')
 @include('layouts.pkg_rh.pkg_rhMenu')
 @include('layouts.pkg_realisation_projet.GestionLivrable')
+
+
+@include('layouts.pkg-autorisations.GestionAutorisation')
+@include('layouts.pkg-autorisations.GestionProjets')
