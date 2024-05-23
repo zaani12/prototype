@@ -2,10 +2,7 @@
 
 namespace Database\Seeders;
 
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-
 use Illuminate\Database\Seeder;
-use Symfony\Component\Uid\NilUuid;
 
 use Database\Seeders\{
     UserSeeder ,
@@ -13,17 +10,10 @@ use Database\Seeders\{
     NotificationsSeeder,
     AutorisationsSeeder,
     RHSeeder ,
-    GestionProjetsSeeder,
     ProjetsSeeder,
     RealisationProjetSeeder,
     PostsSeeder,
-
-  
-  
 };
-
-
-
 
 
 class DatabaseSeeder extends Seeder
