@@ -26,8 +26,8 @@ class ProjetsSeeder extends Seeder
         return [
             EquipeSeeder::class,
             ProjetSeeder::class,
-            TachesSeeder::class,
             StatutTacheSeeder::class,
+            TachesSeeder::class,
         ];
     }
 }
