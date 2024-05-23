@@ -6,6 +6,8 @@ use Illuminate\Database\Seeder;
 use App\Models\pkg_autorisations\Permission;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Support\Facades\Schema;
+use App\Models\User;
+
 
 class PermissionSeeder extends Seeder
 {
