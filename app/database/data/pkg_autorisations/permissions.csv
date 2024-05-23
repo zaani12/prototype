@@ -1,0 +1,10 @@
+name,guard_name
+index-ProjetController,web
+show-ProjetController,web
+create-ProjetController,web
+store-ProjetController,web
+edit-ProjetController,web
+update-ProjetController,web
+destroy-ProjetController,web
+export-ProjetController,web
+import-ProjetController,web
