@@ -17,6 +17,7 @@ class EquipeSeeder extends Seeder
      */
     public function run(): void
     {
+
         Schema::disableForeignKeyConstraints();
         Equipe::truncate();
         Schema::enableForeignKeyConstraints();
@@ -51,5 +52,7 @@ class EquipeSeeder extends Seeder
             $firstline = false;
         }
         fclose($csvFile);
+
+
     }
 }
