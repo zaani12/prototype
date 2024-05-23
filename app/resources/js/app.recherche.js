@@ -3,25 +3,36 @@ import "https://code.jquery.com/jquery-3.6.0.min.js";
 
 $(document).ready(function () {
     // Fonction pour mettre à jour un paramètre dans l'URL
-    function updateURLParameter(param, paramVal) {
-        var url = window.location.href;
-        var hash = location.hash;
-        url = url.replace(hash, "");
-        if (url.indexOf(param + "=") >= 0) {
-            var prefix = url.substring(0, url.indexOf(param + "="));
-            var suffix = url.substring(url.indexOf(param + "="));
-            suffix = suffix.substring(suffix.indexOf("=") + 1);
-            suffix =
-                suffix.indexOf("&") >= 0
-                    ? suffix.substring(suffix.indexOf("&"))
-                    : "";
-            url = prefix + param + "=" + paramVal + suffix;
-        } else {
-            if (url.indexOf("?") < 0) url += "?" + param + "=" + paramVal;
-            else url += "&" + param + "=" + paramVal;
-        }
-        window.history.replaceState({ path: url }, "", url + hash);
+   /**
+ * Function to update or add a query parameter in the current URL without reloading the page.
+ * @param {string} param - The parameter name to update or add.
+ * @param {string} paramVal - The value of the parameter to set.
+ */
+function updateURLParameter(param, paramVal) {
+    var url = window.location.href;
+    var hash = location.hash;
+
+    // Remove hash from the URL
+    url = url.replace(hash, "");
+
+    // Check if the parameter already exists in the URL
+    if (url.indexOf(param + "=") >= 0) {
+        var prefix = url.substring(0, url.indexOf(param + "="));
+        var suffix = url.substring(url.indexOf(param + "="));
+        suffix = suffix.substring(suffix.indexOf("=") + 1);
+        suffix = suffix.indexOf("&") >= 0 ? suffix.substring(suffix.indexOf("&")) : "";
+        url = prefix + param + "=" + paramVal + suffix;
+    } else {
+        // If parameter doesn't exist, append it to the URL
+        if (url.indexOf("?") < 0) 
+            url += "?" + param + "=" + paramVal;
+        else 
+            url += "&" + param + "=" + paramVal;
     }
+
+    // Update the URL in the browser history
+    window.history.replaceState({ path: url }, "", url + hash);
+}
 
     // Fonction pour récupérer les données avec AJAX
     function fetchData(page, searchValue) {
