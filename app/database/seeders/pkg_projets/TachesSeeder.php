@@ -28,6 +28,7 @@ class TachesSeeder extends Seeder
                     "dateEchéance"=>$data['3'],
                     "personne_id"=>$personne_id,
                     "projets_id"=>$data['5'],
+                    "status_tache_id"=>$data['6'],
                     'updated_at' => Carbon::now(),
                     'created_at' => Carbon::now()
                 ]);
