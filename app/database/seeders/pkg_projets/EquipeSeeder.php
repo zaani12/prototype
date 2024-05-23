@@ -51,19 +51,6 @@ class EquipeSeeder extends Seeder
             $firstline = false;
         }
         fclose($csvFile);
-        // while (($data = fgetcsv($csvFile)) !== FALSE) {
-        //     if (!$firstline) {
-        //         Equipe::create([
-        //             'nom' => $data[0],
-        //             'description' => $data[1],
-        //             'projet_id' => $data[2],
-        //             'created_at' => $data[3],
-        //             'updated_at' => $data[4],
-        //         ]);
-        //     }
-        //     $firstline = false;
-        // }
-
-        // fclose($csvFile);
+        
     }
 }
