@@ -10,6 +10,8 @@ use App\Models\pkg_rh\Formateur;
 use Illuminate\Support\Facades\Route;
 use App\Exceptions\pkg_rh\FormateurAlreadyExistException;
 use App\Exceptions\pkg_rh\ApprenantAlreadyExistException;
+use App\Repositories\pkg_rh\ApprenantRepositorie;
+use App\Repositories\pkg_rh\GroupRepositorie;
 
 
 
@@ -19,19 +21,17 @@ class PersonneController extends Controller
     public function index(Request $request)
     {
         
-        $personnes = $this->getRepositorie()->paginate();
+       
         $type = $this->getType();
         if ($request->ajax()) {
-            $searchQuery = $request->get('query');
-            if (!empty($searchQuery)) {
-                $searchQuery = str_replace(" ", "%", $searchQuery);
-                $methodName = 'search' . ucfirst($type);
+            $searchValue = $request->get('searchValue');
+            if ($searchValue !== '') {
+                $searchQuery = str_replace(" ", "%", $searchValue);
                 $personnes = $this->searchData($searchQuery);
-                
                 return view('pkg_rh.personne.index', compact('personnes', 'type'))->render();
             }
         }
-
+        $personnes = $this->getRepositorie()->paginate();
         return view('pkg_rh.personne.index', compact('personnes', 'type'));
     }
 
@@ -39,7 +39,10 @@ class PersonneController extends Controller
     public function create()
     {
         $type = $this->getType();
-        return view('pkg_rh.personne.create',compact('type'));
+        $GroupRepositorie = new GroupRepositorie();
+
+        $groupes = $GroupRepositorie->paginate();
+        return view('pkg_rh.personne.create',compact('type','groupes'));
     }
 
     public function store(Request $request)
@@ -50,9 +53,9 @@ class PersonneController extends Controller
             $personne =  $this->getRepositorie()->create($data);
             return redirect()->route($type . '.index')->with('success', $type . ' a été ajouté avec succès');
         } catch (FormateurAlreadyExistException $e) {
-            return back()->withInput()->withErrors(['' => __('') . ' ' . __('app.existdeja')]);
+            return back()->withInput()->withErrors(['personne_exists' =>__('pkg_rh/personne.formateurException')]);
         } catch (ApprenantAlreadyExistException $e) {
-            return back()->withInput()->withErrors(['' => __('') . ' ' . __('app.existdeja')]);
+            return back()->withInput()->withErrors(['personne_exists' => __('pkg_rh/personne.apprenantException')]);
         } catch (\Exception $e) {
             return abort(500);
         }
@@ -69,7 +72,9 @@ class PersonneController extends Controller
     {
         $type = $this->getType();
         $personne = $this->getRepositorie()->find($id);
-        return view('pkg_rh.personne.edit', compact('personne','type'));
+        $GroupRepositorie = new GroupRepositorie();
+        $groupes = $GroupRepositorie->paginate();
+        return view('pkg_rh.personne.edit', compact('personne','type','groupes'));
     }
 
     public function update(Request $request, $id)
@@ -92,7 +97,7 @@ class PersonneController extends Controller
         $type = explode('.',$route);
         $model = str::ucfirst($type[0]);
         $modelRepository = $model.'Repositorie';
-        $path = "\\App\\Repositories\\personne\\".$modelRepository;
+        $path = "\\App\\Repositories\\pkg_rh\\".$modelRepository;
 
         if($model === 'Formateur'){
             $repository = new $path(new Formateur);

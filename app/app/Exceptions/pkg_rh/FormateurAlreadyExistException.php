@@ -8,6 +8,6 @@ class FormateurAlreadyExistException extends BusinessException
 {
     public static function createFormateur()
     {
-        return new self(__('Formateur already existe'));
+        return new self(__('pkg_rh/personne.formateurException'));
     }
 }

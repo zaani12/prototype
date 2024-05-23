@@ -3,12 +3,11 @@
 namespace App\Repositories\pkg_rh;
 
 use App\Repositories\BaseRepository;
-use App\Models\pkg_rh\Formateur;
+use App\Models\pkg_rh\Groupe;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
-use App\Exceptions\pkg_rh\FormateurAlreadyExistException;
+use App\Exceptions\pkg_rh\GroupAlreadyExistException;
 
-
-class FormateurRepositorie extends BaseRepository
+class GroupRepositorie extends BaseRepository
 {
     protected $type;
 
@@ -18,7 +17,8 @@ class FormateurRepositorie extends BaseRepository
      * @var array
      */
     protected $fieldsSearchable = [
-        'nom','prenom','type' ,'groupe_id'
+        'nom',
+        'description'
     ];
 
     /**
@@ -36,31 +36,25 @@ class FormateurRepositorie extends BaseRepository
      */
     public function __construct()
     {
-        $this->type = "Formateur";
-        parent::__construct(new Formateur());
+        parent::__construct(new Groupe());
+    }
+
+    public function paginate($search = [], $perPage = 0, array $columns = ['*']): LengthAwarePaginator
+    {
+        return $this->model->paginate($perPage, $columns);
     }
 
     public function create(array $data)
     {
         $nom = $data['nom'];
-        $preom = $data['prenom'];
-        
-        $existingFormateur = $this->model->where('nom', $nom)->where('prenom', $preom)->exists();
-        
-        if ($existingFormateur) {
-            throw FormateurAlreadyExistException::createFormateur();
+    
+        $existingGroup = $this->model->where('nom', $nom)->exists();
+    
+        if ($existingGroup) {
+            throw GroupAlreadyExistException::createGroup();
         } else {
            
             return parent::create($data);
-        }
-    }
-
-    public function paginate($search = [], $perPage = 10, array $columns = ['*']): LengthAwarePaginator
-    {
-        if ($this->type !== null) {
-            return $this->model->where('type', $this->type)->paginate($perPage, $columns);
-        } else {
-            return $this->model->paginate($perPage, $columns);
         }
     }
 
@@ -71,11 +65,11 @@ class FormateurRepositorie extends BaseRepository
      * @param int $perPage Nombre d'éléments par page.
      * @return \Illuminate\Contracts\Pagination\LengthAwarePaginator
      */
-    public function searchData($searchableData, $perPage = 10)
+    public function searchData($searchableData, $perPage = 4)
     {
-        return $this->model->where('type', 'Formateur')->where(function($query) use ($searchableData) {
+        return $this->model->where(function($query) use ($searchableData) {
             $query->where('nom', 'like', '%' . $searchableData . '%')
-                  ->orWhere('prenom', 'like', '%' . $searchableData . '%');
+                  ->orWhere('description', 'like', '%' . $searchableData . '%');
         })->paginate($perPage);
     }
 }

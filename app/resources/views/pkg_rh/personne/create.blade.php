@@ -10,6 +10,19 @@
         </div>
     </div>
 </div>
+<div class="content-header">
+    @if ($errors->has('personne_exists'))
+        <div class="alert alert-danger">
+            {{ $errors->first('personne_exists') }}
+        </div>
+    @else
+        @if ($errors->has('unexpected_error'))
+            <div class="alert alert-danger">
+                {{ $errors->first('unexpected_error') }}
+            </div>
+        @endif
+    @endif
+</div>
 <section class="content">
 
 <div class="container-fluid">
@@ -24,7 +37,7 @@
                     @csrf
                     @method('POST')
                     <div class="card-body">
-                        @include('personne.fields')
+                        @include('pkg_rh.personne.fields')
                     </div>
 
                     <div class="card-footer">

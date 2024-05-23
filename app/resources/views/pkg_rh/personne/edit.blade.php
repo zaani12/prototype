@@ -31,11 +31,11 @@
                     @csrf
                     @method('post')
                     <div class="card-body">
-                        @include('personne.fields')
+                        @include('pkg_rh.personne.fields')
                     </div>
 
                     <div class="card-footer">
-                        <a href="{{ route('membre.index') }}" class="btn btn-default">Cancel</a>
+                        <a href="{{ route($type.'.index') }}" class="btn btn-default">Cancel</a>
                         <button type="submit" class="btn btn-primary">Editer</button>
                     </div>
                 </form>

@@ -2,7 +2,15 @@
 import "https://code.jquery.com/jquery-3.6.0.min.js";
 
 $(document).ready(function () {
-    // Fonction pour mettre à jour un paramètre dans l'URL
+    // Function to get URL parameter value by name
+    function getUrlParameter(name) {
+        name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)");
+        var results = regex.exec(location.search);
+        return results === null ? null : decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+
+    // Function to update a parameter in the URL
     function updateURLParameter(param, paramVal) {
         var url = window.location.href;
         var hash = location.hash;
@@ -23,62 +31,59 @@ $(document).ready(function () {
         window.history.replaceState({ path: url }, "", url + hash);
     }
 
-    // Fonction pour récupérer les données avec AJAX
+    // Function to fetch data with AJAX
     function fetchData(page, searchValue) {
+        var url = "";
+        if (window.location.pathname.includes("projets")) {
+            url = "/projets";
+        } else if (window.location.pathname.includes("Apprenant")) {
+            url = "/Apprenant";
+        }
+
         $.ajax({
-            url: "/projets/?page=" + page + "&searchValue=" + searchValue,
+            url: url + "/?page=" + page + "&searchValue=" + searchValue,
             success: function (data) {
                 var newData = $(data);
-
-                $("tbody").html(newData.find("tbody").html());
+                if (url === "/projets") {
+                    $("tbody").html(newData.find("tbody").html());
+                } else if (url === "/Apprenant") {
+                    $("#table-personne").html(newData.find("#table-personne").html());
+                }
                 $("#card-footer").html(newData.find("#card-footer").html());
                 var paginationHtml = newData.find(".pagination").html();
-                if (paginationHtml) {
-                    $(".pagination").html(paginationHtml);
-                } else {
-                    $(".pagination").html("");
-                }
+                $(".pagination").html(paginationHtml || "");
             },
         });
+
         if (page !== null && searchValue !== null) {
             updateURLParameter("page", page);
             updateURLParameter("searchValue", searchValue);
         } else {
-            window.history.replaceState(
-                {},
-                document.title,
-                window.location.pathname
-            );
+            window.history.replaceState({}, document.title, window.location.pathname);
         }
     }
 
-    // Function to get URL parameter value by name
-    function getUrlParameter(name) {
-        name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)");
-        var results = regex.exec(location.search);
-        return results === null
-            ? ""
-            : decodeURIComponent(results[1].replace(/\+/g, " "));
-    }
+    // Get initial page value
+    var initialPage = getUrlParameter("page");
 
-    var searchValueFromUrl = getUrlParameter("searchValue");
-    if (searchValueFromUrl) {
+    // Trigger initial data fetch if page is defined
+    if (initialPage) {
+        var searchValueFromUrl = getUrlParameter("searchValue");
         $("#table_search").val(searchValueFromUrl);
-        fetchData($("#page").val(), searchValueFromUrl);
+        fetchData(initialPage, searchValueFromUrl);
     }
 
-    // Gestion de l'événement de clic sur la pagination
-    $("body").on("click", ".pagination a", function (param) {
-        param.preventDefault();
+    // Handle pagination click event
+    $(document).on("click", ".pagination a", function (event) {
+        event.preventDefault();
         var page = $(this).attr("href").split("page=")[1];
         var searchValue = $("#table_search").val();
         fetchData(page, searchValue);
     });
 
-    // Gestion de l'événement de saisie dans la barre de recherche
+    // Handle search input event
     $("body").on("keyup", "#table_search", function () {
-        var page = $("#page").val();
+        var page = initialPage || 1; // Set a default page value if undefined
         var searchValue = $(this).val();
         fetchData(page, searchValue);
     });
@@ -89,7 +94,5 @@ $(document).ready(function () {
     }
 
     // Activation des dropdowns Bootstrap
-    $(document).ready(function () {
-        $(".dropdown-toggle").dropdown();
-    });
+    $(".dropdown-toggle").dropdown();
 });

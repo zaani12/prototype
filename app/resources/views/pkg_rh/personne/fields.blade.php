@@ -11,7 +11,14 @@
 </div>
 
 <div class="form-group">
-    <label for="exampleInputPassword1">Email</label>
-    <input name="email" type="email" class="form-control"
-        id="exampleInputPassword2" value="{{ isset($personne) ? $personne->email : null}}">
+    <label for="groupeSelect">Groupe</label>
+    <select name="groupe_id" id="groupeSelect" class="form-control">
+        @foreach ($groupes as $item)
+            @if(isset($personne) && $personne->groupe_id == $item->id)
+                <option value="{{ $item->id }}" selected>{{ $item->nom }}</option>
+            @else
+                <option value="{{ $item->id }}">{{ $item->nom }}</option>
+            @endif
+        @endforeach
+    </select>
 </div>
