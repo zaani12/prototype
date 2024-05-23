@@ -11,9 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('formateurs', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+        Schema::table('projets', function (Blueprint $table) {
+            $table->string('objectifs')->nullable();
+            $table->date('date_debut')->nullable();
+            $table->date('date_echeance')->nullable();
         });
     }
 
@@ -22,6 +23,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('formateurs');
+        Schema::table('projets_table', function (Blueprint $table) {
+            //
+        });
     }
 };
