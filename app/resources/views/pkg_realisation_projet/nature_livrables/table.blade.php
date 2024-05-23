@@ -13,19 +13,17 @@
                     <td>{{ $natureLivrable->nom }}</td>
                     <td>{{ $natureLivrable->description }}</td>
                     <td class="text-center">
-                        
-                        
+                      
                             <a href="{{ route('nature-livrables.show', $natureLivrable) }}" class="btn btn-default btn-sm">
                                 <i class="far fa-eye"></i>
                             </a>
                         
-                            @can("edit-NatureLivrableController")
+                    
                             <a href="{{ route('nature-livrables.edit', $natureLivrable) }}" class="btn btn-sm btn-default">
                                 <i class="fas fa-pen-square"></i>
                             </a>
-                            @endcan
                         
-                            @can('destroy-NatureLivrableController')
+                        
                             <form action="{{ route('nature-livrables.destroy', $natureLivrable) }}" method="POST" style="display: inline;">
                                 @csrf
                                 @method('DELETE')
@@ -34,7 +32,6 @@
                                     <i class="fas fa-trash"></i>
                                 </button>
                             </form>
-                            @endcan
                         
                     </td>
                 </tr>
