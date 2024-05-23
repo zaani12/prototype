@@ -17,6 +17,11 @@ class ActionSeeder extends Seeder
      */
     public function run(): void
     {
+
+        // Undefined array key 5
+
+
+
         $AdminRole = User::ADMIN;
         $MembreRole = User::APPRENANT;
 
@@ -33,51 +38,25 @@ class ActionSeeder extends Seeder
             if (!$firstline) {
                 Action::create([
 
-                    
-                        "id"=>$data[0],
-                    
-                        "nom"=>$data[1],
-                    
-                        "controller_id"=>$data[2],
-                                        
-                        "created_at"=>$data[3],
-                    
-                        "updated_at"=>$data[4],
-                    
+
+                    "id" => $data[0],
+
+                    "nom" => $data[1],
+
+                    "controller_id" => $data[2],
+
+                    "permission_id" => $data[3],
+
+                    "parent_action_id" => $data[4],
+
+                    "created_at" => $data[5],
+
+                    "updated_at" => $data[6]
                 ]);
             }
             $firstline = false;
         }
 
         fclose($csvFile);
-        $actions = ['index', 'show', 'create', 'store', 'edit', 'update', 'destroy', 'export', 'import'];
-        foreach ($actions as $action) {
-            $permissionName = $action . '-' . "TachesController";
-            Permission::create(['name' => $permissionName, 'guard_name' => 'web']);
-        }
-
-        $tachesManagerRolePermissions = [
-            'index-TachesController',
-            'show-TachesController',
-            'create-TachesController',
-            'store-TachesController',
-            'edit-TachesController',
-            'update-TachesController',
-            'destroy-TachesController',
-            'export-TachesController',
-            'import-TachesController'
-        ];
-
-        $tachesMembreRolePermissions = [
-            'index-TachesController',
-            'show-TachesController',
-        ];
-
-        $admin = Role::where('name', $AdminRole)->first();
-        $membre = Role::where('name', $MembreRole)->first();
-
-        $admin->givePermissionTo($tachesManagerRolePermissions);
-        $membre->givePermissionTo($tachesMembreRolePermissions);
-
     }
 }
