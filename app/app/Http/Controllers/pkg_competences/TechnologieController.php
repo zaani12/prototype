@@ -81,8 +81,10 @@ class TechnologieController extends Controller
 
     public function edit(string $id)
     {
+        $CategorieTechnologie = $this->CategorieTechnologie::all();
+        $Competence = $this->Competence::all();
         $dataToEdit = $this->TechnologieRepository->find($id);
-        return view('Pkg_competences.Technologie.edit', compact('dataToEdit'));
+        return view('Pkg_competences.Technologie.edit', compact('dataToEdit' ,'CategorieTechnologie' ,'Competence'));
     }
 
 

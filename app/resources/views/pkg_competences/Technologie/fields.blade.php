@@ -33,8 +33,17 @@
                 placeholder="Entrez le titre"
                 value="{{ $dataToEdit ? $dataToEdit->competence_id : old('competence_id') }}">
 
-            <select name="" id="">
-                <option value=""></option>
+            <select name="CategorieTechnologie" class="form-control" id="exampleInputProject">
+                @if (isset($dataToEdit))
+                    <option value="{{ $task->project->id }}">{{ $task->project->nom }}</option>
+                @else
+                    <option value="">{{ __('GestionProjets/task/message.choix') }}</option>
+                @endif
+                @foreach ($CategorieTechnologie as $item)
+                    @if (!isset($task) || !$task->project || $item->id !== $task->project->id)
+                        <option value="{{ $item->id }}">{{ $item->nom }}</option>
+                    @endif
+                @endforeach
             </select>
             for
             @error('competence_id')
