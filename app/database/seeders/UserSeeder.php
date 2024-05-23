@@ -48,30 +48,30 @@ class UserSeeder extends Seeder
         ])->assignRole($formateur);
 
 
-        $permissionsAdmin = [
-            'index-ProjetController',
-            'show-ProjetController',
-            'create-ProjetController',
-            'store-ProjetController',
-            'edit-ProjetController',
-            'update-ProjetController',
-            'destroy-ProjetController',
-            'export-ProjetController',
-            'import-ProjetController'
-        ];
+        // $permissionsAdmin = [
+        //     'index-ProjetController',
+        //     'show-ProjetController',
+        //     'create-ProjetController',
+        //     'store-ProjetController',
+        //     'edit-ProjetController',
+        //     'update-ProjetController',
+        //     'destroy-ProjetController',
+        //     'export-ProjetController',
+        //     'import-ProjetController'
+        // ];
 
-        $permissionsApprenant = [
-            'index-ProjetController',
-            'show-ProjetController',
-        ];
+        // $permissionsApprenant = [
+        //     'index-ProjetController',
+        //     'show-ProjetController',
+        // ];
 
         $adminRole = Role::where('name', $admin)->first();
         $apprenantRole = Role::where('name', $apprenant)->first();
         $formateurRole = Role::where('name', $formateur)->first();
 
-        $adminRole->givePermissionTo($permissionsAdmin);
-        $formateurRole->givePermissionTo($permissionsAdmin);
-        $apprenantRole->givePermissionTo($permissionsApprenant);
+        // $adminRole->givePermissionTo($permissionsAdmin);
+        // $formateurRole->givePermissionTo($permissionsAdmin);
+        // $apprenantRole->givePermissionTo($permissionsApprenant);
     }
 }
 
