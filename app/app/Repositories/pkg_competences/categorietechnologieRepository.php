@@ -60,4 +60,15 @@ class categorietechnologieRepository extends BaseRepository
             return parent::update($id, $data);
         }
     }
+
+    public function destroy($id)
+    {
+        $categorietechnologieExist =  $this->model->find($id);
+
+        if (!$categorietechnologieExist) {
+            throw categorietechnologieException::NotExistCategorieTechnlogie();
+        } else {
+            return parent::destroy($id);
+        }
+    }
 }
