@@ -1,40 +1,40 @@
 <?php
 
-namespace Database\Seeders\GestionProjets;
+namespace Database\Seeders\pkg_rh;
 
-
+use App\Models\pkg_rh\Personne;
 use Illuminate\Database\Seeder;
-use App\Models\GestionProjets\Projet;
-use Spatie\Permission\Models\Permission;
-use Spatie\Permission\Models\Role;
-use App\Models\User;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 
-
-class ProjetsSeeder extends Seeder
+class PersonneSeeder extends Seeder
 {
+    /**
+     * Run the database seeds.
+     */
     public function run(): void
     {
 
+
+
         Schema::disableForeignKeyConstraints();
-        Projet::truncate();
+        Personne::truncate();
         Schema::enableForeignKeyConstraints();
 
-        $csvFile = fopen(base_path("database/data/projets.csv"), "r");
+        $csvFile = fopen(base_path("database/data/pkg_rh/Personnes.csv"), "r");
         $firstline = true;
-        $i = 0;
+
         while (($data = fgetcsv($csvFile)) !== FALSE) {
             if (!$firstline) {
-                Projet::create([
+                Personne::create([
                     "nom" => $data['0'],
-                    "description" => $data['1']
+                    "prenom" => $data['1'],
+                    "type" => $data['2']
                 ]);
             }
             $firstline = false;
         }
 
         fclose($csvFile);
-
-
     }
 }
