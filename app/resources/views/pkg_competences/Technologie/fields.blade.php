@@ -15,7 +15,7 @@
         </div>
 
         <div class="form-group">
-            <label for="competence_id">{{ __('pkg_competences/technologie/technologie.competence') }}
+            <label for="competence_id">{{ __('pkg_competences/technologie.competence') }}
                 <span class="text-danger">*</span></label>
             <select name="competence_id" class="form-control" id="exampleInputProject">
                 @if (isset($dataToEdit))
@@ -36,8 +36,7 @@
         </div>
 
         <div class="form-group">
-            <label
-                for="categorie_technologies_id">{{ __('pkg_competences/technologie/technologie.categorie_technologies') }}
+            <label for="categorie_technologies_id">{{ __('pkg_competences/technologie.categorie_technologies') }}
                 <span class="text-danger">*</span>
             </label>
             <select name="categorie_technologies_id" class="form-control" id="exampleInputProject">

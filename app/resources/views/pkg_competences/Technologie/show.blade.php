@@ -30,14 +30,13 @@
                             </div>
 
                             <div class="col-sm-12">
-                                <label
-                                    for="nom">{{ __('pkg_competences/technologie/technologie.competence') }}:</label>
+                                <label for="nom">{{ __('pkg_competences/technologie.competence') }}:</label>
                                 <p>{{ $fetchedData->competence->nom }}</p>
                             </div>
 
                             <div class="col-sm-12">
                                 <label
-                                    for="nom">{{ __('pkg_competences/technologie/technologie.categorie_technologies') }}:</label>
+                                    for="nom">{{ __('pkg_competences/technologie.categorie_technologies') }}:</label>
                                 <p>{{ $fetchedData->categorieTechnologie->nom }}</p>
                             </div>
 

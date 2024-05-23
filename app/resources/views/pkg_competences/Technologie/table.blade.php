@@ -2,7 +2,7 @@
     <table class="table table-striped text-nowrap">
         <thead>
             <tr>
-                <th>{{ __('pkg_competences/technologie/technologie.singular') }}</th>
+                <th>{{ __('pkg_competences/technologie.singular') }}</th>
                 <th>{{ __('app.description') }}</th>
                 <th class="text-center">{{ __('app.action') }}</th>
             </tr>

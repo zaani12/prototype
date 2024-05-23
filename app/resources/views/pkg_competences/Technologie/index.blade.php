@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', __('pkg_competences/technologie/technologie.singular'))
+@section('title', __('pkg_competences/technologie.singular'))
 
 @section('content')
     <div class="content-header">
@@ -18,7 +18,7 @@
                             use App\helpers\TranslationHelper;
                             $lang = Config::get('app.locale');
                             $translatedName = TranslationHelper::getTitle(
-                                __('pkg_competences/technologie/technologie.singular'),
+                                __('pkg_competences/technologie.singular'),
                                 $lang,
                             );
                             echo $translatedName;
@@ -32,7 +32,7 @@
                         {{-- @can('create-ProjetController') --}}
                         <a href="{{ route('technologies.create') }}" class="btn btn-info">
                             <i class="fas fa-plus"></i>
-                            {{ __('app.add') }} {{ __('pkg_competences/technologie/technologie.singular') }}
+                            {{ __('app.add') }} {{ __('pkg_competences/technologie.singular') }}
                         </a>
                         {{-- @endcan --}}
                     </div>
