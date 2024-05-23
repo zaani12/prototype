@@ -11,13 +11,13 @@
             <p><strong>Description:</strong> {{ $fetchedData->description }}</p>
         </div>
     </div>
-    <a href="{{ route('nature-livrables.edit', $fetchedData->id) }}" class="btn btn-warning">Edit</a>
+    <!-- <a href="{{ route('nature-livrables.edit', $fetchedData->id) }}" class="btn btn-warning">Edit</a>
     <form action="{{ route('nature-livrables.destroy', $fetchedData->id) }}" method="POST" style="display:inline-block;">
         @csrf
         @method('DELETE')
         <button type="submit" class="btn btn-danger">Delete</button>
     </form>
-    <a href="{{ route('nature-livrables.index') }}" class="btn btn-info">Back to List</a>
+    <a href="{{ route('nature-livrables.index') }}" class="btn btn-info">Back to List</a> -->
 </div>
 @endsection
 

@@ -1,0 +1,10 @@
+name
+index-NatureLivrableController,
+show-NatureLivrableController,
+create-NatureLivrableController,
+store-NatureLivrableController,
+edit-NatureLivrableController,
+update-NatureLivrableController,
+destroy-NatureLivrableController,
+export-NatureLivrableController,
+import-NatureLivrableController

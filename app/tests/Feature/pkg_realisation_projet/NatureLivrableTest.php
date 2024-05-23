@@ -69,10 +69,6 @@ class NatureLivrableTest extends TestCase
         $this->assertEquals($natureLivrableData['nom'], $natureLivrable->nom);
     }
 
-
-
-    
-
     /**
      * Teste la création d'un NatureLivrable déjà existant.
      */
@@ -90,7 +86,7 @@ class NatureLivrableTest extends TestCase
             $natureLivrable = $this->natureLivrableRepository->create($natureLivrableData);
             $this->fail('Expected NatureLivrableAlreadyExistException was not thrown');
         } catch (NatureLivrableAlreadyExistException $e) {
-            $this->assertEquals(__('pkg_realisation_projet/nature_livrable/message.createNatureLivrableException'), $e->getMessage());
+            $this->assertEquals('A NatureLivrable with the same name already exists.', $e->getMessage());
         } catch (\Exception $e) {
             $this->fail('Unexpected exception was thrown: ' . $e->getMessage());
         }
@@ -138,5 +134,4 @@ class NatureLivrableTest extends TestCase
         $this->assertTrue($searchResults->contains('nom', $searchValue));
     }
 }
-
 
