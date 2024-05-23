@@ -37,5 +37,30 @@ class UserSeeder extends Seeder
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
         ])->assignRole($adminRole);
+
+
+        $permissionsAdmin = [
+            'index-ProjetController',
+            'show-ProjetController',
+            'create-ProjetController',
+            'store-ProjetController',
+            'edit-ProjetController',
+            'update-ProjetController',
+            'destroy-ProjetController',
+            'export-ProjetController',
+            'import-ProjetController'
+        ];
+
+        $permissionsApprenant = [
+            'index-ProjetController',
+            'show-ProjetController',
+        ];
+
+        $admin = Role::where('name', $adminRole)->first();
+        $membre = Role::where('name', $membreRole)->first();
+
+        $admin->givePermissionTo($permissionsAdmin);
+        $membre->givePermissionTo($permissionsApprenant);
     }
 }
+

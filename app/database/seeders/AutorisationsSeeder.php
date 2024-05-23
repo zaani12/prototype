@@ -11,6 +11,7 @@ use Database\Seeders\pkg_autorisations\{
     ControllerSeeder,
     ActionSeeder,
     AutorisationSeeder,
+    PermissionSeeder,
 };
 
 
@@ -28,7 +29,8 @@ class AutorisationsSeeder extends Seeder
             RoleSeeder::class,
             ControllerSeeder::class,
             ActionSeeder::class,
-            AutorisationSeeder::class
+            AutorisationSeeder::class,
+            PermissionSeeder::class,
         ];
     }
 }
