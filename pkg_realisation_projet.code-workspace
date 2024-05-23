@@ -16,47 +16,44 @@
     "folders": [
         {
             "path": "./app/app/Models/pkg_realisation_projet",
-            "name":"Models"
-        },   
+            "name": "Models"
+        },
         {
             "path": "./app/resources/views/pkg_realisation_projet",
-            "name":"Views"
+            "name": "Views"
         },
         {
             "path": "./app/app/Http/Controllers/pkg_realisation_projet",
-            "name":"Controllers"
+            "name": "Controllers"
         },
-      
-       
         {
             "path": "./app/app/Repositories/pkg_realisation_projet",
-            "name":"Repositories"
+            "name": "Repositories"
         },
         {
             "path": "./app/app/Http/Requests/pkg_realisation_projet",
-            "name":"requests"
+            "name": "requests"
         },
         {
             "path": "./app/database/seeders/pkg_realisation_projet",
-            "name":"seeders"
+            "name": "seeders"
         },
         {
             "path": "./app/database/migrations/pkg_realisation_projet",
-            "name":"migrations"
+            "name": "migrations"
         },
         {
             "path": "./docs/pkg_realisation_projet",
-            "name":"docs"
+            "name": "docs"
         },
         {
             "path": "./docs/diagrammes/pkg_realisation_projet",
-            "name":"docs/diagrammes"
+            "name": "docs/diagrammes"
         },
         {
             "path": "./modélisation/pkg_realisation_projet",
-            "name":"modélisation"
-        },   
-      
+            "name": "modélisation"
+        },
         {
             "path": "./maquettes/view/pkg_realisation_projet",
             "name": "maquettes"
@@ -64,8 +61,10 @@
         {
             "path": "./collaboration",
             "name": "collaboration"
+        },
+        {
+            "path": "C:/Users/hp/Desktop/prototype-1/app/resources/views/pkg_realisation_projet/nature_livrables"
         }
-        
     ]
   
 }
