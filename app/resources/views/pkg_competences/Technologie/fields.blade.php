@@ -32,6 +32,11 @@
             <input name="competence_id" type="text" class="form-control" id="competence_id"
                 placeholder="Entrez le titre"
                 value="{{ $dataToEdit ? $dataToEdit->competence_id : old('competence_id') }}">
+
+            <select name="" id="">
+                <option value=""></option>
+            </select>
+            for
             @error('competence_id')
                 <div class="text-danger">{{ $message }}</div>
             @enderror
