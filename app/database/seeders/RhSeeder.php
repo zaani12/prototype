@@ -10,7 +10,6 @@ use Database\Seeders\pkg_rh\{
     PersonneSeeder,
 };
 
-
 class RhSeeder extends Seeder
 {
 
