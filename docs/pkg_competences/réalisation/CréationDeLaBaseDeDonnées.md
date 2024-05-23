@@ -27,7 +27,6 @@ php artisan make:migration add_description_nom_to_competences_table --table=comp
  php artisan make:migration add_nom_and_description_to_niveau_competences_table --table=niveau_competences
 
 ````
-
 ### Migrate
 
 
