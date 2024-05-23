@@ -2,11 +2,13 @@
 
 namespace Database\Seeders\pkg_autorisations;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\pkg_autorisations\Permission;
-use App\Models\User;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Support\Facades\Schema;
+use App\Models\User;
+
+
 class PermissionSeeder extends Seeder
 {
     /**
@@ -18,23 +20,13 @@ class PermissionSeeder extends Seeder
         Permission::truncate();
         Schema::enableForeignKeyConstraints();
 
-        $csvFile = fopen(base_path("database/data/pkg_autorisations/Permissions.csv"), "r");
+        $csvFile = fopen(base_path("database/data/pkg_autorisations/permissions.csv"), "r");
         $firstline = true;
-        $i = 0;
         while (($data = fgetcsv($csvFile)) !== FALSE) {
-
-
             if (!$firstline) {
                 Permission::create([
-
-
-                    "id" => $data[0],
-
-                    "name" => $data[1],
-
-                    "guard_name" => $data[2],
-
-
+                    "name"=>$data['0'],
+                    "guard_name"=>$data['1'],
                 ]);
             }
             $firstline = false;
