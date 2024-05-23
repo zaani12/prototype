@@ -19,7 +19,7 @@
                 <span class="text-danger">*</span></label>
             <select name="competence_id" class="form-control" id="exampleInputProject">
                 @if (isset($dataToEdit))
-                    <option value="{{ $Competence->id }}">{{ $dataToEdit->competence->nom }}</option>
+                    <option value="{{ $dataToEdit->id }}">{{ $dataToEdit->competence->nom }}</option>
                 @else
                     <option value="">Choisir un Competence</option>
                 @endif
@@ -42,7 +42,7 @@
             </label>
             <select name="categorie_technologies_id" class="form-control" id="exampleInputProject">
                 @if (isset($dataToEdit))
-                    <option value="{{ $categorieTechnologie->id }}">{{ $dataToEdit->categorieTechnologie->nom }}
+                    <option value="{{ $dataToEdit->id }}">{{ $dataToEdit->categorieTechnologie->nom }}
                     </option>
                 @else
                     <option value="">Choisir un categorie technologies</option>
