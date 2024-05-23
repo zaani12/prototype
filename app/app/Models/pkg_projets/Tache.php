@@ -17,6 +17,7 @@ class Tache extends Model
         'priorité',
         'personne_id',
         'projets_id',
+        'status_tache_id',
         'created_at',
         'updated_at'
     ];

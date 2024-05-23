@@ -21,7 +21,9 @@ class TacheTest extends TestCase
             'priorité' => 1,
             'dateEchéance' => '2024/06/08',
             'apprenant_id' => 10,
+            'personne_id' => 1,
             'projets_id' => 1,
+            'status_tache_id' => 1,
             'updated_at' => Carbon::now(),
             'created_at' => Carbon::now()
         ];
@@ -40,6 +42,8 @@ class TacheTest extends TestCase
             'dateEchéance' => '2024/06/08',
             'apprenant_id' => 10,
             'projets_id' => 1,
+            'personne_id' => 1,
+            'status_tache_id' => 1,
             'updated_at' => Carbon::now(),
             'created_at' => Carbon::now()
         ];
