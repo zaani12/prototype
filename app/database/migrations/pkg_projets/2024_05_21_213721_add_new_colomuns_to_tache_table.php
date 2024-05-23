@@ -17,8 +17,7 @@ return new class extends Migration
             $table->string('priorité');
             $table->Date('dateEchéance');
             $table->unsignedBigInteger('personne_id')->nullable();
-            $table->unsignedBigInteger('projets_id')->nullable();
-
+            $table->unsignedBigInteger('projets_id');
             $table->foreign('personne_id')->references('id')->on('personnes')->onDelete('cascade');
             $table->foreign('projets_id')->references('id')->on('projets')->onDelete('cascade');
         });
