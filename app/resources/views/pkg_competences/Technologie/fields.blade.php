@@ -15,38 +15,45 @@
         </div>
 
         <div class="form-group">
-            <label
-                for="categorie_technologies_id">{{ __('pkg_competences/technologie/technologie.categorie_technologies') }}
+            <label for="competence_id">{{ __('pkg_competences/technologie/technologie.competence') }}
                 <span class="text-danger">*</span></label>
-            <input name="categorie_technologies_id" type="text" class="form-control" id="categorie_technologies_id"
-                placeholder="Entrez le titre"
-                value="{{ $dataToEdit ? $dataToEdit->categorie_technologies_id : old('categorie_technologies_id') }}">
-            @error('categorie_technologies_id')
-                <div class="text-danger">{{ $message }}</div>
-            @enderror
-        </div>
-
-        <div class="form-group">
-            <label for="competence_id">{{ __('pkg_competences/technologie/technologie.competence') }} <span
-                    class="text-danger">*</span></label>
-            <input name="competence_id" type="text" class="form-control" id="competence_id"
-                placeholder="Entrez le titre"
-                value="{{ $dataToEdit ? $dataToEdit->competence_id : old('competence_id') }}">
-
-            <select name="CategorieTechnologie" class="form-control" id="exampleInputProject">
+            <select name="competence_id" class="form-control" id="exampleInputProject">
                 @if (isset($dataToEdit))
-                    <option value="{{ $task->project->id }}">{{ $task->project->nom }}</option>
+                    <option value="{{ $Competence->id }}">{{ $dataToEdit->competence->nom }}</option>
                 @else
-                    <option value="">{{ __('GestionProjets/task/message.choix') }}</option>
+                    <option value="">Choisir un Competence</option>
                 @endif
-                @foreach ($CategorieTechnologie as $item)
-                    @if (!isset($task) || !$task->project || $item->id !== $task->project->id)
+                @foreach ($Competence as $item)
+                    @if (!isset($dataToEdit) || !$dataToEdit->nom || $item->id !== $dataToEdit->competence->id)
                         <option value="{{ $item->id }}">{{ $item->nom }}</option>
                     @endif
                 @endforeach
             </select>
-            for
             @error('competence_id')
+                <div class="text-danger">{{ $message }}</div>
+            @enderror
+
+        </div>
+
+        <div class="form-group">
+            <label
+                for="categorie_technologies_id">{{ __('pkg_competences/technologie/technologie.categorie_technologies') }}
+                <span class="text-danger">*</span>
+            </label>
+            <select name="categorie_technologies_id" class="form-control" id="exampleInputProject">
+                @if (isset($dataToEdit))
+                    <option value="{{ $categorieTechnologie->id }}">{{ $dataToEdit->categorieTechnologie->nom }}
+                    </option>
+                @else
+                    <option value="">Choisir un categorie technologies</option>
+                @endif
+                @foreach ($CategorieTechnologie as $item)
+                    @if (!isset($dataToEdit) || !$dataToEdit->nom || $item->id !== $dataToEdit->categorieTechnologie->id)
+                        <option value="{{ $item->id }}">{{ $item->nom }}</option>
+                    @endif
+                @endforeach
+            </select>
+            @error('categorie_technologies_id')
                 <div class="text-danger">{{ $message }}</div>
             @enderror
         </div>

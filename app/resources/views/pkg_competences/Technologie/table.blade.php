@@ -15,17 +15,17 @@
 
                     <td class="text-center">
                         {{-- @can('show-ProjetController') --}}
-                        <a href="{{ route('projets.show', $technologie) }}" class="btn btn-default btn-sm">
+                        <a href="{{ route('technologies.show', $technologie) }}" class="btn btn-default btn-sm">
                             <i class="far fa-eye"></i>
                         </a>
                         {{-- @endcan --}}
                         {{-- @can('edit-ProjetController') --}}
-                        <a href="{{ route('projets.edit', $technologie) }}" class="btn btn-sm btn-default">
+                        <a href="{{ route('technologies.edit', $technologie) }}" class="btn btn-sm btn-default">
                             <i class="fas fa-pen-square"></i>
                         </a>
                         {{-- @endcan --}}
                         {{-- @can('destroy-ProjetController') --}}
-                        <form action="{{ route('projets.destroy', $technologie) }}" method="POST"
+                        <form action="{{ route('technologies.destroy', $technologie) }}" method="POST"
                             style="display: inline;">
                             @csrf
                             @method('DELETE')

@@ -29,6 +29,18 @@
                                 <p>{{ $fetchedData->nom }}</p>
                             </div>
 
+                            <div class="col-sm-12">
+                                <label
+                                    for="nom">{{ __('pkg_competences/technologie/technologie.competence') }}:</label>
+                                <p>{{ $fetchedData->competence->nom }}</p>
+                            </div>
+
+                            <div class="col-sm-12">
+                                <label
+                                    for="nom">{{ __('pkg_competences/technologie/technologie.categorie_technologies') }}:</label>
+                                <p>{{ $fetchedData->categorieTechnologie->nom }}</p>
+                            </div>
+
                             <!-- Description Field -->
                             <div class="col-sm-12">
                                 <label for="description">{{ __('app.description') }}:</label>
@@ -40,7 +52,7 @@
                                     <p class="text-secondary">Aucune information disponible</p>
                                 @endif
                             </div>
-                          
+
 
                         </div>
                     </div>

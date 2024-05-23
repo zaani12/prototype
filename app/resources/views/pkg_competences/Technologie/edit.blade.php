@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', __('app.edit') . ' ' . __('GestionTasks/task/message.titre'))
+@section('title', __('app.edit') . ' ' . __('pkg_competences/technologie/technologie.singular'))
 
 @section('content')
     <div class="content-header">
@@ -18,7 +18,7 @@
                             </h3>
                         </div>
                         <!-- Obtenir le formulaire -->
-                        @include('GestionTasks.task.fields')
+                        @include('pkg_competences.Technologie.fields')
                     </div>
                 </div>
             </div>
