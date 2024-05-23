@@ -14,6 +14,7 @@ class TachesSeeder extends Seeder
      */
     public function run(): void
     {       
+
         $csvFile = fopen(base_path("database/data/pkg_projets/Taches.csv"), "r");
         $firstline = true;
         $i = 0;
