@@ -1,6 +1,6 @@
 <?php
 
-namespace Database\Seeders;
+namespace Database\Seeders\pkg_projets;
 
 use Log;
 use App\Models\pkg_rh\Personne;
@@ -21,26 +21,26 @@ class ApprenantEquipeSeeder extends Seeder
         Schema::enableForeignKeyConstraints();
 
         // Ensure the 'Personne' table has some records
-        if (DB::table('personnes')->count() == 0) {
-            DB::table('personnes')->insert([
-                [
-                    'id' => 1,
-                    'nom' => 'Default person 1',
-                    'prenom' => 'Default person 1',
-                    'type' => 'Default type 1',
-                    'created_at' => now(),
-                    'updated_at' => now(),
-                ],
-                [
-                    'id' => 2,
-                    'nom' => 'Default person 2',
-                    'prenom' => 'Default person 2',
-                    'type' => 'Default type 2',
-                    'created_at' => now(),
-                    'updated_at' => now(),
-                ]
-            ]);
-        }
+        // if (DB::table('personnes')->count() == 0) {
+        //     DB::table('personnes')->insert([
+        //         [
+        //             'id' => 1,
+        //             'nom' => 'Default person 1',
+        //             'prenom' => 'Default person 1',
+        //             'type' => 'Default type 1',
+        //             'created_at' => now(),
+        //             'updated_at' => now(),
+        //         ],
+        //         [
+        //             'id' => 2,
+        //             'nom' => 'Default person 2',
+        //             'prenom' => 'Default person 2',
+        //             'type' => 'Default type 2',
+        //             'created_at' => now(),
+        //             'updated_at' => now(),
+        //         ]
+        //     ]);
+        // }
 
         // Open the CSV file
         $csvFile = fopen(base_path("database/data/pkg_projets/apprenantEquipe.csv"), "r");
@@ -60,15 +60,16 @@ class ApprenantEquipeSeeder extends Seeder
                         'created_at' => $data[2],
                         'updated_at' => $data[3],
                     ]);
-                } else {
-                    // Log the missing apprenant_id or equipe_id
-                    if (!$apprenantExists) {
-                        \Log::warning("Apprenant ID {$data[0]} does not exist. Skipping record.");
-                    }
-                    if (!$equipeExists) {
-                        \Log::warning("Equipe ID {$data[1]} does not exist. Skipping record.");
-                    }
                 }
+                //  else {
+                //     // Log the missing apprenant_id or equipe_id
+                //     if (!$apprenantExists) {
+                //         \Log::warning("Apprenant ID {$data[0]} does not exist. Skipping record.");
+                //     }
+                //     if (!$equipeExists) {
+                //         \Log::warning("Equipe ID {$data[1]} does not exist. Skipping record.");
+                //     }
+                // }
             }
             $firstline = false;
         }

@@ -21,16 +21,16 @@ class EquipeSeeder extends Seeder
         Equipe::truncate();
         Schema::enableForeignKeyConstraints();
         
-        if (Projet::count() == 0) {
-            // Create a default projet with id 1
-            Projet::create([
-                'id' => 1,
-                'nom' => 'Default Project',
-                'description' => 'Default Project',
-                'created_at' => now(),
-                'updated_at' => now(),
-            ]);
-        }
+        // if (Projet::count() == 0) {
+        //     // Create a default projet with id 1
+        //     Projet::create([
+        //         'id' => 1,
+        //         'nom' => 'Default Project',
+        //         'description' => 'Default Project',
+        //         'created_at' => now(),
+        //         'updated_at' => now(),
+        //     ]);
+        // }
 
         $csvFile = fopen(base_path("database/data/pkg_projets/equipes.csv"), "r");
         $firstline = true;
