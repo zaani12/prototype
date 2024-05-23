@@ -9,6 +9,7 @@ use App\Models\pkg_competences\Competence;
 use App\Models\pkg_competences\NiveauCompetence;
 use Illuminate\Support\Facades\Schema;
 
+
 class CompetenceSeeder extends Seeder
 {
     /**
