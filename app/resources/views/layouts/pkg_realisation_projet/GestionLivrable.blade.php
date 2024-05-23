@@ -7,10 +7,8 @@
         </p>
     </a>
 
+
     @include('layouts.pkg_realisation_projet.NatureLivrableMenu')
-<<<<<<< HEAD
-=======
-    @include('layouts.pkg_realisation_projet.Livrable')
->>>>>>> develop
+
 
 </li>
