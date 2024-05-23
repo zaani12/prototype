@@ -17,26 +17,18 @@ class ActionSeeder extends Seeder
      */
     public function run(): void
     {
+        Schema::disableForeignKeyConstraints();
+        Action::truncate();
+        Schema::enableForeignKeyConstraints();
 
-        // Undefined array key 5
-
-
-
-        $AdminRole = User::ADMIN;
-        $MembreRole = User::APPRENANT;
-
-        // Schema::disableForeignKeyConstraints();
-        // Action::truncate();
-        // Schema::enableForeignKeyConstraints();
-
-        // $csvFile = fopen(base_path("database/data/pkg_autorisations/Actions.csv"), "r");
-        // $firstline = true;
-        // $i = 0;
-        // while (($data = fgetcsv($csvFile)) !== FALSE) {
+        $csvFile = fopen(base_path("database/data/pkg_autorisations/Actions.csv"), "r");
+        $firstline = true;
+        $i = 0;
+        while (($data = fgetcsv($csvFile)) !== FALSE) {
 
 
-        //     if (!$firstline) {
-        //         Action::create([
+            if (!$firstline) {
+                Action::create([
 
 
                     "id" => $data[0],
