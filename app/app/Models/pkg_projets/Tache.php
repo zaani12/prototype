@@ -30,6 +30,6 @@ class Tache extends Model
     }
 
     public function StatutTache(){
-        return $this->hasMany(StatutTache::class);
+        return $this->belongsTo(StatutTache::class);
     }
 }
