@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Models;
+namespace App\Models\pkg_realisation_projet;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\pkg_realisation_projet\NatureLivrable;
 
 class Livrable extends Model
 {
@@ -18,3 +19,4 @@ class Livrable extends Model
         return $this->belongsTo(NatureLivrable::class, 'nature_livrable_id');
     }
 }
+     
