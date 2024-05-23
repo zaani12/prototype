@@ -27,7 +27,7 @@ class MessageSeeder extends Seeder
                         'titre' => $data[0],
                         'description' => $data[1],
                         'projet_id' => $data[2],
-                        'tach_id' => $data[3],
+                        'tache_id' => $data[3],
                         'isLue' => filter_var($data[4], FILTER_VALIDATE_BOOLEAN),
                     ]);
                 }
