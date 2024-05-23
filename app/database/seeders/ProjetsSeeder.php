@@ -29,7 +29,9 @@ class ProjetsSeeder extends Seeder
             EquipeSeeder::class,
             TachesSeeder::class,
             StatutTacheSeeder::class,
+            TachesSeeder::class,
             ApprenantEquipeSeeder::class,
+
         ];
     }
 }
