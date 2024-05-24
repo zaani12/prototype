@@ -50,7 +50,15 @@
         {
             "path": "./collaboration",
             "name": "collaboration"
-        }
+        },
+        {
+            "path": "./app/resources/lang/fr/pkg_competences",
+            "name": "Multiland"
+        },
+        {
+            "path": "./app/database/data/pkg_competences",
+            "name": "Data"
+        },
     ],
     "settings": {
 
