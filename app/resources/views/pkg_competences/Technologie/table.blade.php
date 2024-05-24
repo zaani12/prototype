@@ -11,7 +11,7 @@
             @foreach ($technologieData as $technologie)
                 <tr>
                     <td>{{ $technologie->nom }}</td>
-                    <td>{{ Str::limit($technologie->description, 100) }}</td>
+                    <td>{!! Str::limit($technologie->description, 100) !!}</td>
 
                     <td class="text-center">
                         @can('show-TechnologieController')
