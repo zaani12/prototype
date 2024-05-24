@@ -97,6 +97,6 @@ class CategorieTechnologieController extends Controller
         } catch (\InvalidArgumentException $e) {
             return redirect()->route('CategorieTechnologie.index')->withError('Le symbole de séparation est introuvable. Pas assez de données disponibles pour satisfaire au format.');
         }
-        return redirect()->route('CategorieTechnologie.index')->with('success', __('Pkg_competences.CategorieTechnologie.singular') . ' ' . __('app.addSucées'));
+        return redirect()->route('CategorieTechnologie.index')->with('success', 'Categorie Technologie ' . __('app.addSucées'));
     }
 }
