@@ -4,7 +4,6 @@ namespace Database\Seeders\pkg_rh;
 
 use App\Models\pkg_rh\Personne;
 use App\Models\User;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Schema;
 use Spatie\Permission\Models\Role;
@@ -12,79 +11,86 @@ use Spatie\Permission\Models\Permission;
 
 class PersonneSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
     public function run(): void
     {
-        // $AdminRole = User::ADMIN;
+        $adminRole = User::ADMIN;
 
-        // Schema::disableForeignKeyConstraints();
-        // Personne::truncate();
-        // Schema::enableForeignKeyConstraints();
+        Schema::disableForeignKeyConstraints();
+        Personne::truncate();
+        Schema::enableForeignKeyConstraints();
 
-        // $csvFile = fopen(base_path("database/data/pkg_rh/Personnes.csv"), "r");
-        // $firstline = true;
-        // while (($data = fgetcsv($csvFile)) !== FALSE) {
-        //     if ($firstline) {
-        //         $firstline = false;
-        //         continue;
-        //     }
+        $csvFilePath = base_path("database/data/pkg_rh/Personnes.csv");
+        $csvFile = fopen($csvFilePath, "r");
 
-        //     // Check if the row has the expected number of columns
-        //     if (count($data) < 6) {
-        //         continue;
-        //     }
+        if (!$csvFile) {
+            throw new \Exception("Failed to open CSV file: $csvFilePath");
+        }
 
-        //     Personne::create([
-        //         "nom" => $data[0],
-        //         "prenom" => $data[1],
-        //         "type" => $data[2],
-        //         "created_at" => $data[3],
-        //         "updated_at" => $data[4],
-        //         "groupe_id" => $data[5],
-        //     ]);
-        // }
+        $firstLine = true;
+        while (($data = fgetcsv($csvFile)) !== false) {
+            if ($firstLine) {
+                $firstLine = false;
+                continue; // Skip the header row
+            }
 
-        // fclose($csvFile);
+            // Validate data
+            if (count($data) < 4) {
+                continue; 
+            }
 
-        // $actions = ['index', 'show', 'create', 'store', 'edit', 'update', 'destroy', 'export', 'import'];
-        // foreach ($actions as $action) {
-        //     $permissionName = $action . '-' . "ProjetController";
-        //     Permission::create(['name' => $permissionName, 'guard_name' => 'web']);
-        // }
 
-        // $projectManagerRolePermissions = [
-        //     'index-PersonneController',
-        //     'show-PersonneController',
-        //     'create-PersonneController',
-        //     'store-PersonneController',
-        //     'edit-PersonneController',
-        //     'update-PersonneController',
-        //     'destroy-PersonneController',
-        //     'export-PersonneController',
-        //     'import-PersonneController'
-        // ];
+            // Map CSV data to database fields
+            $personneData = [
+                "nom" => $data[0],
+                "prenom" => $data[1],
+                "type" => $data[2],
+                "groupe_id" => $data[3],
+            ];
 
-        // $admin = Role::where('name', $AdminRole)->first();
+            // Check if Personne already exists
+            $existingPersonne = Personne::where($personneData)->first();
+            if (!$existingPersonne) {
+                // Create new Personne if not exists
+                Personne::create($personneData);
+            }
+        }
 
-        // if ($admin) {
-        //     $admin->givePermissionTo($projectManagerRolePermissions);
-        // }
-        // $i = 0;
-        // while (($data = fgetcsv($csvFile)) !== FALSE) {
-        //     if (!$firstline) {
+        fclose($csvFile);
 
-        //         Personne::create([
-        //             "nom" => $data['0'],
-        //             "prenom" => $data['1'],
-        //             "type" => $data['2'],
-        //             "groupe_id" => $data['3'],
-        //         ]);
-        //     }
-        //     $firstline = false;
-        // }
+        // Seed permissions
+        $permissions = $this->readPermissionsFromCSV();
+        foreach ($permissions as $permissionName) {
+            $existingPermission = Permission::where('name', $permissionName)->first();
+            if (!$existingPermission) {
+                Permission::create(['name' => $permissionName, 'guard_name' => 'web']);
+            }
+        }
 
-        // fclose($csvFile);
+        $admin = Role::where('name', $adminRole)->first();
+        if ($admin) {
+            $admin->givePermissionTo($permissions);
+        }
+    }
+
+    private function readPermissionsFromCSV(): array
+    {
+        $permissionsArray = [];
+
+        $csvFilePath = base_path("database/data/pkg_rh/Permissions.csv");
+        $csvFilePermissions = fopen($csvFilePath, "r");
+
+        if (!$csvFilePermissions) {
+            throw new \Exception("Failed to open CSV file: $csvFilePath");
+        }
+
+        fgetcsv($csvFilePermissions); // Skip the header row
+
+        while (($data = fgetcsv($csvFilePermissions)) !== false) {
+            $permissionsArray[] = $data[0];
+        }
+
+        fclose($csvFilePermissions);
+
+        return $permissionsArray;
     }
 }

@@ -29,9 +29,9 @@
     <div class="row">
         <div class="col-md-12 p-4">
 
-            <div class="card card-primary">
+            <div class="card card-info">
                 <div class="card-header">
-                    <h3 class="card-title">Ajouter {{$type}}</h3>
+                    <h3 class="card-title">>{{__('app.add')}} {{$type}}</h3>
                 </div>
                 <form action="{{ route($type.'.store') }}" method="POST">
                     @csrf
@@ -41,8 +41,8 @@
                     </div>
 
                     <div class="card-footer">
-                        <a href="{{ route($type.'.index') }}" class="btn btn-default">Cancel</a>
-                        <button type="submit" class="btn btn-primary">Ajouter</button>
+                        <a href="{{ route($type.'.index') }}" class="btn btn-default">>{{__('app.back')}}</a>
+                        <button type="submit" class="btn btn-primary">>{{__('app.add')}}</button>
                     </div>
                 </form>
             </div>
