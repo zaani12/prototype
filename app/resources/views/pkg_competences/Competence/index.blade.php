@@ -17,7 +17,7 @@
                             // Generate the title using the title function
                             use App\helpers\TranslationHelper;
                             $lang = Config::get('app.locale');
-                            $translatedName = TranslationHelper::getTitle(__('pkg_competences/competence.singular'), $lang);
+                            $translatedName = TranslationHelper::getTitle(__('pkg_competences/competence.plural'), $lang);
                             echo $translatedName;
 
                         @endphp

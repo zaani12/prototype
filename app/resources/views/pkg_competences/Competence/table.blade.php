@@ -3,7 +3,7 @@
         <thead>
             <tr>
                 <th>{{ __('pkg_competences/competence.singular') }}</th>
-                <th>{{ __('app.description') }}</th>
+                
                 <th class="text-center">{{ __('app.action') }}</th>
             </tr>
         </thead>
@@ -11,7 +11,6 @@
             @foreach ($competenceData as $competence)
                 <tr>
                     <td>{{ $competence->nom }}</td>
-                    <td>{{ $competence->description }}</td>
 
                     <td class="text-center">
                         @can('show-CompetenceController')
