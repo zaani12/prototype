@@ -23,7 +23,7 @@
     <div class="row">
         <div class="col-md-12 p-4">
 
-            <div class="card card-primary">
+            <div class="card card-info">
                 <div class="card-header">
                     <h3 class="card-title">Editer {{$type}}</h3>
                 </div>
@@ -35,7 +35,7 @@
                     </div>
 
                     <div class="card-footer">
-                        <a href="{{ route($type.'.index') }}" class="btn btn-default">Cancel</a>
+                        <a href="{{ route($type.'.index') }}" class="btn btn-default">{{__('app.back')}}</a>
                         <button type="submit" class="btn btn-primary">Editer</button>
                     </div>
                 </form>
