@@ -52,9 +52,21 @@ class CategorieTechnologieController extends Controller
         $fetchedData = $this->CategorieTechnologie->find($id);
         return view('pkg_competences.CategorieTechnologie.show', compact('fetchedData'));
     }
-    public function edit()
+    public function edit($id)
     {
-        return view('pkg_competences.CategorieTechnologie.edit');
+        $dataToEdit = $this->CategorieTechnologie->find($id);
+        return view('pkg_competences.CategorieTechnologie.edit', compact('dataToEdit'));
+    }
+
+    public function update(CategorieTechnologie $request, $id)
+    {
+        try {
+            $data = $request->validated();
+            $this->CategorieTechnologie->update($id, $data);
+            return redirect()->route('CategorieTechnologie.index')->with('success', 'Categorie Technologie ' . __('app.updateSucées'));
+        } catch (categorietechnologieException $e) {
+            return back()->withInput()->withErrors($e);
+        }
     }
 
 }

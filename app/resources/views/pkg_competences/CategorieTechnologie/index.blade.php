@@ -101,6 +101,9 @@
                         </table>
                     </div>
                 </div>
+                <ul class="pagination  m-0 float-right">
+                    {{ $categorieTechnologieData->links() }}
+                </ul>
             </div>
         </div>
         <input type="hidden" id='page' value="1">

@@ -45,7 +45,7 @@
                                   </div>
                                 </div>
                                 <div class="card-footer">
-                                    <a href="{{ route('CategorieTechnologie.index') }}" class="btn btn-default">{{ __('app.cancel') }}</a>
+                                    <a href="{{ route('CategorieTechnologie.index') }}" class="btn btn-secondary">{{ __('app.cancel') }}</a>
                                     <button type="submit" class="btn btn-info">{{ __('app.add') }}</button>
                                 </div>
                               </form>

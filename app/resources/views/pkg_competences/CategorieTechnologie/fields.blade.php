@@ -66,7 +66,7 @@
             </textarea>
             @error('description')
                 <div class="text-danger">{{ $message }}</div>
-            @enderror
+            @enderror 
         </div>
     </div>
 
