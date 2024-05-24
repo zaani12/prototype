@@ -24,7 +24,7 @@
         },
         {
             "path": "./app/app/resources/views/layouts/pkg_competences",
-            "name":"Data"
+            "name":"Layouts"
         },
         {
             "path": "./app/app/Repositories/pkg_competences",
