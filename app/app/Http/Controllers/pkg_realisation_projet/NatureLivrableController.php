@@ -4,13 +4,13 @@ namespace App\Http\Controllers\pkg_realisation_projet;
 
 use App\Exceptions\pkg_realisation_projet\NatureLivrableAlreadyExistException;
 use App\Repositories\pkg_realisation_projet\NatureLivrableRepository;
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\AppBaseController;
 use App\Models\pkg_realisation_projet\NatureLivrable;
 use Illuminate\Http\Request;
 use App\Http\Requests\pkg_realisation_projet\NatureLivrableRequest;
 use Carbon\Carbon;
 
-class NatureLivrableController extends Controller
+class NatureLivrableController extends AppBaseController
 {
     protected $natureLivrableRepository;
 
