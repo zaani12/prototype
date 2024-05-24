@@ -11,8 +11,7 @@ use Database\Seeders\pkg_autorisations\{
     ControllerSeeder,
     PermissionSeeder,
     ActionSeeder,
-    AutorisationSeeder,
-    PermissionSeeder,
+    AutorisationSeeder
 };
 
 
