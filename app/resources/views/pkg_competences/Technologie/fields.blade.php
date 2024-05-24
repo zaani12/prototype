@@ -7,7 +7,7 @@
     <div class="card-body">
         <div class="form-group">
             <label for="nom">{{ __('app.name') }} <span class="text-danger">*</span></label>
-            <input name="nom" type="text" class="form-control" id="nom" placeholder="Entrez le titre"
+            <input name="nom" type="text" class="form-control" id="nom" placeholder="Entrez le technologie"
                 value="{{ $dataToEdit ? $dataToEdit->nom : old('nom') }}">
             @error('nom')
                 <div class="text-danger">{{ $message }}</div>

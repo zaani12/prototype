@@ -91,14 +91,14 @@ class TechnologieController extends AppBaseController
     {
         $validatedData = $request->validated();
         $this->TechnologieRepository->update($id, $validatedData);
-        return redirect()->route('technologies.index', $id)->with('success', __('Pkg_competences.Technologie.technologie.singular') . ' ' . __('app.updateSucées'));
+        return redirect()->route('technologies.index', $id)->with('success', __('Pkg_competences.technologie.singular') . ' ' . __('app.updateSucées'));
     }
 
 
     public function destroy(string $id)
     {
         $this->TechnologieRepository->destroy($id);
-        return redirect()->route('technologies.index')->with('success', __('Pkg_competences.Technologie.technologie.singular') . ' ' . __('app.deleteSucées'));
+        return redirect()->route('technologies.index')->with('success', __('pkg_competences.technologie.singular') . ' ' . __('app.deleteSucées'));
     }
 
 
