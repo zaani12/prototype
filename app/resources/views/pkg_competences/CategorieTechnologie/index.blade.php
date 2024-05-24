@@ -99,10 +99,34 @@
                                 @endforeach
                             </tbody>
                         </table>
+                        <div class="d-md-flex justify-content-between align-items-center p-2">
+                            <div class="d-flex align-items-center mb-2 ml-2 mt-2">
+                                @can('import-CategorieTechnologieController')
+                                    <form action="{{ route('CategorieTechnologie.import') }}" method="post" class="mt-2" enctype="multipart/form-data"
+                                        id="importForm">
+                                        @csrf
+                                        <label for="upload" class="btn btn-default btn-sm font-weight-normal">
+                                            <i class="fas fa-file-download"></i>
+                                            {{ __('app.import') }}
+                                        </label>
+                                        <input type="file" id="upload" name="file" style="display:none;" />
+                                    </form>
+                                @endcan
+                                @can('export-CategorieTechnologieController')
+                                    <form class="">
+                                        <a href="{{ route('CategorieTechnologie.export') }}" class="btn btn-default btn-sm mt-0 mx-2">
+                                            <i class="fas fa-file-export"></i>
+                                            {{ __('app.export') }}</a>
+                                    </form>
+                                @endcan
+                            </div>
+                            <ul class="pagination  m-0 float-right">
+                                {{ $categorieTechnologiesData->onEachSide(1)->links() }}
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
         <input type="hidden" id='page' value="1">
     </section>
 @endsection

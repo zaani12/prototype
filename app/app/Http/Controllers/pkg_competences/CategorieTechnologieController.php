@@ -3,10 +3,14 @@
 namespace App\Http\Controllers\pkg_competences;
 
 use App\Exceptions\pkg_competences\categorietechnologieException;
+use App\Exports\pkg_competences\CategorieTechnologieExport;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\pkg_competences\CategorieTechnologie;
+use App\Imports\pkg_competences\CategorieTechnologieImport;
+use App\Models\pkg_competences\CategorieTechnologie as Pkg_competencesCategorieTechnologie;
 use App\Repositories\pkg_competences\categorietechnologieRepository;
 use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
 
 class CategorieTechnologieController extends Controller
 {
@@ -19,7 +23,7 @@ class CategorieTechnologieController extends Controller
     }
 
     public function index(Request $request)
-    {
+    { 
         if ($request->ajax()) {
             $searchValue = $request->get('searchValue');
             if ($searchValue !== '') {
@@ -72,5 +76,27 @@ class CategorieTechnologieController extends Controller
     public function destroy($id){
         $this->CategorieTechnologie->destroy($id);
         return redirect()->route('CategorieTechnologie.index')->with('success', 'Categorie Technologie ' . __('app.deleteSucées'));
+    }
+
+    public function export()
+    {
+        $CategorieTechnologies = $this->CategorieTechnologie->all();
+
+        return Excel::download(new CategorieTechnologieExport($CategorieTechnologies), 'CategorieTechnologie.xlsx');
+    }
+
+
+    public function import(Request $request)
+    {
+        $request->validate([
+            'file' => 'required|mimes:xlsx,xls,csv',
+        ]);
+
+        try {
+            Excel::import(new CategorieTechnologieImport, $request->file('file'));
+        } catch (\InvalidArgumentException $e) {
+            return redirect()->route('CategorieTechnologie.index')->withError('Le symbole de séparation est introuvable. Pas assez de données disponibles pour satisfaire au format.');
+        }
+        return redirect()->route('CategorieTechnologie.index')->with('success', __('Pkg_competences.CategorieTechnologie.singular') . ' ' . __('app.addSucées'));
     }
 }
