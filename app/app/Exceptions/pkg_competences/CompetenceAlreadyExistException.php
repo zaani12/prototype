@@ -8,6 +8,6 @@ class CompetenceAlreadyExistException extends BusinessException
 {
     public static function createCompetence()
     {
-        return new self(__('pkg_competences/competence/message.createCompetenceException'));
+        return new self(__('Competence already existe'));
     }
 }

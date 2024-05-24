@@ -1,10 +1,4 @@
-name,guard_name
-index-ProjetController,web
-show-ProjetController,web
-create-ProjetController,web
-store-ProjetController,web
-edit-ProjetController,web
-update-ProjetController,web
-destroy-ProjetController,web
-export-ProjetController,web
-import-ProjetController,web
+id,name,guard_name
+1,view users,web
+2,edit content,web
+3,view content,web
