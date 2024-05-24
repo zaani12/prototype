@@ -8,7 +8,7 @@
             {{ $fetchedData->nom }}
         </div>
         <div class="card-body">
-            <p><strong>Description:</strong> {{ $fetchedData->description }}</p>
+            <p><strong>{{ __('pkg_realisation_projet/Nature_Livrables.description') }}:</strong> {{ $fetchedData->description }}</p>
         </div>
     </div>
     <!-- <a href="{{ route('nature-livrables.edit', $fetchedData->id) }}" class="btn btn-warning">Edit</a>

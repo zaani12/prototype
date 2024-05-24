@@ -2,7 +2,7 @@
     <table class="table table-striped text-nowrap">
         <thead>
             <tr>
-                <th>{{ __('Nature Livrables') }}</th>
+                <th>{{ __('pkg_realisation_projet/Nature_Livrables.name') }}</th>
                 <th>{{ __('app.description') }}</th>
                 <th class="text-center">{{ __('app.action') }}</th>
             </tr>
