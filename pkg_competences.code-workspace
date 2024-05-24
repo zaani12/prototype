@@ -15,6 +15,18 @@
       
        
         {
+            "path": "./app/app/lang/pkg_competences",
+            "name":"Lang"
+        },
+        {
+            "path": "./app/app/database/data/pkg_competences",
+            "name":"Data"
+        },
+        {
+            "path": "./app/app/resources/views/layouts/pkg_competences",
+            "name":"Data"
+        },
+        {
             "path": "./app/app/Repositories/pkg_competences",
             "name":"Repositories"
         },
