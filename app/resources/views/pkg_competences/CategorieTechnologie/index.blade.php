@@ -72,17 +72,17 @@
                                         <td>{{ $categorieTechnologieData->nom }}</td>
                                         <td>{{ Str::limit($categorieTechnologieData->description, 70, '...') }}</td>
                                         <td class="text-center">
-                                            {{-- @can('show-ProjetController') --}}
+                                            @can('show-CategorieTechnologieController')
                                             <a href="{{ route('CategorieTechnologie.show', $categorieTechnologieData->id) }}" class="btn btn-default btn-sm">
                                                 <i class="far fa-eye"></i>
                                             </a>
-                                            {{-- @endcan --}}
-                                            {{-- @can('edit-ProjetController') --}}
+                                            @endcan
+                                            @can('edit-CategorieTechnologieController')
                                             <a href="{{ route('CategorieTechnologie.edit', $categorieTechnologieData->id) }}" class="btn btn-sm btn-default">
                                                 <i class="fas fa-pen-square"></i>
                                             </a>
-                                            {{-- @endcan --}}
-                                            {{-- @can('destroy-ProjetController') --}}
+                                            @endcan
+                                            @can('destroy-CategorieTechnologieController')
                                             <form action="{{ route('CategorieTechnologie.destroy', $categorieTechnologieData->id) }}" method="POST"
                                                 style="display: inline;">
                                                 @csrf
@@ -92,7 +92,7 @@
                                                     <i class="fas fa-trash"></i>
                                                 </button>
                                             </form>
-                                            {{-- @endcan --}}
+                                            @endcan
                     
                                         </td>                    
                                     </tr>
