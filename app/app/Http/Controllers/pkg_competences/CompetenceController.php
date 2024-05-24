@@ -50,7 +50,7 @@ class CompetenceController extends AppBaseController
             $this->competenceRepository->create($validatedData);
             return redirect()->route('competences.index')->with('success', __('pkg_competences/competence.singular') . ' ' . __('app.addSuccess'));
         } catch (CompetenceAlreadyExistException $e) {
-            return back()->withInput()->withErrors(['competence_exists' => __('Competence already existe')]);
+            return back()->withInput()->withErrors(['competence_exists' => __('pkg_competences/competence/competence.createProjectException')]);
         } catch (\Exception $e) {
             return abort(500);
         }
