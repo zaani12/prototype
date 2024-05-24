@@ -1,5 +1,5 @@
 <?php
 return [
-    'singular' => 'Technology Category',
-    'plural' => 'Category Technologies',
+    'singular' => 'technology category',
+    'plural' => 'category technologies',
 ];
