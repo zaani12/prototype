@@ -16,6 +16,8 @@ Route::middleware('auth')->group(function () {
             Route::get('/{id}/edit', [CompetenceController::class, 'edit'])->name('competence.edit');
             Route::post('/{id}/update', [CompetenceController::class, 'update'])->name('competence.update');
             Route::delete('/{id}/delete', [CompetenceController::class, 'destroy'])->name('competence.delete');
+            Route::get('/export', [CompetenceController::class, 'export'])->name('competence.export');
+        Route::post('/import', [CompetenceController::class, 'import'])->name('competence.import');
         });
     });
 });
