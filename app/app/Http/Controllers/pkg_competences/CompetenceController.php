@@ -48,7 +48,7 @@ class CompetenceController extends AppBaseController
         try {
             $validatedData = $request->validated();
             $this->competenceRepository->create($validatedData);
-            return redirect()->route('competence.index')->with('success', __('pkg_competences/competence.singular') . ' ' . __('pkg_competences/competence.competence_added_success'));
+            return redirect()->route('competence.index')->with('success', __('pkg_competences/competence.singular') . ' ' . __(' été ajoutée avec succès'));
         } catch (CompetenceAlreadyExistException $e) {
             return back()->withInput()->withErrors(['competence_exists' => __('pkg_competences/competence.createProjectException')]);
         }
@@ -75,7 +75,7 @@ class CompetenceController extends AppBaseController
     {
         $validatedData = $request->validated();
         $this->competenceRepository->update($id, $validatedData);
-        return redirect()->route('competence.index')->with('success', __('pkg_competences/competence.singular') . ' ' . __('pkg_competences/competence.competence_updated_success'));
+        return redirect()->route('competence.index')->with('success', __('pkg_competences/competence.singular') . ' ' . __(' mise à jour avec succès.'));
     }
 
     public function destroy(string $id)
