@@ -69,4 +69,8 @@ class CategorieTechnologieController extends Controller
         }
     }
 
+    public function destroy($id){
+        $this->CategorieTechnologie->destroy($id);
+        return redirect()->route('CategorieTechnologie.index')->with('success', 'Categorie Technologie ' . __('app.deleteSucées'));
+    }
 }
