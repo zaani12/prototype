@@ -31,9 +31,9 @@
 
                             <div class="col-sm-12">
                                 <label>{{ __('app.description') }}</label>
-                                <p>{{ $fetchedData->description }}</p>
+                                <p>{!! $fetchedData->description !!}</p>
                             </div>
-                        </div>
+                        </div>  
                         <div class="card-footer">
                             <a href="{{ route('CategorieTechnologie.index') }}" class="btn btn-secondary">{{ __('app.cancel') }}</a>
                         </div>
