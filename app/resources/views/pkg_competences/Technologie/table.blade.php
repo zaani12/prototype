@@ -54,7 +54,7 @@
                     <i class="fas fa-file-download"></i>
                     {{ __('app.import') }}
                 </label>
-                <input type="file" id="upload" name="file" style="display:none;" onchange="submitForm()" />
+                <input type="file" id="upload" name="file" style="display:none;" />
             </form>
         @endcan
         @can('export-TechnologieController')
@@ -70,3 +70,10 @@
         {{ $technologieData->onEachSide(1)->links() }}
     </ul>
 </div>
+
+
+{{-- <script>
+    function submitForm() {
+        document.getElementById("importForm").submit();
+    }
+</script> --}}
