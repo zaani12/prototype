@@ -14,7 +14,7 @@ class categorietechnologieRepository extends BaseRepository
      * @var array
      */
     protected $fieldsSearchable = [
-        'name'
+        'nom'
     ];
 
     /**

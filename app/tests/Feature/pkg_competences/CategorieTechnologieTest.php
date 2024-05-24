@@ -12,11 +12,11 @@ use Tests\TestCase;
 class CategorieTechnologieTest extends TestCase
 {
 
-    protected $VilleRepository;
+    protected $categorietechnologieRepository;
     protected function setUp(): void
     {
         parent::setUp();
-        $this->VilleRepository = new categorietechnologieRepository();
+        $this->categorietechnologieRepository = new categorietechnologieRepository();
     }
 
 
@@ -32,7 +32,7 @@ class CategorieTechnologieTest extends TestCase
             'created_at' => Carbon::now()
         ];
 
-        $add_data = $this->VilleRepository->create($data);
+        $add_data = $this->categorietechnologieRepository->create($data);
         $this->assertNotNull($add_data);
     }
 
@@ -46,19 +46,19 @@ class CategorieTechnologieTest extends TestCase
             'created_at' => Carbon::now()
         ];
 
-        $update_data = $this->VilleRepository->update(1,$data);
+        $update_data = $this->categorietechnologieRepository->update(1,$data);
         $this->assertNotNull($update_data);
     }
 
     public function test_delete_CategorieTechnologie(): void
     {
-        $update_data = $this->VilleRepository->destroy(4);
+        $update_data = $this->categorietechnologieRepository->destroy(4);
         $this->assertNotNull($update_data);
     }
 
     public function test_paginate_CategorieTechnologie(): void
     {
-        $update_data = $this->VilleRepository->paginate();
+        $update_data = $this->categorietechnologieRepository->paginate();
         $this->assertNotNull($update_data);
     }
 }
