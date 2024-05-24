@@ -48,16 +48,18 @@ class CompetenceController extends AppBaseController
         try {
             $validatedData = $request->validated();
             $this->competenceRepository->create($validatedData);
-            return redirect()->route('competences.index')->with('success', __('pkg_competences/competence.singular') . ' ' . __('app.addSuccess'));
+            return redirect()->route('competence.index')->with('success', __('pkg_competences/competence.singular') . ' ' . __('pkg_competences/competence.competence_added_success'));
         } catch (CompetenceAlreadyExistException $e) {
-            return back()->withInput()->withErrors(['competence_exists' => __('pkg_competences/competence/competence.createProjectException')]);
-        } catch (\Exception $e) {
-            return abort(500);
+            return back()->withInput()->withErrors(['competence_exists' => __('pkg_competences/competence.createProjectException')]);
         }
+
+
+
     }
 
     public function show(string $id)
     {
+
         $fetchedData = $this->competenceRepository->find($id);
         return view('pkg_competences.competence.show', compact('fetchedData'));
     }
@@ -73,13 +75,13 @@ class CompetenceController extends AppBaseController
     {
         $validatedData = $request->validated();
         $this->competenceRepository->update($id, $validatedData);
-        return redirect()->route('competences.index')->with('success', __('pkg_competences/competence.singular') . ' ' . __('app.updateSuccess'));
+        return redirect()->route('competence.index')->with('success', __('pkg_competences/competence.singular') . ' ' . __('pkg_competences/competence.competence_updated_success'));
     }
 
     public function destroy(string $id)
     {
         $this->competenceRepository->destroy($id);
-        return redirect()->route('competences.index')->with('success', 'Le projet a été supprimé avec succès.');
+        return redirect()->route('competence.index')->with('success', 'Le competence a été supprimé avec succès.');
     }
 
     public function export()

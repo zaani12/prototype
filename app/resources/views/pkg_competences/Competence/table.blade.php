@@ -55,11 +55,9 @@
             </form>
         @endcan
         @can('export-CompetenceController')
-            <form class="">
                 <a href="{{ route('competence.export') }}" class="btn btn-default btn-sm mt-0 mx-2">
                     <i class="fas fa-file-export"></i>
                     {{ __('app.export') }}</a>
-            </form>
         @endcan
     </div>
 
