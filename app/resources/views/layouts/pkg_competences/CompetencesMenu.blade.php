@@ -9,7 +9,7 @@
     <ul class="nav nav-treeview">
         <li class="nav-item ">
             <a href="{{ route('technologies.index') }}"
-                class="nav-link nav-link {{ Request::is('technologie*') ? 'active' : '' }}">
+                class="nav-link nav-link {{ Request::is('technologies*') ? 'active' : '' }}">
                 <i class="nav-icon fas fa-table"></i>
                 <p>Technologies</p>
             </a>
