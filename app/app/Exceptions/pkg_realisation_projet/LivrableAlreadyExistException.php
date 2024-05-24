@@ -6,27 +6,10 @@ use Exception;
 
 class LivrableAlreadyExistException extends Exception
 {
-    public function __construct()
+
+    public static function createLivrable()
     {
-        parent::__construct("Livrable already exists.");
+        return new self(__('pkg_realisation_projet/livrable/livrablemessage.createLivrableException'));
     }
-
-    public function render($request)
-    {
-        return response()->json(['error' => 'Livrable already exists'], 409);
-    }
-}
-
-<?php
-
-namespace App\Exceptions\GestionProjets;
-
-use App\Exceptions\BusinessException;
-
-class ProjectAlreadyExistException extends BusinessException
-{
-    public static function createProject()
-    {
-        return new self(__('GestionProjets/projet/message.createProjectException'));
-    }
+   
 }
