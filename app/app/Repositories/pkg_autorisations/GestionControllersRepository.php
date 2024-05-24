@@ -36,6 +36,21 @@ class GestionControllersRepository extends BaseRepository {
         return parent::create($data);
     }
 
+    public function update($id, array $data) {
+        $nom = $data['nom'];
+
+        if (!in_array($nom, $this->extractControllerNames())) {
+            throw ControllerExceptions::ControllerNotExist();
+        }
+
+        $existingController = $this->model->where('nom', $nom)->where('id', '!=', $id)->first();
+        if ($existingController) {
+            throw ControllerExceptions::ControllerAlreadyExist();
+        }
+
+        return parent::update($id, $data);
+    }
+
     public static function extractControllerNames(): array
     {
         $controllerNames = [];
@@ -65,9 +80,9 @@ class GestionControllersRepository extends BaseRepository {
     
     public function getFieldsSearchable(): array
     {
-        // Define the fields that are searchable in your model
         return [
             'nom',
         ];
+        
     }
 }
