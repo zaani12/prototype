@@ -70,7 +70,7 @@
                                 @foreach ($categorieTechnologiesData as $categorieTechnologieData)
                                     <tr>   
                                         <td>{{ $categorieTechnologieData->nom }}</td>
-                                        <td>{!! Str::limit($categorieTechnologieData->description, 70, '...') !!}</td>
+                                        <td>{!! Str::limit($categorieTechnologieData->description, 50, '...') !!}</td>
                                         <td class="text-center">
                                             @can('show-CategorieTechnologieController')
                                             <a href="{{ route('CategorieTechnologie.show', $categorieTechnologieData->id) }}" class="btn btn-default btn-sm">

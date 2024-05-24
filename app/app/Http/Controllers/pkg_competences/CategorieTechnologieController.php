@@ -46,7 +46,7 @@ class CategorieTechnologieController extends Controller
         try {
             $data = $request->validated();
             $this->CategorieTechnologie->create($data);
-            return redirect()->route('CategorieTechnologie.index')->with('success', __('pkg_competences.CategorieTechnologie.singular') . ' ' . __('app.addSucées'));
+            return redirect()->route('CategorieTechnologie.index')->with('success', 'Catégorie technologie  ' . __('app.addSucées'));
         } catch (categorietechnologieException $e) {
             return back()->withInput()->withErrors($e);
         }
