@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'createCompetenceException' => 'Le projet existe déjà',
+    'createCompetenceException' => 'Le competence existe déjà',
     'singular' => 'compétence',
     'plural' => 'compétences',
     'competence_added_success' => 'La compétence a été ajoutée avec succès',
