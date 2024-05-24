@@ -8,7 +8,7 @@ use App\Models\pkg_competences\Competence;
 Route::middleware('auth')->group(function () {
     $namespace = 'App\Http\Controllers\pkg_competences';
     Route::namespace($namespace)->group(function () {
-        Route::prefix('Competence')->group(function () {
+        Route::prefix('competences')->group(function () {
             Route::get('/', [CompetenceController::class, 'index'])->name('competence.index');
             Route::get('/form-ajouter', [CompetenceController::class, 'create'])->name('competence.create');
             Route::post('/ajouter', [CompetenceController::class, 'store'])->name('competence.store');
