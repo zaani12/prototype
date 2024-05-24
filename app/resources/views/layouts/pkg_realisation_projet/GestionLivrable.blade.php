@@ -8,6 +8,6 @@
     </a>
     @include('layouts.pkg_realisation_projet.NatureLivrableMenu')
 
-
+    @include('layouts.pkg_realisation_projet.NatureLivrableMenu')
 
 </li>
