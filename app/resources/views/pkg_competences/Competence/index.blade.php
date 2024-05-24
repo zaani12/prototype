@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', __('Gestion competences'))
+@section('title', __('pkg_competences/competence.singular'))
 
 @section('content')
     <div class="content-header">
