@@ -29,12 +29,12 @@
 
                 <div class="col-sm-6">
                     <div class="float-sm-right">
-                        {{-- @can('create-ProjetController') --}}
-                        <a href="{{ route('technologies.create') }}" class="btn btn-info">
-                            <i class="fas fa-plus"></i>
-                            {{ __('app.add') }} {{ __('pkg_competences/technologie.singular') }}
-                        </a>
-                        {{-- @endcan --}}
+                        @can('create-TechnologieController')
+                            <a href="{{ route('technologies.create') }}" class="btn btn-info">
+                                <i class="fas fa-plus"></i>
+                                {{ __('app.add') }} {{ __('pkg_competences/technologie.singular') }}
+                            </a>
+                        @endcan
                     </div>
                 </div>
             </div>

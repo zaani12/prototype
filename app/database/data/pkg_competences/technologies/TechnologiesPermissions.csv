@@ -5,5 +5,6 @@ create-TechnologieController,web
 store-TechnologieController,web
 edit-TechnologieController,web
 update-TechnologieController,web
+destroy-TechnologieController,web
 export-TechnologieController,web
 import-TechnologieController,web

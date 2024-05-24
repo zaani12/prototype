@@ -16,8 +16,7 @@ use App\Http\Requests\pkg_competences\TechnologieRequest;
 use App\Repositories\Pkg_competences\TechnologieRepository;
 use App\Exceptions\pkg_competences\TechnologieAlreadyExistException;
 
-// class TechnologieController extends AppBaseController
-class TechnologieController extends Controller
+class TechnologieController extends AppBaseController
 {
     protected $TechnologieRepository;
     protected $CategorieTechnologie;

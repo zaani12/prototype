@@ -7,9 +7,9 @@
                 <div class="col-sm-6">
                     <h1>{{ __('app.detail') }}</h1>
                 </div>
-                @can('edit-TaskController')
+                @can('edit-TechnologieController')
                     <div class="col-sm-6">
-                        <a href="{{ route('tasks.edit', $fetchedData->id) }}" class="btn btn-default float-right">
+                        <a href="{{ route('technologies.edit', $fetchedData->id) }}" class="btn btn-default float-right">
                             <i class="far fa-edit"></i>
                             {{ __('app.edit') }}
                         </a>
