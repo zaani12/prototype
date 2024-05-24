@@ -44,9 +44,9 @@ class NatureLivrableController extends AppBaseController
         try {
             $validatedData = $request->validated();
             $this->natureLivrableRepository->create($validatedData);
-            return redirect()->route('nature-livrables.index')->with('success', 'Nature Livrable added successfully');
+            return redirect()->route('nature-livrables.index')->with('success', 'Nature du Livrable ajoutée avec succès');
         } catch (NatureLivrableAlreadyExistException $e) {
-            return back()->withInput()->withErrors(['nature_livrable_exists' => 'A Nature Livrable with the same name already exists.']);
+            return back()->withInput()->withErrors(['nature_livrable_exists' => 'Nature du Livrable est déjà existante.']);
         } catch (\Exception $e) {
             return abort(500);
         }
@@ -68,13 +68,13 @@ class NatureLivrableController extends AppBaseController
     {
         $validatedData = $request->validated();
         $this->natureLivrableRepository->update($id, $validatedData);
-        return redirect()->route('nature-livrables.index')->with('success', 'Nature Livrable updated successfully');
+        return redirect()->route('nature-livrables.index')->with('success', 'Nature du Livrable mise à jour avec succès');
     }
 
     public function destroy(string $id)
     {
         $this->natureLivrableRepository->destroy($id);
-        return redirect()->route('nature-livrables.index')->with('success', 'Nature Livrable deleted successfully');
+        return redirect()->route('nature-livrables.index')->with('success', 'Nature du Livrable supprimée avec succès');
     }
 }
 
