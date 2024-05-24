@@ -1,6 +1,7 @@
 <?php
 
 return [
+<<<<<<< HEAD
     'createCompetenceException' => 'Le competence existe déjà',
     'singular' => 'compétence',
     'plural' => 'compétences',
@@ -8,3 +9,8 @@ return [
     'competence_updated_success' => 'Compétence mise à jour avec succès.',
 ];
 
+=======
+    'singular' => 'Competence',
+    'plural' => 'Competences',
+];
+>>>>>>> develop
