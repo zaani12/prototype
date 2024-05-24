@@ -36,8 +36,8 @@ class CategorieTechnologiesSeeder extends Seeder
             $firstline = false;
         }
 
-        $FormateurRole = User::FORMATEUR;
-        $Role = Role::where('name', $FormateurRole)->first();
+        $FormateurRole = Role::where('name', User::FORMATEUR)->first();
+        $ApprenantRole = Role::where('name', User::APPRENANT)->first();
 
         Schema::disableForeignKeyConstraints();
         Permission::truncate();
@@ -52,16 +52,28 @@ class CategorieTechnologiesSeeder extends Seeder
                     "guard_name" => $data['1'],
                 ]);
 
-                if ($Role) {
+                if ($FormateurRole) {
                     // If the role exists, update its permissions
-                    $Role->givePermissionTo($data['0']);
+                    $FormateurRole->givePermissionTo($data['0']);
                 } else {
                     // If the role doesn't exist, create it and give permissions
-                    $Role = Role::create([
-                        'name' => $FormateurRole,
+                    Role::create([
+                        'name' => User::FORMATEUR,
                         'guard_name' => 'web',
-                    ]);
-                    $Role->givePermissionTo($data['0']);
+                    ])->givePermissionTo($data['0']);
+                }
+
+                if ($ApprenantRole) {
+                    // If the role exists, update its permissions
+                    if (in_array($data['0'], ['index-CategorieTechnologieController', 'show-CategorieTechnologieController', 'export-CategorieTechnologieController','import-CategorieTechnologieController'] )) {
+                        $ApprenantRole->givePermissionTo($data['0']);
+                    }
+                } else {
+                    // If the role doesn't exist, create it and give permissions
+                    Role::create([
+                        'name' => User::APPRENANT,
+                        'guard_name' => 'web',
+                    ])->givePermissionTo($data['0']);
                 }
             }
             $firstline = false;

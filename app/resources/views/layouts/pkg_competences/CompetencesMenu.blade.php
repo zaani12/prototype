@@ -7,12 +7,14 @@
         </p>
     </a>
     <ul class="nav nav-treeview">
-        <li class="nav-item ">
-            <a href="{{ route('CategorieTechnologie.index') }}"
+        @can('index-CategorieTechnologieController')
+            <li class="nav-item ">
+                <a href="{{ route('CategorieTechnologie.index') }}"
                 class="nav-link nav-link {{ Request::is('CategorieTechnologie*') ? 'active' : '' }}">
                 <i class="nav-icon fas fa-table"></i>
                 <p>Categorie technologie</p>
-            </a>
-        </li>
+                </a>
+            </li>
+        @endcan
     </ul>
 </li>
