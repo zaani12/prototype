@@ -53,7 +53,7 @@
         },
         {
             "path": "./app/resources/lang/fr/pkg_competences",
-            "name": "Multiland"
+            "name": "Multilang"
         },
         {
             "path": "./app/database/data/pkg_competences",
