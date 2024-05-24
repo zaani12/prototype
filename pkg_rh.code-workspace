@@ -58,7 +58,7 @@
         {
             "path": "./app/database/data/pkg_competences",
             "name": "Data"
-        },
+        }
     ],
     "settings": {
 
