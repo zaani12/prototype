@@ -25,11 +25,12 @@
             </div>
             <div class="col-sm-6">
                 <div class="float-sm-right">
-                    
+                        @can('create-NatureLivrableController')
                         <a href="{{ route('nature-livrables.create') }}" class="btn btn-info">
                             <i class="fas fa-plus"></i>
                             {{ __('app.add') }} {{ __('Nature Livrable') }}
                         </a>
+                        @endcan
                         <!-- New Ajouter button -->
                 </div>
             </div>
