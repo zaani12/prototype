@@ -1,8 +1,8 @@
 <?php
 
 return [
-    'singular' => 'Competence',
-    'plural' => 'Competences',
+    'singular' => 'competence',
+    'plural' => 'competences',
 
 ];
 

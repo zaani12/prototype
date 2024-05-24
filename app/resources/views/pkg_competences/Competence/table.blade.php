@@ -3,7 +3,7 @@
         <thead>
             <tr>
                 <th>{{ __('pkg_competences/competence.singular') }}</th>
-                
+
                 <th class="text-center">{{ __('app.action') }}</th>
             </tr>
         </thead>
@@ -14,17 +14,17 @@
 
                     <td class="text-center">
                         @can('show-CompetenceController')
-                            <a href="{{ route('competences.show', $competence) }}" class="btn btn-default btn-sm">
+                            <a href="{{ route('competence.show', $competence) }}" class="btn btn-default btn-sm">
                                 <i class="far fa-eye"></i>
                             </a>
                         @endcan
                         @can('edit-CompetenceController')
-                            <a href="{{ route('competences.edit', $competence) }}" class="btn btn-sm btn-default">
+                            <a href="{{ route('competence.edit', $competence) }}" class="btn btn-sm btn-default">
                                 <i class="fas fa-pen-square"></i>
                             </a>
                         @endcan
                         @can('destroy-CompetenceController')
-                            <form action="{{ route('competences.destroy', $competence) }}" method="POST" style="display: inline;">
+                            <form action="{{ route('competence.delete', $competence) }}" method="POST" style="display: inline;">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-sm btn-danger"

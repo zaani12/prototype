@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', __('/Competence.singular'))
+@section('title', __('Gestion competences'))
 
 @section('content')
     <div class="content-header">
@@ -27,7 +27,7 @@
                 <div class="col-sm-6">
                     <div class="float-sm-right">
                         @can('create-CompetenceController')
-                            <a href="{{ route('competences.create') }}" class="btn btn-info">
+                            <a href="{{ route('competence.create') }}" class="btn btn-info">
                                 <i class="fas fa-plus"></i>
                                 {{ __('app.add') }} {{ __('pkg_competences/competence.singular') }}
                             </a>

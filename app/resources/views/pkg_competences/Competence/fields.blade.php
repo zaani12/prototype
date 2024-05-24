@@ -1,4 +1,4 @@
-<form action="{{ $dataToEdit ? route('competences.update', $dataToEdit->id) : route('competences.store') }}" method="POST">
+<form action="{{ $dataToEdit ? route('competence.update', $dataToEdit->id) : route('competence.store') }}" method="POST">
     @csrf
     @if ($dataToEdit)
         @method('PUT')
@@ -28,7 +28,7 @@
     </div>
 
     <div class="card-footer">
-        <a href="{{ route('competences.index') }}" class="btn btn-default">{{ __('app.cancel') }}</a>
+        <a href="{{ route('competence.index') }}" class="btn btn-default">{{ __('app.cancel') }}</a>
         <button type="submit" class="btn btn-info ml-2">{{ $dataToEdit ? __('app.edit') : __('app.add') }}</button>
     </div>
 

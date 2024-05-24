@@ -65,8 +65,6 @@ class CompetenceController extends AppBaseController
     public function edit(string $id)
     {
         $dataToEdit = $this->competenceRepository->find($id);
-        $dataToEdit->nom = Carbon::parse($dataToEdit->nom);
-        $dataToEdit->description = Carbon::parse($dataToEdit->description);
 
         return view('pkg_competences.competence.edit', compact('dataToEdit'));
     }
