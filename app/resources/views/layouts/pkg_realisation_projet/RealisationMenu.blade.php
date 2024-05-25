@@ -24,6 +24,4 @@
         </li>
     </ul>
 </li>
-
-
 <!-- @include('layouts.pkg_realisation_projet.GestionLivrable') -->
