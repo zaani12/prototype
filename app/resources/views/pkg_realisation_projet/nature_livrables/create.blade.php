@@ -38,7 +38,7 @@
                                 </div>
                             </div>
                             <div class="card-footer">
-                                <button type="submit" class="btn btn-info">Submit</button>
+                                <button type="submit" class="btn btn-info">{{ __('app.add') }}</button>
                             </div>
                         </form>
                     </div>
