@@ -9,7 +9,7 @@ class LivrableAlreadyExistException extends Exception
 
     public static function createLivrable()
     {
-        return new self(__('pkg_realisation_projet/livrable/livrablemessage.createLivrableException'));
+        return new self('Livrable est déjà existant');
     }
    
 }
