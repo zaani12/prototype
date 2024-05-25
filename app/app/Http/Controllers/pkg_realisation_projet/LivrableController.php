@@ -12,6 +12,8 @@ use App\Exports\pkg_realisation_projet\LivrableExport;
 use App\Imports\pkg_realisation_projet\LivrableImport;
 use Carbon\Carbon;
 use Maatwebsite\Excel\Facades\Excel;
+use Illuminate\Support\Facades\Log; // Added import for Log
+
 
 class LivrableController extends AppBaseController
 {
@@ -63,13 +65,13 @@ class LivrableController extends AppBaseController
 
     public function show(string $id)
     {
-        $fetchedData = $this->livrableRepository->find($id);
+        $fetchedData = $this->livrableRepository->find((int) $id);
         return view('pkg_realisation_projet.livrable.show', compact('fetchedData'));
     }
 
     public function edit(string $id)
     {
-        $dataToEdit = $this->livrableRepository->find($id);
+        $dataToEdit = $this->livrableRepository->find((int) $id);
         return view('pkg_realisation_projet.livrable.edit', compact('dataToEdit'));
     }
 
@@ -82,19 +84,27 @@ class LivrableController extends AppBaseController
             'nature_livrable_id' => 'required|integer',
             'projet_id' => 'required|integer'
         ]);
-        $this->livrableRepository->update($id, $validatedData);
+        $this->livrableRepository->update((int) $id, $validatedData);
         return redirect()->route('livrables.index', $id)->with('success', __('pkg_realisation_projet/livrable.singular') . ' ' . __('app.updateSucées'));
     }
 
     public function destroy(string $id)
     {
-        $this->livrableRepository->destroy($id);
+        $this->livrableRepository->destroy((int) $id);
         return redirect()->route('livrables.index')->with('success', 'Le livrable a été supprimer avec succés.');
     }
 
     public function export()
     {
+        Log::info("Export function called"); // Log to check if this method is called
+
         $livrables = Livrable::all();
+        Log::info("Number of livrables fetched: " . count($livrables)); // Check how many livrables are fetched
+
+        if (count($livrables) == 0) {
+            return redirect()->route('livrables.index')->with('error', 'No livrables available to export.');
+        }
+
         return Excel::download(new LivrableExport($livrables), 'livrables_export.xlsx');
     }
 
