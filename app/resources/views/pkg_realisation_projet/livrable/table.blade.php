@@ -4,7 +4,7 @@
             <tr>
                 <th>{{ __('pkg_realisation_projet/livrable.plural') }}</th>
                 <th>{{ __('app.description') }}</th>
-                <th>{{ __('app.link') }}</th> <!-- Added column header for 'lien' -->
+                <th>{{ __('pkg_realisation_projet/livrable.link') }}</th> <!-- Added column header for 'lien' -->
                 <th class="text-center">{{ __('app.action') }}</th>
             </tr>
         </thead>
@@ -42,37 +42,32 @@
     </table>
 </div>
 
-<div class="d-md-flex justify-content-between align-items-center p-2">
-    <div class="d-flex align-items-center mb-2 ml-2 mt-2">
-        <!-- TODO css-2 : Importer et exporter ne doit pas s'afficher dans la version mobile  -->
-        @can('import-LivrableController')
-            <form action="{{ route('livrables.import') }}" method="post" class="mt-2" enctype="multipart/form-data"
-                id="importForm">
-                @csrf
-                <label for="upload" class="btn btn-default btn-sm font-weight-normal">
-                    <i class="fas fa-file-download"></i>
-                    {{ __('app.import') }}
-                </label>
-                <input type="file" id="upload" name="file" style="display:none;" onchange="submitForm()" />
-            </form>
-        @endcan
-        @can('export-LivrableController')
-            <form class="">
-                <a href="{{ route('livrables.export') }}" class="btn btn-default btn-sm mt-0 mx-2">
-                    <i class="fas fa-file-export"></i>
-                    {{ __('app.export') }}</a>
-            </form>
-        @endcan
+    <!-- Existing pagination below the table -->
+    <div class="d-md-flex justify-content-between align-items-center p-2">
+        <div class="d-flex align-items-center mb-2 ml-2 mt-2">
+            @can('import-LivrableController')
+                <form action="{{ route('livrables.import') }}" method="post" class="mt-2" enctype="multipart/form-data"
+                    id="importForm">
+                    @csrf
+                    <label for="upload" class="btn btn-default btn-sm font-weight-normal">
+                        <i class="fas fa-file-download"></i>
+                        {{ __('app.import') }}
+                    </label>
+                    <input type="file" id="upload" name="file" style="display:none;" onchange="submitForm()" />
+                </form>
+            @endcan
+            @can('export-LivrableController')
+                <form class="">
+                    <a href="{{ route('livrables.export') }}" class="btn btn-default btn-sm mt-0 mx-2">
+                        <i class="fas fa-file-export"></i>
+                        {{ __('app.export') }}</a>
+                </form>
+            @endcan
+        </div>
+        
+        <ul class="pagination m-0 float-right">
+            {{ $livrableData->onEachSide(1)->links() }}
+        </ul>
     </div>
-    
-    <ul class="pagination  m-0 float-right">
-        {{ $livrableData->onEachSide(1)->links() }}
-    </ul>
 </div>
-
-{{-- <script>
-    function submitForm() {
-        document.getElementById("importForm").submit();
-    }
-</script> --}}
 

@@ -7,8 +7,8 @@ use App\Http\Controllers\pkg_realisation_projet\LivrableController;
 Route::middleware('auth')->group(function () {
     Route::prefix('/')->group(function () {
         Route::resource('livrables', LivrableController::class);
-        Route::get('livrables/export', [LivrableController::class, 'export'])->name('livrables.export');
-        Route::post('livrables/import', [LivrableController::class, 'import'])->name('livrables.import');
+        Route::get('livrables-export', [LivrableController::class, 'export'])->name('livrables.export');
+        Route::post('livrabless-import', [LivrableController::class, 'import'])->name('livrables.import');
     });
 });
 

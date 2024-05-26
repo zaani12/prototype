@@ -10,6 +10,8 @@ use App\Repositories\pkg_realisation_projet\LivrableRepository;
 use App\Http\Controllers\AppBaseController;
 use App\Exports\pkg_realisation_projet\LivrableExport;
 use App\Imports\pkg_realisation_projet\LivrableImport;
+use App\Repositories\GestionProjets\ProjetRepository;
+use App\Repositories\pkg_realisation_projet\NatureLivrableRepository;
 use Carbon\Carbon;
 use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Support\Facades\Log; // Added import for Log
@@ -38,10 +40,12 @@ class LivrableController extends AppBaseController
         return view('pkg_realisation_projet.livrable.index', compact('livrableData'));
     }
 
-    public function create()
+    public function create(NatureLivrableRepository $natureLivrableRepository, ProjetRepository $projetRepository)
     {
         $dataToEdit = null;
-        return view('pkg_realisation_projet.livrable.create', compact('dataToEdit'));
+        $projects = $projetRepository->all();
+        $natureLivrables = $natureLivrableRepository->all();
+        return view('pkg_realisation_projet.livrable.create', compact(['dataToEdit', 'projects', 'natureLivrables']));
     }
 
     public function store(Request $request)
@@ -69,10 +73,12 @@ class LivrableController extends AppBaseController
         return view('pkg_realisation_projet.livrable.show', compact('fetchedData'));
     }
 
-    public function edit(string $id)
+    public function edit(string $id, NatureLivrableRepository $natureLivrableRepository, ProjetRepository $projetRepository)
     {
+        $projects = $projetRepository->all();
+        $natureLivrables = $natureLivrableRepository->all();
         $dataToEdit = $this->livrableRepository->find((int) $id);
-        return view('pkg_realisation_projet.livrable.edit', compact('dataToEdit'));
+        return view('pkg_realisation_projet.livrable.edit', compact(['dataToEdit', 'projects', 'natureLivrables']));
     }
 
     public function update(Request $request, string $id)

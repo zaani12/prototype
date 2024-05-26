@@ -3,7 +3,7 @@
 return [
     'singular' => 'Livrable',
     'plural' => 'Livrables',
-    'titre'  => 'Titre',
-    'lien' => 'Lien', 
+    'title'  => 'Titre',
     'description' =>'Description',
-];
+    'link' => 'Lien',
+]; 

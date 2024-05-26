@@ -25,8 +25,8 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="col-sm-12">
-                                <label for=titre">{{ __('app.titre') }}:</label>
-                                <p>{{ $fetchedData->nom }}</p>
+                                <label for=titre">{{ __('pkg_realisation_projet/livrable.title') }}:</label>
+                                <p>{{ $fetchedData->titre}}</p>
                             </div>
 
                             <!-- Description Field -->
@@ -43,7 +43,7 @@
 
                             <!-- Link Field -->
                             <div class="col-sm-12">
-                                <label for="lien">{{ __('app.link') }}:</label>
+                                <label for="lien">{{ __('pkg_realisation_projet/livrable.link') }}:</label>
                                 <p>{{ $fetchedData->lien }}</p>
                             </div>
                         </div>
