@@ -1,8 +1,9 @@
+<div class="card-body table-responsive p-0">
 <table class="table table-striped text-nowrap">
     <thead>
         <tr>
-            <th>{{ __('pkg_autorisations/controllers/message.NameController') }}</th>
-            <th class="action-column" style="width: 150px;">{{ __('pkg_autorisations/controllers/message.Actions') }}
+            <th>{{ __('pkg_autorisations/Controller.singular') }}</th>
+            <th class="text-center">{{ __('app.action') }}</th>
             </th>
         </tr>
     </thead>
@@ -10,36 +11,31 @@
         @forelse ($controllers as $controller)
             <tr>
                 <td>{{ $controller->nom }}</td>
-                <td class="d-flex justify-content-center">
+                <td class="text-center">
 
-                    @can('edit-GestionControllersController')
-                    <a href="{{ route('controllers.edit', $controller) }}" class="btn btn-sm btn-default"><i
-                            class="fas fa-edit"></i></a>
-                    @endcan
-                    @can('destroy-GestionControllersController')
-                    <form action="{{ route('controllers.destroy', $controller) }}" class="ml-2" method="post">
+                    <a href="{{ route('controllers.edit', $controller) }}" class="btn btn-sm btn-default">
+                        <i class="fas fa-pen-square"></i>
+                    </a>
+                    <form action="{{ route('controllers.destroy', $controller) }}" class="ml-2" style="display: inline;" method="post">
                         @csrf
                         @method('delete')
                         <button type="button" class="btn btn-sm btn-danger"
-                            onclick="confirmDelete(this.form, `{{ __('pkg_autorisations/controllers/message.ConfirmDeleteController') }}`)"><i
-                                class="fa-solid fa-trash"></i></button>
+                            onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce controller ?')">
+                            <i class="fas fa-trash"></i>
+                        </button>
                     </form>
-                    @endcan
                 </td>
             </tr>
         @empty
             <tr>
-                <td>{{ __('pkg_autorisations/controllers/message.NoControllers') }}</td>
+                <td>n'a pas des {{ __('pkg_autorisations/Controller.plural') }}</td>
             </tr>
         @endforelse
     </tbody>
-    <tfoot>
-        <tr>
-            <td colspan="2">
-                <ul class="pagination  m-0 float-right">
-                    {{ $controllers->links() }}
-                </ul>
-            </td>
-        </tr>
-    </tfoot>
 </table>
+</div>
+<div class="d-md-flex justify-content-between align-items-center p-2">
+<ul class="pagination  m-0 float-right">
+        {{ $controllers->onEachSide(1)->links() }}
+    </ul>
+</div>

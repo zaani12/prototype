@@ -1,50 +1,57 @@
 @extends('layouts.app')
+@section('title', __('app.add') . ' ' . __('pkg_autorisations/Controller.singular'))
 @section('content')
     <div class="content-header">
-        <div class="container-fluid">
-            @if ($errors->any())
-                <div class="alert alert-danger alert-dismissible">
-                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                    @foreach ($errors->all() as $error)
-                        {{ $error }}
-                    @endforeach
+        @if ($errors->has('controller_exists'))
+            <div class="alert alert-danger">
+                {{ $errors->first('controller_exists') }}
+            </div>
+        @else
+            @if ($errors->has('unexpected_error'))
+                <div class="alert alert-danger">
+                    {{ $errors->first('unexpected_error') }}
                 </div>
             @endif
-            <div class="row mb-2">
-                <div class="col">
-                    <h1>{{ __('pkg_autorisations/controllers/message.addController') }}</h1>
-                </div>
-            </div>
-        </div>
+        @endif
     </div>
     <section class="content">
         <div class="container-fluid">
+        
             <div class="row">
                 <div class="col-md-12">
                     <div class="card card-info">
                         <div class="card-header">
-                            <h3 class="card-title"> <i class="fas fa-gamepad nav-icon"></i>
-                                {{ __('pkg_autorisations/controllers/message.add') }}</h3>
+                            <h3 class="card-title">
+                                <i class="nav-icon fas fa-table"></i>
+                                {{ __('app.add') }} {{ __('pkg_autorisations/Controller.singular') }}
+                            </h3>
                         </div>
-                        <div class="card-body">
-                            <form action="{{ route('controllers.store') }}" method="POST">
+                        <!-- Obtenir le formulaire -->
+                        <form action="{{ route('controllers.store') }}" method="POST">
                                 @csrf
                                 @method('POST')
-                                <div class="form-group">
-                                    <label
-                                        for="ControllerName">{{ __('pkg_autorisations/controllers/message.NameController') }}</label>
-                                    <input type="text" name="nom" class="form-control" id="ControllerName"
-                                        placeholder="Entrez le nom de Controller" value="{{ old('nom') }}">
+                                <div class="card-body">
+                                    <div class="form-group">    
+                                        <label for="nom">{{ __('app.name') }} <span class="text-danger">*</span></label>
+                                        <input type="text" name="nom" class="form-control" id="ControllerName"
+                                            placeholder="Entrez le nom de Controller" value="{{ old('nom') }}">
+                                    </div>
+
                                 </div>
                                 <a href="{{ route('controllers.index') }}"
                                     class="btn btn-default">{{ __('pkg_autorisations/controllers/message.cancel') }}</a>
                                 <button type="submit"
                                     class="btn btn-info">{{ __('pkg_autorisations/controllers/message.add') }}</button>
                             </form>
-                        </div>
+
+
+
+                        <!-- formulair end -->
                     </div>
                 </div>
             </div>
+           
         </div>
+    
     </section>
 @endsection
