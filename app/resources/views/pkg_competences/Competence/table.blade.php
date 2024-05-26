@@ -51,7 +51,7 @@
                     <i class="fas fa-file-download"></i>
                     {{ __('app.import') }}
                 </label>
-                <input type="file" id="upload" name="file" style="display:none;" onchange="submitForm()" />
+                <input type="file" id="upload" name="file" style="display:none;"  />
             </form>
         @endcan
         @can('export-CompetenceController')

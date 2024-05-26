@@ -99,8 +99,8 @@ class CompetenceController extends AppBaseController
         try {
             Excel::import(new CompetenceImport, $request->file('file'));
         } catch (\InvalidArgumentException $e) {
-            return redirect()->route('competences.index')->withError('Le symbole de séparation est introuvable. Pas assez de données disponibles pour satisfaire au format.');
+            return redirect()->route('competence.index')->withError('Le symbole de séparation est introuvable. Pas assez de données disponibles pour satisfaire au format.');
         }
-        return redirect()->route('competences.index')->with('success', __('pkg_competences/competence.singular') . ' ' . __('app.addSuccess'));
+        return redirect()->route('competence.index')->with('success', __('pkg_competences/competence.singular') . ' ' . __('app.addSuccess'));
     }
 }
