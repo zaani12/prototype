@@ -48,9 +48,9 @@ class CompetenceController extends AppBaseController
         try {
             $validatedData = $request->validated();
             $this->competenceRepository->create($validatedData);
-            return redirect()->route('competence.index')->with('success', __('pkg_competences/competence.singular') . ' ' . __(' app.addSucées'));
+            return redirect()->route('competence.index')->with('success', __('messages.create_success'));
         } catch (CompetenceAlreadyExistException $e) {
-            return back()->withInput()->withErrors(['competence_exists' => __('pkg_competences/message.createProjectException')]);
+            return back()->withInput()->withErrors(['competence_exists' => 'Competence est déjà existant']);
         }
 
 
@@ -75,13 +75,13 @@ class CompetenceController extends AppBaseController
     {
         $validatedData = $request->validated();
         $this->competenceRepository->update($id, $validatedData);
-        return redirect()->route('competence.index')->with('success', __('pkg_competences/competence.singular') . ' ' . __('app.updateSucées'));
+        return redirect()->route('competence.index')->with('success', __('messages.update_success'));
     }
 
     public function destroy(string $id)
     {
         $this->competenceRepository->destroy($id);
-        return redirect()->route('competence.index')->with('success', __('pkg_competences/competence.singular') . ' ' . __('app.deleteSucées'));
+        return redirect()->route('competence.index')->with('success', __('messages.delete_success'));
     }
 
     public function export()
