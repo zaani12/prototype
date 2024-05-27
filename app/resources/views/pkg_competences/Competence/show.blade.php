@@ -9,7 +9,7 @@
                 </div>
                 @can('edit-CompetenceController')
                     <div class="col-sm-6">
-                        <a href="{{ route('competences.edit', $fetchedData->id) }}" class="btn btn-default float-right">
+                        <a href="{{ route('competence.edit', $fetchedData->id) }}" class="btn btn-default float-right">
                             <i class="far fa-edit"></i>
                             {{ __('app.edit') }}
                         </a>

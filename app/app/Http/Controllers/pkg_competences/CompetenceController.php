@@ -48,9 +48,9 @@ class CompetenceController extends AppBaseController
         try {
             $validatedData = $request->validated();
             $this->competenceRepository->create($validatedData);
-            return redirect()->route('competence.index')->with('success', __('pkg_competences/competence.singular') . ' ' . __(' été ajoutée avec succès'));
+            return redirect()->route('competence.index')->with('success', __('pkg_competences/competence.singular') . ' ' . __(' app.addSucées'));
         } catch (CompetenceAlreadyExistException $e) {
-            return back()->withInput()->withErrors(['competence_exists' => __('pkg_competences/competence.createProjectException')]);
+            return back()->withInput()->withErrors(['competence_exists' => __('pkg_competences/message.createProjectException')]);
         }
 
 
@@ -75,13 +75,13 @@ class CompetenceController extends AppBaseController
     {
         $validatedData = $request->validated();
         $this->competenceRepository->update($id, $validatedData);
-        return redirect()->route('competence.index')->with('success', __('pkg_competences/competence.singular') . ' ' . __(' mise à jour avec succès.'));
+        return redirect()->route('competence.index')->with('success', __('pkg_competences/competence.singular') . ' ' . __('app.updateSucées'));
     }
 
     public function destroy(string $id)
     {
         $this->competenceRepository->destroy($id);
-        return redirect()->route('competence.index')->with('success', 'Le competence a été supprimé avec succès.');
+        return redirect()->route('competence.index')->with('success', __('pkg_competences/competence.singular') . ' ' . __('app.deleteSucées'));
     }
 
     public function export()
@@ -101,6 +101,6 @@ class CompetenceController extends AppBaseController
         } catch (\InvalidArgumentException $e) {
             return redirect()->route('competence.index')->withError('Le symbole de séparation est introuvable. Pas assez de données disponibles pour satisfaire au format.');
         }
-        return redirect()->route('competence.index')->with('success', __('pkg_competences/competence.singular') . ' ' . __('app.addSuccess'));
+        return redirect()->route('competence.index')->with('success', __('pkg_competences/competence.singular') . ' ' . __('app.addSucées'));
     }
 }

@@ -8,6 +8,6 @@ class CompetenceAlreadyExistException extends BusinessException
 {
     public static function createCompetence()
     {
-        return new self(__('Competence already existe'));
+        return new self(__('Competence already existant'));
     }
 }

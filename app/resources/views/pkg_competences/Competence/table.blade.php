@@ -10,7 +10,7 @@
         <tbody>
             @foreach ($competenceData as $competence)
                 <tr>
-                    <td>{{ $competence->nom }}</td>
+                    <td>{!! Str::limit($competence->nom, 100) !!}</td>
 
                     <td class="text-center">
                         @can('show-CompetenceController')
