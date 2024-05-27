@@ -1,24 +1,46 @@
 <?php
-
 namespace App\Repositories\pkg_autorisations;
 
 use App\Repositories\BaseRepository;
 use Illuminate\Support\Facades\Route;
 use App\Exceptions\pkg_autorisations\ControllerExceptions;
-use App\Models\pkg_autorisations\Controller as AutorisationController;
+use App\Models\pkg_autorisations\Controller;
 
-class GestionControllersRepository extends BaseRepository {
+class GestionControllersRepository extends BaseRepository
+{
     protected $model;
 
-    public function __construct(AutorisationController $controller){
-        $this->model = $controller;
+    /**
+     * Les champs de recherche disponibles pour les projets.
+     *
+     * @var array
+     */
+    protected $fieldsSearchable = [
+        'name'
+    ];
+
+    /**
+     * Renvoie les champs de recherche disponibles.
+     *
+     * @return array
+     */
+    public function getFieldsSearchable(): array
+    {
+        return $this->fieldsSearchable;
     }
 
-    public function getModel(): AutorisationController {
-        return $this->model;
+    public function __construct()
+    {
+       parent::__construct(new Controller());
     }
 
-    public function create(array $data) {
+    // public function getModel(): AutorisationController
+    // {
+    //     return $this->model;
+    // }
+
+    public function create(array $data)
+    {
         $nom = $data['nom'];
 
         // Check if the controller name exists in the extracted controller names
@@ -36,7 +58,8 @@ class GestionControllersRepository extends BaseRepository {
         return parent::create($data);
     }
 
-    public function update($id, array $data) {
+    public function update($id, array $data)
+    {
         $nom = $data['nom'];
 
         if (!in_array($nom, $this->extractControllerNames())) {
@@ -54,7 +77,7 @@ class GestionControllersRepository extends BaseRepository {
     public static function extractControllerNames(): array
     {
         $controllerNames = [];
-        
+
         // Loop through all routes
         foreach (Route::getRoutes() as $route) {
             $action = $route->getAction();
@@ -77,12 +100,19 @@ class GestionControllersRepository extends BaseRepository {
         // Remove duplicate controller names and return the list
         return array_unique($controllerNames);
     }
-    
-    public function getFieldsSearchable(): array
+
+    /**
+     * Recherche les projets correspondants aux critères spécifiés.
+     *
+     * @param mixed $searchableData Données de recherche.
+     * @param int $perPage Nombre d'éléments par page.
+     * @return \Illuminate\Contracts\Pagination\LengthAwarePaginator
+     */
+    public function searchData($searchableData, $perPage = 4)
     {
-        return [
-            'nom',
-        ];
-        
+        return $this->model->where(function ($query) use ($searchableData) {
+            $query->where('nom', 'like', '%' . $searchableData . '%')
+;
+        })->paginate($perPage);
     }
 }

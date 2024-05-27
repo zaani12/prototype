@@ -58,7 +58,8 @@
                     <div class="card-header col-md-12">
                         <div class=" p-0">
                             <div class="input-group input-group-sm float-sm-right col-md-3 p-0">
-                                <input type="text" name="table_search" id="table_search" class="form-control float-right" placeholder="Recherche">
+                                <input type="text" name="table_search" id="table_search"
+                                    class="form-control float-right" placeholder="Recherche">
                                 <div class="input-group-append">
                                     <button type="submit" class="btn btn-default">
                                         <i class="fas fa-search"></i>

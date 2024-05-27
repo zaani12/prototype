@@ -1,49 +1,39 @@
 @extends('layouts.app')
+@section('title', __('app.edit') . ' ' . __('pkg_autorisations/Controller.singular'))
+
 @section('content')
     <div class="content-header">
-        @if ($errors->any())
-            <div class="alert alert-danger alert-dismissible">
-                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                @foreach ($errors->all() as $error)
-                    {{ $error }}
-                @endforeach
-            </div>
-        @endif
-
-        <div class="container-fluid">
-            <div class="row mb-2">
-                <div class="col">
-                    <h1>{{ __('pkg_autorisations/controllers/message.editController') }} {{ $controller->nom }}</h1>
-                </div>
-            </div>
-        </div>
     </div>
+
     <section class="content">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
                     <div class="card card-info">
                         <div class="card-header">
-                            <h3 class="card-title"> <i class="fas fa-gamepad nav-icon"></i>
-                                {{ __('pkg_autorisations/controllers/message.edit') }}</h3>
+                            <h3 class="card-title">
+                                <i class="nav-icon fas fa-table"></i>
+                                {{ __('app.edit') }}
+                            </h3>
                         </div>
-                        <div class="card-body">
-                            <form action="{{ route('controllers.update', $controller) }}" method="post">
+                        <form action="{{ route('controllers.update', $controller) }}" method="post">
+                            <div class="card-body">
                                 @csrf
                                 @method('put')
-                                <div class="form-group">
-                                    <label
-                                        for="ControllerName">{{ __('pkg_autorisations/controllers/message.NameController') }}</label>
-                                    <input type="text" name="nom" class="form-control" id="ControllerName"
-                                        placeholder="Entrez le nom de Controller"
-                                        value="{{ old('nom') ?? $controller->nom }}">
+                                <div class="form-group">   
+                                    <label for="nom">{{ __('app.name') }} <span class="text-danger">*</span></label>
+                                    <input type="text" name="nom" class="form-control" id="nom" placeholder="Entrez le nom de Controller" value="{{ old('nom') ?? $controller->nom }}">         
+                                    @error('nom')
+                                        <div class="text-danger">{{ $message }}</div>
+                                    @enderror
                                 </div>
-                                <a href="{{ route('controllers.index') }}"
-                                    class="btn btn-default">{{ __('pkg_autorisations/controllers/message.cancel') }}</a>
-                                <button type="submit"
-                                    class="btn btn-info">{{ __('pkg_autorisations/controllers/message.update') }}</button>
+                            </div>
+                            <div class="card-footer">
+                                <a href="{{ route('controllers.index') }}" class="btn btn-default">{{ __('app.cancel') }}</a>
+                                <button type="submit" class="btn btn-info ml-2">{{ __('app.edit') }}</button>
+                            </div>
+
                             </form>
-                        </div>
                     </div>
                 </div>
             </div>

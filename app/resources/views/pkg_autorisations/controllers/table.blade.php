@@ -8,7 +8,7 @@
         </tr>
     </thead>
     <tbody>
-        @forelse ($controllers as $controller)
+        @foreach ($controllers as $controller)
             <tr>
                 <td>{{ $controller->nom }}</td>
                 <td class="text-center">
@@ -18,24 +18,21 @@
                     </a>
                     <form action="{{ route('controllers.destroy', $controller) }}" class="ml-2" style="display: inline;" method="post">
                         @csrf
-                        @method('delete')
-                        <button type="button" class="btn btn-sm btn-danger"
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-sm btn-danger"
                             onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce controller ?')">
                             <i class="fas fa-trash"></i>
                         </button>
                     </form>
                 </td>
             </tr>
-        @empty
-            <tr>
-                <td>n'a pas des {{ __('pkg_autorisations/Controller.plural') }}</td>
-            </tr>
-        @endforelse
+        
+        @endforeach
     </tbody>
 </table>
 </div>
 <div class="d-md-flex justify-content-between align-items-center p-2">
-<ul class="pagination  m-0 float-right">
+<ul class="pagination m-0 float-right">
         {{ $controllers->onEachSide(1)->links() }}
     </ul>
 </div>

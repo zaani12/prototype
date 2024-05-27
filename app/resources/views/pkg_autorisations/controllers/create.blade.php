@@ -35,13 +35,17 @@
                                         <label for="nom">{{ __('app.name') }} <span class="text-danger">*</span></label>
                                         <input type="text" name="nom" class="form-control" id="ControllerName"
                                             placeholder="Entrez le nom de Controller" value="{{ old('nom') }}">
+                                            @error('nom')
+                                                <div class="text-danger">{{ $message }}</div>
+                                            @enderror
                                     </div>
 
                                 </div>
-                                <a href="{{ route('controllers.index') }}"
-                                    class="btn btn-default">{{ __('pkg_autorisations/controllers/message.cancel') }}</a>
-                                <button type="submit"
-                                    class="btn btn-info">{{ __('pkg_autorisations/controllers/message.add') }}</button>
+                                <div class="card-footer">
+                                    <a href="{{ route('controllers.index') }}" class="btn btn-default">{{ __('app.cancel') }}</a>
+                                    <button type="submit" class="btn btn-info ml-2">{{ __('app.add') }}</button>
+                                </div>
+
                             </form>
 
 
