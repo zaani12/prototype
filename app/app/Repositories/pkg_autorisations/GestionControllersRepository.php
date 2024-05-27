@@ -108,11 +108,8 @@ class GestionControllersRepository extends BaseRepository
      * @param int $perPage Nombre d'éléments par page.
      * @return \Illuminate\Contracts\Pagination\LengthAwarePaginator
      */
-    public function searchData($searchableData, $perPage = 4)
+    public function searchData($searchableData, $perPage = 10)
     {
-        return $this->model->where(function ($query) use ($searchableData) {
-            $query->where('nom', 'like', '%' . $searchableData . '%')
-;
-        })->paginate($perPage);
+        return $this->model->where('nom', 'like', '%' . $searchableData . '%')->paginate($perPage);
     }
 }

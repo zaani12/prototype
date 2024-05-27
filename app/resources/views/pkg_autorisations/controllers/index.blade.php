@@ -57,19 +57,22 @@
                 <div class="card">
                     <div class="card-header col-md-12">
                         <div class=" p-0">
-                            <div class="input-group input-group-sm float-sm-right col-md-3 p-0">
-                                <input type="text" name="table_search" id="table_search"
-                                    class="form-control float-right" placeholder="Recherche">
-                                <div class="input-group-append">
-                                    <button type="submit" class="btn btn-default">
-                                        <i class="fas fa-search"></i>
-                                    </button>
+                            <form id="search_form" action="{{ route('controllers.index') }}" method="get">
+                                <div class="input-group input-group-sm float-sm-right col-md-3 p-0">
+                                    <input type="text" name="searchValue" id="table_search" class="form-control float-right" placeholder="Recherche">
+                                    <div class="input-group-append">
+                                        <button type="submit" class="btn btn-default">
+                                            <i class="fas fa-search"></i>
+                                        </button>
+                                    </div>
                                 </div>
-                            </div>
-
+                            </form>
                         </div>
                     </div>
-                    @include('pkg_autorisations.controllers.table')
+                    <div id="table_container">
+                        @include('pkg_autorisations.controllers.table')
+                    </div>
+                    <!-- @include('pkg_autorisations.controllers.table') -->
                 </div>
             </div>
         </div>

@@ -31,8 +31,6 @@
     </tbody>
 </table>
 </div>
-<div class="d-md-flex justify-content-between align-items-center p-2">
-<ul class="pagination m-0 float-right">
-        {{ $controllers->onEachSide(1)->links() }}
-    </ul>
-</div>
+<ul class="pagination m-2 float-right">
+            {{ $controllers->onEachSide(1)->links() }}
+        </ul>

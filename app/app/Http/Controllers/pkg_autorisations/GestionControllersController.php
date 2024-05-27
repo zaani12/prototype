@@ -20,11 +20,11 @@ class GestionControllersController extends AppBaseController
     public function index(Request $request)
     {
         if ($request->ajax()) {
-            $searchValue = $request->get('searchValue', '');
+            $searchValue = $request->get('searchValue');
             if ($searchValue !== '') {
                 $searchQuery = str_replace(' ', '%', $searchValue);
                 $controllers = $this->controllersRepository->searchData($searchQuery);
-                return view('pkg_autorisations.controllers.index', compact('controllers'))->render();
+                return view('pkg_autorisations.controllers.index', compact('controllers'));
             }
         }
 
