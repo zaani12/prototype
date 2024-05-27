@@ -24,7 +24,7 @@ class CompetenceSeeder extends Seeder
         Competence::truncate();
         Schema::enableForeignKeyConstraints();
 
-        $csvFile = fopen(base_path("database/data/pkg_competences/Competences.csv"), "r");
+        $csvFile = fopen(base_path("database/data/pkg_competences/competences.csv"), "r");
         if ($csvFile === false) {
             throw new \Exception("Could not open the CSV file.");
         }
@@ -49,11 +49,6 @@ class CompetenceSeeder extends Seeder
         // ==========================================================
         $FormateurRole = User::FORMATEUR;
         $Role = Role::where('name', $FormateurRole)->first();
-
-        Schema::disableForeignKeyConstraints();
-        Permission::truncate();
-        Schema::enableForeignKeyConstraints();
-
         $csvFile = fopen(base_path("database/data/pkg_competences/CompetencePermission.csv"), "r");
         $firstline = true;
         while (($data = fgetcsv($csvFile)) !== FALSE) {
