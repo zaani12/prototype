@@ -1,6 +1,8 @@
 import "https://code.jquery.com/jquery-3.6.0.min.js";
 
 $(document).ready(function () {
+    console.log(true);
+
     // Fonction pour mettre à jour un paramètre dans l'URL
     function updateURLParameter(param, paramVal) {
         var url = window.location.href;
@@ -25,42 +27,34 @@ $(document).ready(function () {
     // Fonction pour récupérer les données avec AJAX
     function fetchData(page, searchValue) {
         var neededUrl = window.location.pathname;
-    
-        // Show spinner
-        $('#spinner-wrapper').css('display', 'flex');
-        setTimeout(function (){
-            $.ajax({
-                url: neededUrl + "/?page=" + page + "&searchValue=" + searchValue,
-                success: function (data) {
-                    var newData = $(data);
-        
-                    $("tbody").html(newData.find("tbody").html());
-                    $("#card-footer").html(newData.find("#card-footer").html());
-                    var paginationHtml = newData.find(".pagination").html();
-                    if (paginationHtml) {
-                        $(".pagination").html(paginationHtml);
-                    } else {
-                        $(".pagination").html("");
-                    }
-        
-                    // Hide spinner once AJAX request is complete
-                    $('#spinner-wrapper').hide();
-                },
-            });    
-            if (page !== null && searchValue !== null) {
-                updateURLParameter("page", page);
-                updateURLParameter("searchValue", searchValue);
-            } else {
-                window.history.replaceState(
-                    {},
-                    document.title,
-                    window.location.pathname
-                );
-            }
-        }, 100)
-    
+        console.log(neededUrl);
+        $.ajax({
+            url: neededUrl + "/?page=" + page + "&searchValue=" + searchValue,
+            success: function (data) {
+                var newData = $(data);
+
+                $("tbody").html(newData.find("tbody").html());
+                $("#card-footer").html(newData.find("#card-footer").html());
+                var paginationHtml = newData.find(".pagination").html();
+                if (paginationHtml) {
+                    $(".pagination").html(paginationHtml);
+                } else {
+                    $(".pagination").html("");
+                }
+            },
+        });
+        if (page !== null && searchValue !== null) {
+            updateURLParameter("page", page);
+            updateURLParameter("searchValue", searchValue);
+        } else {
+            window.history.replaceState(
+                {},
+                document.title,
+                window.location.pathname
+            );
+        }
     }
-    
+
     // Function to get URL parameter value by name
     function getUrlParameter(name) {
         name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
