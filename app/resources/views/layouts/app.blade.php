@@ -11,6 +11,10 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
+    <!-- Spinner -->
+    <div id="spinner-wrapper" class="spinner-wrapper">
+        <div class="spinner"></div>
+    </div>
     <div class="wrapper">
         <!-- Main Header -->
         <nav class="main-header navbar navbar-expand navbar-white navbar-light">
