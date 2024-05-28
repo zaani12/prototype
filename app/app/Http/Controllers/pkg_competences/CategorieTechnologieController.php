@@ -48,7 +48,7 @@ class CategorieTechnologieController extends Controller
             $this->CategorieTechnologie->create($data);
             return redirect()->route('CategorieTechnologie.index')->with('success', 'Catégorie technologie  ' . __('app.addSucées'));
         } catch (categorietechnologieException $e) {
-            return back()->withInput()->withErrors($e);
+            return back()->with('error', $e->getMessage());
         }
     }
     public function show($id)
@@ -69,7 +69,7 @@ class CategorieTechnologieController extends Controller
             $this->CategorieTechnologie->update($id, $data);
             return redirect()->route('CategorieTechnologie.index')->with('success', 'Categorie Technologie ' . __('app.updateSucées'));
         } catch (categorietechnologieException $e) {
-            return back()->withInput()->withErrors($e);
+            return back()->with('error', $e->getMessage());
         }
     }
 
