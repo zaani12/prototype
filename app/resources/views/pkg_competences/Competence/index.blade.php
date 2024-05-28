@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', __('pkg_competences/technologie.singular'))
+@section('title', __('pkg_competences/competence.singular'))
 
 @section('content')
     <div class="content-header">
@@ -17,10 +17,7 @@
                             // Generate the title using the title function
                             use App\helpers\TranslationHelper;
                             $lang = Config::get('app.locale');
-                            $translatedName = TranslationHelper::getTitle(
-                                __('pkg_competences/technologie.singular'),
-                                $lang,
-                            );
+                            $translatedName = TranslationHelper::getTitle(__('pkg_competences/competence.plural'), $lang);
                             echo $translatedName;
 
                         @endphp
@@ -29,10 +26,10 @@
 
                 <div class="col-sm-6">
                     <div class="float-sm-right">
-                        @can('create-TechnologieController')
-                            <a href="{{ route('technologies.create') }}" class="btn btn-info">
+                        @can('create-CompetenceController')
+                            <a href="{{ route('competence.create') }}" class="btn btn-info">
                                 <i class="fas fa-plus"></i>
-                                {{ __('app.add') }} {{ __('pkg_competences/technologie.singular') }}
+                                {{ __('app.add') }} {{ __('pkg_competences/competence.singular') }}
                             </a>
                         @endcan
                     </div>
@@ -59,7 +56,7 @@
 
                             </div>
                         </div>
-                        @include('pkg_competences/technologie/table')
+                        @include('pkg_competences.competence.table')
                     </div>
                 </div>
             </div>
