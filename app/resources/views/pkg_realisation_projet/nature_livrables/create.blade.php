@@ -4,7 +4,7 @@
     <div class="content-header">
         @if ($errors->has('livrable_exists'))
             <div class="alert alert-danger">
-                {{ $errors->first('livrable_exists') }}
+                {{ $errors->first('pkg_realisation_projet/message.createNatureLivrableException') }}
             </div>
         @else
             @if ($errors->has('unexpected_error'))
@@ -38,7 +38,7 @@
                                 </div>
                             </div>
                             <div class="card-footer">
-                                <button type="submit" class="btn btn-info">Submit</button>
+                                <button type="submit" class="btn btn-info">{{ __('app.add') }}</button>
                             </div>
                         </form>
                     </div>
