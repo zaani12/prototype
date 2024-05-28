@@ -11,6 +11,10 @@
             <li class="nav-item ">
                 <a href="{{ route('CategorieTechnologie.index') }}"
                 class="nav-link nav-link {{ Request::is('CategorieTechnologie*') ? 'active' : '' }}">
+                <p>Categorie technologie</p>
+                </a>
+            </li>
+        @endcan
         <li class="nav-item ">
             <a href="{{ route('competence.index') }}"
                 class="nav-link nav-link {{ Request::is('competence*') ? 'active' : '' }}">
@@ -22,9 +26,5 @@
                 <p>Technologies</p>
             </a>
         </li>
-                <p>Categorie technologie</p>
-                </a>
-            </li>
-        @endcan
     </ul>
 </li>
