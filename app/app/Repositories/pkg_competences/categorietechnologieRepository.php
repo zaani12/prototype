@@ -71,4 +71,20 @@ class categorietechnologieRepository extends BaseRepository
             return parent::destroy($id);
         }
     }
+
+        /**
+     * Recherche les projets correspondants aux critères spécifiés.
+     *
+     * @param mixed $searchableData Données de recherche.
+     * @param int $perPage Nombre d'éléments par page.
+     * @return \Illuminate\Contracts\Pagination\LengthAwarePaginator
+     */
+    
+    public function searchData($searchableData, $perPage = 4)
+    {
+        return $this->model->where(function ($query) use ($searchableData) {
+            $query->where('nom', 'like', '%' . $searchableData . '%')
+                ->orWhere('description', 'like', '%' . $searchableData . '%');
+        })->paginate($perPage);
+    }
 }

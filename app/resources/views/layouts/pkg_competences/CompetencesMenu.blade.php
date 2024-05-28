@@ -11,7 +11,8 @@
             <li class="nav-item ">
                 <a href="{{ route('CategorieTechnologie.index') }}"
                 class="nav-link nav-link {{ Request::is('CategorieTechnologie*') ? 'active' : '' }}">
-                <p>Categorie technologie</p>
+                    <i class="nav-icon fas fa-table"></i>
+                    <p>Categorie technologie</p>
                 </a>
             </li>
         @endcan
